@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Václav Mudra — Software Engineer & Solution Architect</title>
+  <meta name="description" content="Osobní web Václava Mudry. Software engineer a solution architect. Stavím SaaS produkty, integrace a architekturu pro SME a veřejnou správu." />
+
+  <!-- Canonical & language alternates -->
+  <link rel="canonical" href="https://vaclavmudra.com/" />
+  <link rel="alternate" href="https://vaclavmudra.com/" hreflang="cs" />
+  <link rel="alternate" href="https://vaclavmudra.com/en/" hreflang="en" />
+  <link rel="alternate" href="https://vaclavmudra.com/" hreflang="x-default" />
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="cs_CZ" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:title" content="Václav Mudra — Software Engineer & Solution Architect" />
+  <meta property="og:description" content="Stavím SaaS produkty, integrace a architekturu pro SME a veřejnou správu." />
+  <meta property="og:url" content="https://vaclavmudra.com/" />
+  <meta property="og:image" content="https://vaclavmudra.com/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Václav Mudra",
+    "honorificPrefix": "Ing.",
+    "jobTitle": "Software Engineer & Solution Architect",
+    "url": "https://vaclavmudra.com/",
+    "email": "mailto:hello@vaclavmudra.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Prague",
+      "addressCountry": "CZ"
+    },
+    "sameAs": [
+      "https://cz.linkedin.com/in/vmudra",
+      "https://github.com/eLh0m3r0"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="#top" aria-label="Václav Mudra">
+      <span class="brand__mark" aria-hidden="true">VM</span>
+      <span>Václav Mudra</span>
+    </a>
+    <nav class="nav" aria-label="Hlavní navigace">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#what">Co dělám</a></li>
+        <li><a class="nav__link" href="#sector">Pro koho pracuji</a></li>
+        <li><a class="nav__link" href="#projects">Projekty</a></li>
+        <li><a class="nav__link" href="#about">O mně</a></li>
+        <li><a class="nav__link" href="#contact">Kontakt</a></li>
+      </ul>
+      <div class="lang" role="group" aria-label="Jazyk">
+        <a href="/" class="is-active" lang="cs" hreflang="cs" aria-current="page">CS</a>
+        <a href="/en/" lang="en" hreflang="en">EN</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-name">
+    <div class="container hero__grid">
+      <div>
+        <span class="eyebrow">Praha · Czech Republic · Available</span>
+        <h1 class="hero__name" id="hero-name">Václav Mudra</h1>
+        <p class="hero__role">
+          <span>Software Engineer</span><span class="sep">/</span><span>Solution Architect</span>
+        </p>
+        <p class="hero__lede">
+          Pracuju na pomezí soukromého sektoru, veřejné správy a vlastních produktů.
+          Specializuju se na systémovou integraci, databáze a stavbu malých,
+          dobře navržených SaaS aplikací.
+        </p>
+        <div class="hero__meta">
+          <span class="status is-live">Otevřený novým zakázkám</span>
+        </div>
+      </div>
+
+      <div class="hero__photo-wrap">
+        <figure class="hero__photo">
+          <img
+            src="assets/photo-dog.jpeg"
+            alt="Václav venku v lese, po boku jeho pes Kvido (boston terrier v postroji)."
+            width="820" height="1024" />
+          <figcaption class="hero__photo-caption">Václav & Kvido</figcaption>
+        </figure>
+        <div class="meme-sticker" aria-hidden="false">
+          <img src="assets/prod-meme.png"
+               alt="„Real men test in production“ — vtipný obrázek z developer kultury."
+               width="1000" height="900" loading="lazy" />
+          <span class="meme-sticker__cap">// life motto</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT I DO ============ -->
+  <section id="what" aria-labelledby="what-title">
+    <div class="container">
+      <header class="section-head">
+        <div>
+          <span class="section-head__index">01 / Co dělám</span>
+          <h2 id="what-title">Pět věcí, ve kterých jsem doma</h2>
+        </div>
+      </header>
+
+      <div class="do-grid">
+        <article class="card do-card tone-blue">
+          <span class="num">01</span>
+          <h3>Návrh & vývoj softwaru</h3>
+          <p>Python, JavaScript, SQL. Stavba SaaS produktů od datové vrstvy po UI. Důraz na malé, srozumitelné, udržitelné systémy.</p>
+        </article>
+
+        <article class="card do-card tone-green">
+          <span class="num">02</span>
+          <h3>Databázový design & datová integrace</h3>
+          <p>PostgreSQL a MSSQL. Komplexní SQL (CTE, rekurze, deduplikace), návrh schémat, migrace, datová validace.</p>
+        </article>
+
+        <article class="card do-card tone-yellow">
+          <span class="num">03</span>
+          <h3>Systémová integrace & solution architecture</h3>
+          <p>Propojování enterprise systémů, API návrh, JSON schema, ArchiMate modelování, BE/FE specifikace. Mosty mezi business požadavky a implementací.</p>
+        </article>
+
+        <article class="card do-card tone-red">
+          <span class="num">04</span>
+          <h3>Konzultace pro výrobní SME</h3>
+          <p>Digitální transformace, IT strategie, vendor management, management consulting v rámci dlouhodobých spoluprací.</p>
+        </article>
+
+        <article class="card do-card tone-purple">
+          <span class="num">05</span>
+          <h3>AI tooling & experimenty</h3>
+          <p>Lokální LLM inference na Apple Silicon, autonomní agentní systémy postavené nad Claude Code.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTOR & CLIENTS ============ -->
+  <section id="sector" aria-labelledby="sector-title">
+    <div class="container">
+      <header class="section-head">
+        <div>
+          <span class="section-head__index">02 / Pro koho pracuji</span>
+          <h2 id="sector-title">Soukromý sektor i veřejná správa</h2>
+        </div>
+      </header>
+
+      <div class="sector">
+        <article class="card sector__card tone-blue">
+          <span class="sector__tag">Soukromý sektor · SME</span>
+          <h3>Tailor-made aplikace a dlouhodobé spolupráce</h3>
+          <p>Stavím tailor-made aplikace pro malé a střední firmy, vedu digitální transformaci a doprovázím klienty od první analýzy přes implementaci až po provoz. Typicky dlouhodobé vztahy, ne jednorázové dodávky.</p>
+        </article>
+
+        <article class="card sector__card tone-red">
+          <span class="sector__tag">Veřejná správa</span>
+          <h3>Analýza, integrace a architektura</h3>
+          <p>Analýza, integrace a architektura informačních systémů státní správy — typicky jako externí konzultant ve spolupráci s etablovanými českými IT integrátory.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="container">
+      <header class="section-head">
+        <div>
+          <span class="section-head__index">03 / Projekty</span>
+          <h2 id="projects-title">Veřejně dostupné věci, na kterých dělám</h2>
+        </div>
+      </header>
+
+      <div class="projects">
+        <article class="project tone-blue">
+          <div class="project__head">
+            <span class="project__name">Assoluto</span>
+            <span class="status is-beta">Beta</span>
+          </div>
+          <p class="project__desc">Open-source zákaznický portál pro české výrobní firmy. Zakázky, výkresy, stav výroby na jednom místě.</p>
+          <span class="project__tag">SaaS · Open source</span>
+          <div class="project__foot">
+            <span class="project__url">assoluto.eu</span>
+          </div>
+          <a class="cover" href="https://assoluto.eu" target="_blank" rel="noopener" aria-label="Assoluto — assoluto.eu"></a>
+        </article>
+
+        <article class="project tone-green">
+          <div class="project__head">
+            <span class="project__name">Docházka.net</span>
+            <span class="status is-live">Live</span>
+          </div>
+          <p class="project__desc">Evidence docházky pro malé a střední české firmy.</p>
+          <span class="project__tag">SaaS</span>
+          <div class="project__foot">
+            <span class="project__url">dochazka.net</span>
+          </div>
+          <a class="cover" href="https://dochazka.net" target="_blank" rel="noopener" aria-label="dochazka.net"></a>
+        </article>
+
+        <article class="project tone-red">
+          <div class="project__head">
+            <span class="project__name">DissConnect</span>
+            <span class="status is-live">Live</span>
+          </div>
+          <p class="project__desc">AI tool, co z nudného korporátního LinkedIn profilu udělá brutální diss track. Žert pro kolegu za $1.99.</p>
+          <span class="project__tag">Side project · AI</span>
+          <div class="project__foot">
+            <span class="project__url">dissconnect.lol</span>
+          </div>
+          <a class="cover" href="https://dissconnect.lol" target="_blank" rel="noopener" aria-label="DissConnect — dissconnect.lol"></a>
+        </article>
+
+        <article class="project tone-yellow">
+          <div class="project__head">
+            <span class="project__name">Geodaily</span>
+            <span class="status is-live">Live</span>
+          </div>
+          <p class="project__desc">AI-generated denní geopolitický newsletter.</p>
+          <span class="project__tag">Newsletter · AI</span>
+          <div class="project__foot">
+            <span class="project__url">buttondown.com/geodaily</span>
+          </div>
+          <a class="cover" href="https://buttondown.com/geodaily" target="_blank" rel="noopener" aria-label="Geodaily newsletter"></a>
+        </article>
+
+        <article class="project tone-purple">
+          <div class="project__head">
+            <span class="project__name">Genesis Factory</span>
+            <span class="status is-wip">WIP</span>
+          </div>
+          <p class="project__desc">Autonomní agentní systém pro vývoj softwaru postavený nad Claude Code.</p>
+          <span class="project__tag">Open source · Tooling</span>
+          <div class="project__foot">
+            <span class="project__url">github.com/eLh0m3r0/Genesis-Factory</span>
+          </div>
+          <a class="cover" href="https://github.com/eLh0m3r0/Genesis-Factory" target="_blank" rel="noopener" aria-label="Genesis Factory na GitHubu"></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+      <header class="section-head">
+        <div>
+          <span class="section-head__index">04 / O mně</span>
+          <h2 id="about-title">Profil, vzdělání, pracovní historie</h2>
+        </div>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-meta">
+          <h3>Vzdělání</h3>
+          <dl>
+            <dt>2017–2019</dt>
+            <dd><strong>Ing.</strong>, Projektové řízení (program <em>Systémové inženýrství a informatika</em>). DP: agilní metody projektového řízení v auditních zakázkách.</dd>
+            <dt>2014–2017</dt>
+            <dd><strong>Bc.</strong>, Systémové inženýrství. BP: cloud computing v sektoru SME.</dd>
+          </dl>
+
+          <h3>Certifikace</h3>
+          <dl>
+            <dt>2024</dt>
+            <dd>ArchiMate 3 — Practitioner (Level 2)</dd>
+          </dl>
+
+          <h3>Jazyky</h3>
+          <dl>
+            <dt>CS</dt><dd>Rodilý mluvčí</dd>
+            <dt>EN</dt><dd>Plná profesionální znalost</dd>
+            <dt>FR</dt><dd>Omezená znalost</dd>
+            <dt>DE</dt><dd>Začátečník</dd>
+          </dl>
+        </div>
+
+        <ol class="timeline" aria-label="Pracovní historie">
+          <li class="is-current">
+            <span class="tl__period">10/2024 → dnes</span>
+            <p class="tl__role">IT Analyst / Solution Architect</p>
+            <p class="tl__via"><span class="label">přes</span>Aricoma</p>
+            <p class="tl__desc">Projekty pro veřejný sektor — analýza a architektura informačních systémů státní správy.</p>
+          </li>
+          <li>
+            <span class="tl__period">02/2023 → 10/2024</span>
+            <p class="tl__role">IT Analyst / Solution Architect</p>
+            <p class="tl__via"><span class="label">přes</span>European Code Factory</p>
+            <p class="tl__desc">Projekty pro veřejný i soukromý sektor — analýza, integrace.</p>
+          </li>
+          <li>
+            <span class="tl__period">04/2021 → 01/2023</span>
+            <p class="tl__role">Digital Transformation Lead, interim CEO</p>
+            <p class="tl__via"><span class="label">přes</span>in-house</p>
+            <p class="tl__desc">Vedení digitální transformace a IT strategie ve výrobní skupině v severních Čechách. ERP/CRM implementace, vendor management.</p>
+          </li>
+          <li>
+            <span class="tl__period">11/2017 → 12/2020</span>
+            <p class="tl__role">Consultant, Senior Analyst</p>
+            <p class="tl__via"><span class="label">přes</span>Deloitte CE</p>
+            <p class="tl__desc">Bankovní a regulátorní sektor — analýza, RPA Center of Excellence, IT risk assessment.</p>
+          </li>
+          <li class="is-current">
+            <span class="tl__period">06/2014 → dnes</span>
+            <p class="tl__role">IT konzultant na volné noze</p>
+            <p class="tl__via"><span class="label">přes</span>vlastní</p>
+            <p class="tl__desc">Tailor-made řešení pro SME — vývoj, implementace, dlouhodobé spolupráce.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <header class="section-head">
+        <div>
+          <span class="section-head__index">05 / Kontakt</span>
+          <h2 id="contact-title">Pište, čtu vše</h2>
+        </div>
+      </header>
+
+      <div class="contact">
+        <a class="contact__card" href="mailto:hello@vaclavmudra.com" data-email>
+          <span class="contact__label">Email</span>
+          <span class="contact__value" data-email-text>hello@vaclavmudra.com</span>
+        </a>
+        <a class="contact__card" href="https://cz.linkedin.com/in/vmudra" target="_blank" rel="noopener">
+          <span class="contact__label">LinkedIn</span>
+          <span class="contact__value">linkedin.com/in/vmudra</span>
+        </a>
+        <a class="contact__card" href="https://github.com/eLh0m3r0" target="_blank" rel="noopener">
+          <span class="contact__label">GitHub</span>
+          <span class="contact__value">github.com/eLh0m3r0</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 Václav Mudra</span>
+    <span>Built static. No trackers. <a href="/en/" lang="en" hreflang="en">English version</a></span>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
