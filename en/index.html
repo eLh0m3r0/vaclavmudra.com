@@ -6,11 +6,13 @@
   <title>Václav Mudra — Software Engineer & Solution Architect</title>
   <meta name="description" content="Personal site of Václav Mudra. Software engineer and solution architect. I build SaaS products, integrations, and architecture for SMEs and public administration." />
 
+  <!-- Canonical & language alternates -->
   <link rel="canonical" href="https://vaclavmudra.com/en/" />
   <link rel="alternate" href="https://vaclavmudra.com/" hreflang="cs" />
   <link rel="alternate" href="https://vaclavmudra.com/en/" hreflang="en" />
   <link rel="alternate" href="https://vaclavmudra.com/" hreflang="x-default" />
 
+  <!-- OpenGraph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="cs_CZ" />
@@ -21,11 +23,14 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
-  <link rel="stylesheet" href="../styles.css" />
 
+  <link rel="preload" href="../fonts/archivo-normal-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/archivo-normal-100-900-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../fonts/instrument-sans-normal-400-700-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- JSON-LD: Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -49,19 +54,18 @@
 </head>
 <body>
 
+<a class="skip-link" href="#content">Skip to content</a>
+
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand" href="#top" aria-label="Václav Mudra">
-      <span class="brand__mark" aria-hidden="true">VM</span>
-      <span class="brand__name">Václav Mudra</span>
-    </a>
+    <a class="wordmark" href="#top" aria-label="Václav Mudra — back to top"><span class="ast" aria-hidden="true">✳</span>Václav Mudra</a>
     <nav class="nav" aria-label="Primary navigation">
       <ul class="nav__list">
-        <li><a class="nav__link" href="#what">What I do</a></li>
-        <li><a class="nav__link" href="#sector">Who I work for</a></li>
-        <li><a class="nav__link" href="#projects">Projects</a></li>
-        <li><a class="nav__link" href="#about">About</a></li>
-        <li><a class="nav__link" href="#contact">Contact</a></li>
+        <li><a href="#what">What I do</a></li>
+        <li><a href="#who-for">Who for</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="lang" role="group" aria-label="Language">
         <a href="/" lang="cs" hreflang="cs">CS</a>
@@ -71,294 +75,341 @@
   </div>
 </header>
 
-<main id="top">
+<main id="content">
 
   <!-- ============ HERO ============ -->
-  <section class="hero" aria-labelledby="hero-name">
-    <div class="container hero__grid">
-      <div>
-        <span class="eyebrow">Prague · Czech Republic</span>
-        <h1 class="hero__name" id="hero-name">Václav Mudra</h1>
-        <p class="hero__role">
-          <span>Software Engineer</span><span class="sep">/</span><span>Solution Architect</span>
-        </p>
-        <p class="hero__lede">
-          I work at the intersection of private sector, public administration,
-          and my own products. I specialize in systems integration, databases,
-          and building small, well-designed SaaS applications.
-        </p>
-        <div class="hero__meta">
-          <span class="status is-live">Open to new engagements</span>
-        </div>
+  <section class="hero" id="top" aria-labelledby="hero-name">
+    <div class="container">
+      <div class="hero__meta mono" aria-hidden="true">
+        <span>Prague, Czechia</span>
+        <span>50.0755°&nbsp;N&nbsp;/&nbsp;14.4378°&nbsp;E</span>
       </div>
 
-      <div class="hero__photo-wrap">
-        <figure class="hero__photo">
-          <img
-            src="../assets/photo-dog.jpeg"
-            alt="Václav out in the woods with his dog Kvido (a Boston terrier in a harness)."
-            width="820" height="1024" />
-          <figcaption class="hero__photo-caption">Václav & Kvido</figcaption>
-        </figure>
+      <div class="hero__grid">
+        <div class="hero__main">
+          <h1 class="hero__name" id="hero-name">Václav<br />Mudra<span class="ast" aria-hidden="true">✳</span></h1>
+
+          <p class="hero__role mono"><span class="hl">Software Engineer</span>&nbsp;&nbsp;<span class="ast" aria-hidden="true">✳</span>&nbsp;&nbsp;<span class="hl">Solution Architect</span></p>
+
+          <p class="hero__lede">
+            I work at the intersection of private sector, public administration,
+            and my own products. I specialize in systems integration, databases,
+            and building small, well-designed SaaS applications.
+          </p>
+        </div>
+
+        <div class="hero__viz">
+          <canvas data-schematic aria-hidden="true"></canvas>
+          <a class="stamp" href="#contact" aria-label="Open to new engagements — go to contact" data-stamp>
+            <svg class="stamp__spin" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <defs>
+                <path id="stamp-circle" d="M 100,22 A 78,78 0 1 1 99.99,22" />
+              </defs>
+              <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="100" cy="100" r="58" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <text class="stamp__text">
+                <textPath href="#stamp-circle" textLength="489" lengthAdjust="spacingAndGlyphs">OPEN TO NEW ENGAGEMENTS&#160;&#160;✳&#160;&#160;VÁCLAV MUDRA&#160;&#160;✳&#160;&#160;</textPath>
+              </text>
+              <text class="stamp__center" x="100" y="100" text-anchor="middle" dominant-baseline="central">✳</text>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHAT I DO ============ -->
-  <section id="what" aria-labelledby="what-title">
+  <!-- ============ MARQUEE BAND ============ -->
+  <!-- Band A: the stack, bottom-up from the data layer to modelling.
+       Band B: disciplines, from analysis through architecture to delivery — and who it's for. -->
+  <p class="sr-only">Stack: PostgreSQL, MSSQL, SQL (CTEs, recursion), Python, JavaScript, REST API, JSON Schema, ArchiMate. Disciplines: IT analysis, business analysis, solution architecture, systems integration, digital transformation, SaaS products, AI tooling, public sector, manufacturing SMEs.</p>
+  <div class="band" aria-hidden="true">
+    <div class="band__row" data-band="-1">
+      <div class="band__track">
+        <span class="band__seq">
+          <span>PostgreSQL</span><i>✳</i><span>MSSQL</span><i>✳</i><span>SQL&nbsp;·&nbsp;CTEs&nbsp;·&nbsp;recursion</span><i>✳</i><span>Python</span><i>✳</i><span>JavaScript</span><i>✳</i><span>REST&nbsp;API</span><i>✳</i><span>JSON&nbsp;Schema</span><i>✳</i><span>ArchiMate</span><i>✳</i>
+        </span>
+      </div>
+    </div>
+    <div class="band__row band__row--b" data-band="1">
+      <div class="band__track">
+        <span class="band__seq">
+          <span>IT&nbsp;analysis</span><i>✳</i><span>business&nbsp;analysis</span><i>✳</i><span>solution&nbsp;architecture</span><i>✳</i><span>systems&nbsp;integration</span><i>✳</i><span>digital&nbsp;transformation</span><i>✳</i><span>SaaS&nbsp;products</span><i>✳</i><span>AI&nbsp;tooling</span><i>✳</i><span>public&nbsp;sector</span><i>✳</i><span>manufacturing&nbsp;SMEs</span><i>✳</i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 01 WHAT I DO ============ -->
+  <section id="what" class="section" aria-labelledby="what-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">01 / What I do</span>
-          <h2 id="what-title">Five things I do well</h2>
-        </div>
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">01&nbsp;—&nbsp;What I do</span>
+        <h2 id="what-title">Five things I do well</h2>
+        <span class="section-head__note mono">the index</span>
       </header>
 
-      <div class="do-grid">
-        <article class="card do-card tone-blue">
-          <span class="num">01</span>
-          <h3>Software design & development</h3>
-          <p>Python, JavaScript, SQL. Building SaaS products from the data layer up to the UI. Bias toward small, legible, maintainable systems.</p>
-        </article>
-
-        <article class="card do-card tone-green">
-          <span class="num">02</span>
-          <h3>Database design & data integration</h3>
-          <p>PostgreSQL and MSSQL. Heavy SQL (CTEs, recursion, deduplication), schema design, migrations, data validation.</p>
-        </article>
-
-        <article class="card do-card tone-yellow">
-          <span class="num">03</span>
-          <h3>Systems integration & solution architecture</h3>
-          <p>Connecting enterprise systems, API design, JSON Schema, ArchiMate modelling, BE/FE specs. Bridging business requirements and implementation.</p>
-        </article>
-
-        <article class="card do-card tone-red">
-          <span class="num">04</span>
-          <h3>Consulting for manufacturing SMEs</h3>
-          <p>Digital transformation, IT strategy, vendor management, management consulting as part of long-term engagements.</p>
-        </article>
-
-        <article class="card do-card tone-purple">
-          <span class="num">05</span>
-          <h3>AI tooling & experiments</h3>
-          <p>Local LLM inference on Apple Silicon, autonomous agent systems built on top of Claude Code.</p>
-        </article>
-      </div>
+      <ol class="index-list">
+        <li class="index-list__row" data-reveal style="--i:0">
+          <span class="index-list__num mono" aria-hidden="true">01</span>
+          <h3 class="index-list__title">Software design &amp;&nbsp;development</h3>
+          <p class="index-list__desc">Python, JavaScript, SQL. Building SaaS products from the data layer up to the UI. Bias toward small, legible, maintainable systems.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:1">
+          <span class="index-list__num mono" aria-hidden="true">02</span>
+          <h3 class="index-list__title">Database design &amp;&nbsp;data integration</h3>
+          <p class="index-list__desc">PostgreSQL and MSSQL. Heavy SQL (CTEs, recursion, deduplication), schema design, migrations, data validation.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:2">
+          <span class="index-list__num mono" aria-hidden="true">03</span>
+          <h3 class="index-list__title">Systems integration &amp;&nbsp;solution architecture</h3>
+          <p class="index-list__desc">Connecting enterprise systems, API design, JSON Schema, ArchiMate modelling, BE/FE specs. Bridging business requirements and implementation.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:3">
+          <span class="index-list__num mono" aria-hidden="true">04</span>
+          <h3 class="index-list__title">Consulting for manufacturing SMEs</h3>
+          <p class="index-list__desc">Digital transformation, IT strategy, vendor management, single-purpose applications, management consulting as part of long-term engagements.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:4">
+          <span class="index-list__num mono" aria-hidden="true">05</span>
+          <h3 class="index-list__title">AI tooling &amp;&nbsp;experiments</h3>
+          <p class="index-list__desc">Local LLM inference on Apple Silicon, autonomous agent systems built on top of Claude Code.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
-  <!-- ============ SECTOR & CLIENTS ============ -->
-  <section id="sector" aria-labelledby="sector-title">
+  <!-- ============ 02 WHO I WORK FOR ============ -->
+  <section id="who-for" class="section" aria-labelledby="who-for-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">02 / Who I work for</span>
-          <h2 id="sector-title">Private sector and public administration</h2>
-        </div>
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">02&nbsp;—&nbsp;Who I work for</span>
+        <h2 id="who-for-title">Private sector and public administration</h2>
       </header>
 
-      <div class="sector">
-        <article class="card sector__card tone-blue">
-          <span class="sector__tag">Private sector · SME</span>
+      <div class="sectors">
+        <article class="sectors__col" data-reveal style="--i:0">
+          <span class="tag mono">Private sector · SME</span>
           <h3>Tailor-made apps and long engagements</h3>
-          <p>I build tailor-made applications for small and medium-sized companies, lead digital transformation efforts, and stay with clients from first analysis through implementation to operations. Mostly long-term relationships.</p>
+          <p>I build tailor-made applications for small and medium-sized companies,
+          lead digital transformation efforts, and stay with clients from first
+          analysis through implementation to operations. Mostly long-term relationships.</p>
         </article>
-
-        <article class="card sector__card tone-red">
-          <span class="sector__tag">Public sector</span>
+        <article class="sectors__col" data-reveal style="--i:1">
+          <span class="tag mono">Public sector</span>
           <h3>Analysis, integration, architecture</h3>
-          <p>Analysis, integration, and architecture of state administration information systems — typically as an external consultant working through established Czech IT integrators.</p>
+          <p>Analysis, integration, and architecture of state administration
+          information systems — typically as an external consultant working
+          through established Czech IT integrators.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" aria-labelledby="projects-title">
+  <!-- ============ 03 PROJECTS ============ -->
+  <section id="projects" class="section section--deck" aria-labelledby="projects-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">03 / Projects</span>
-          <h2 id="projects-title">Public-facing things I build</h2>
-        </div>
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">03&nbsp;—&nbsp;Projects</span>
+        <h2 id="projects-title">Public-facing things I build</h2>
+        <span class="section-head__note mono">scroll — the cards stack</span>
       </header>
+    </div>
 
-      <div class="projects">
-        <article class="project tone-blue">
-          <div class="project__head">
-            <span class="project__name">Assoluto</span>
-            <span class="status is-live">Live</span>
+    <div class="deck">
+      <article class="deck__card" style="--i:0">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Project 01&nbsp;/&nbsp;05</span>
+            <span class="status status--live">●&nbsp;Live</span>
           </div>
-          <p class="project__desc">Open-source customer portal for Czech manufacturing SMEs. Orders, drawings, and production status in one place.</p>
-          <span class="project__tag">SaaS · Open source</span>
-          <div class="project__foot">
-            <span class="project__url">assoluto.eu</span>
+          <h3 class="deck__name">Assoluto</h3>
+          <p class="deck__desc">Open-source customer portal for Czech manufacturing SMEs.
+          Orders, drawings, and production status in one place.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">SaaS&nbsp;·&nbsp;Open source</span>
+            <span class="deck__url">assoluto.eu&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
           <a class="cover" href="https://assoluto.eu" target="_blank" rel="noopener" aria-label="Assoluto — assoluto.eu"></a>
-        </article>
+        </div>
+      </article>
 
-        <article class="project tone-green">
-          <div class="project__head">
-            <span class="project__name">Docházka.net</span>
-            <span class="status is-beta">Beta</span>
+      <article class="deck__card deck__card--alt" style="--i:1">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Project 02&nbsp;/&nbsp;05</span>
+            <span class="status status--beta">◐&nbsp;Beta</span>
           </div>
-          <p class="project__desc">Attendance tracking for Czech SMEs using Jablotron alarm terminals.</p>
-          <span class="project__tag">SaaS</span>
-          <div class="project__foot">
-            <span class="project__url">dochazka.net</span>
+          <h3 class="deck__name">Docházka.net</h3>
+          <p class="deck__desc">Attendance tracking for Czech SMEs using Jablotron
+          alarm terminals.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">SaaS</span>
+            <span class="deck__url">dochazka.net&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
-          <a class="cover" href="https://dochazka.net" target="_blank" rel="noopener" aria-label="dochazka.net"></a>
-        </article>
+          <a class="cover" href="https://dochazka.net" target="_blank" rel="noopener" aria-label="Docházka.net — dochazka.net"></a>
+        </div>
+      </article>
 
-        <article class="project tone-red">
-          <div class="project__head">
-            <span class="project__name">DissConnect</span>
-            <span class="status is-live">Live</span>
+      <article class="deck__card" style="--i:2">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Project 03&nbsp;/&nbsp;05</span>
+            <span class="status status--live">●&nbsp;Live</span>
           </div>
-          <p class="project__desc">An AI tool that turns a boring corporate LinkedIn profile into a brutal AI-generated diss track. Office prank, $1.99.</p>
-          <span class="project__tag">Side project · AI</span>
-          <div class="project__foot">
-            <span class="project__url">dissconnect.lol</span>
+          <h3 class="deck__name">DissConnect</h3>
+          <p class="deck__desc">An AI tool that turns a boring corporate LinkedIn profile
+          into a brutal diss track. Office prank, $1.99.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">Side project&nbsp;·&nbsp;AI</span>
+            <span class="deck__url">dissconnect.lol&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
           <a class="cover" href="https://dissconnect.lol" target="_blank" rel="noopener" aria-label="DissConnect — dissconnect.lol"></a>
-        </article>
+        </div>
+      </article>
 
-        <article class="project tone-yellow">
-          <div class="project__head">
-            <span class="project__name">Geodaily</span>
-            <span class="status is-live">Live</span>
+      <article class="deck__card deck__card--alt" style="--i:3">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Project 04&nbsp;/&nbsp;05</span>
+            <span class="status status--live">●&nbsp;Live</span>
           </div>
-          <p class="project__desc">AI-generated daily geopolitics newsletter.</p>
-          <span class="project__tag">Newsletter · AI</span>
-          <div class="project__foot">
-            <span class="project__url">buttondown.com/geodaily</span>
+          <h3 class="deck__name">Geodaily</h3>
+          <p class="deck__desc">AI-generated daily geopolitics newsletter.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">Newsletter&nbsp;·&nbsp;AI</span>
+            <span class="deck__url">buttondown.com/geodaily&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
-          <a class="cover" href="https://buttondown.com/geodaily" target="_blank" rel="noopener" aria-label="Geodaily newsletter"></a>
-        </article>
+          <a class="cover" href="https://buttondown.com/geodaily" target="_blank" rel="noopener" aria-label="Geodaily — buttondown.com/geodaily"></a>
+        </div>
+      </article>
 
-        <article class="project tone-purple">
-          <div class="project__head">
-            <span class="project__name">Genesis Factory</span>
-            <span class="status is-wip">WIP</span>
+      <article class="deck__card deck__card--ink" style="--i:4">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Project 05&nbsp;/&nbsp;05</span>
+            <span class="status status--wip">○&nbsp;WIP</span>
           </div>
-          <p class="project__desc">Autonomous software development agent system built on top of Claude Code.</p>
-          <span class="project__tag">Open source · Tooling</span>
-          <div class="project__foot">
-            <span class="project__url">github.com/eLh0m3r0/Genesis-Factory</span>
+          <h3 class="deck__name">Genesis Factory</h3>
+          <p class="deck__desc">Autonomous software development agent system built
+          on top of Claude Code.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">Open source&nbsp;·&nbsp;Tooling</span>
+            <span class="deck__url">github.com/eLh0m3r0/Genesis-Factory&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
           <a class="cover" href="https://github.com/eLh0m3r0/Genesis-Factory" target="_blank" rel="noopener" aria-label="Genesis Factory on GitHub"></a>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" aria-labelledby="about-title">
+  <!-- ============ 04 ABOUT ============ -->
+  <section id="about" class="section" aria-labelledby="about-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">04 / About</span>
-          <h2 id="about-title">Profile, education, work history</h2>
-        </div>
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">04&nbsp;—&nbsp;About</span>
+        <h2 id="about-title">Profile, education, work history</h2>
       </header>
 
-      <div class="about-grid">
-        <div class="about-meta">
-          <h3>Education</h3>
-          <dl>
-            <dt>2017–2019</dt>
-            <dd><strong>Ing.</strong> (M.Sc.), Project Management (programme: <em>Systems Engineering and Informatics</em>). Thesis: agile project management methods in audit engagements.</dd>
-            <dt>2014–2017</dt>
-            <dd><strong>Bc.</strong>, Systems Engineering. Thesis: cloud computing in the SME sector.</dd>
-          </dl>
+      <div class="about">
+        <div class="about__side">
+          <figure class="photo" data-reveal>
+            <img src="../assets/photo-dog-720.jpeg"
+                 alt="Václav out in the woods with his dog Kvido, a Boston terrier."
+                 width="720" height="879" loading="lazy" />
+            <figcaption class="mono">Václav &amp;&nbsp;Kvido, a&nbsp;Boston terrier</figcaption>
+          </figure>
 
-          <h3>Certifications</h3>
-          <dl>
-            <dt>2024</dt>
-            <dd>ArchiMate 3 — Practitioner (Level 2)</dd>
-          </dl>
-
-          <h3>Languages</h3>
-          <dl>
-            <dt>CS</dt><dd>Native speaker</dd>
-            <dt>EN</dt><dd>Full working proficiency</dd>
-            <dt>FR</dt><dd>Limited working</dd>
-            <dt>DE</dt><dd>Beginner</dd>
-          </dl>
+          <div class="about-meta" data-reveal>
+            <h3 class="mono">Education</h3>
+            <dl>
+              <dt class="mono">2017–2019</dt>
+              <dd><strong>Ing.</strong> (M.Sc.), Project Management (programme: <em>Systems Engineering and Informatics</em>). Thesis: agile project management methods in audit engagements.</dd>
+              <dt class="mono">2014–2017</dt>
+              <dd><strong>Bc.</strong>, Systems Engineering. Thesis: cloud computing in the SME sector.</dd>
+            </dl>
+            <h3 class="mono">Certifications</h3>
+            <dl>
+              <dt class="mono">2024</dt>
+              <dd>ArchiMate&nbsp;3 — Practitioner (Level&nbsp;2)</dd>
+            </dl>
+            <h3 class="mono">Languages</h3>
+            <dl>
+              <dt class="mono">CS</dt><dd>Native speaker</dd>
+              <dt class="mono">EN</dt><dd>Full working proficiency</dd>
+              <dt class="mono">FR</dt><dd>Limited working</dd>
+              <dt class="mono">DE</dt><dd>Beginner</dd>
+            </dl>
+          </div>
         </div>
 
-        <ol class="timeline" aria-label="Work history">
-          <li class="is-current">
-            <span class="tl__period">10/2024 → present</span>
-            <p class="tl__role">IT Analyst / Solution Architect</p>
-            <p class="tl__via"><span class="label">via</span>Aricoma</p>
+        <div class="timeline" data-timeline>
+          <span class="timeline__rail" aria-hidden="true"></span>
+          <span class="timeline__line" aria-hidden="true"></span>
+          <ol class="timeline__list" aria-label="Work history">
+          <li class="is-current" data-reveal style="--i:0">
+            <span class="tl__period mono">10/2024&nbsp;→&nbsp;present</span>
+            <p class="tl__role">IT Analyst&nbsp;/ Solution Architect</p>
+            <p class="tl__via mono"><span class="label">via</span>Aricoma</p>
             <p class="tl__desc">Public-sector projects — analysis and architecture of state administration information systems.</p>
           </li>
-          <li>
-            <span class="tl__period">02/2023 → 10/2024</span>
-            <p class="tl__role">IT Analyst / Solution Architect</p>
-            <p class="tl__via"><span class="label">via</span>European Code Factory</p>
+          <li data-reveal style="--i:1">
+            <span class="tl__period mono">02/2023&nbsp;→&nbsp;10/2024</span>
+            <p class="tl__role">IT Analyst&nbsp;/ Solution Architect</p>
+            <p class="tl__via mono"><span class="label">via</span>European Code Factory</p>
             <p class="tl__desc">Public and private sector projects — analysis, integration.</p>
           </li>
-          <li>
-            <span class="tl__period">04/2021 → 01/2023</span>
+          <li data-reveal style="--i:2">
+            <span class="tl__period mono">04/2021&nbsp;→&nbsp;01/2023</span>
             <p class="tl__role">Digital Transformation Lead, interim CEO</p>
-            <p class="tl__via"><span class="label">via</span>in-house</p>
+            <p class="tl__via mono"><span class="label">via</span>in-house</p>
             <p class="tl__desc">Led digital transformation and IT strategy at a manufacturing group in northern Bohemia. ERP/CRM rollout, vendor management.</p>
           </li>
-          <li>
-            <span class="tl__period">11/2017 → 12/2020</span>
+          <li data-reveal style="--i:3">
+            <span class="tl__period mono">11/2017&nbsp;→&nbsp;12/2020</span>
             <p class="tl__role">Consultant, Senior Analyst</p>
-            <p class="tl__via"><span class="label">via</span>Deloitte CE</p>
+            <p class="tl__via mono"><span class="label">via</span>Deloitte CE</p>
             <p class="tl__desc">Banking and regulatory sector — analysis, RPA Center of Excellence, IT risk assessment.</p>
           </li>
-          <li class="is-current">
-            <span class="tl__period">06/2014 → present</span>
+          <li class="is-current" data-reveal style="--i:4">
+            <span class="tl__period mono">06/2014&nbsp;→&nbsp;present</span>
             <p class="tl__role">Independent IT consultant</p>
-            <p class="tl__via"><span class="label">via</span>self-employed</p>
+            <p class="tl__via mono"><span class="label">via</span>self-employed</p>
             <p class="tl__desc">Tailor-made solutions for SMEs — development, implementation, long-term engagements.</p>
           </li>
-        </ol>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" aria-labelledby="contact-title">
+  <!-- ============ 05 CONTACT ============ -->
+  <section id="contact" class="section section--ink" aria-labelledby="contact-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">05 / Contact</span>
-          <h2 id="contact-title">Drop me a line</h2>
-        </div>
-      </header>
+      <span class="contact__index mono" data-reveal><span class="ast" aria-hidden="true">✳</span>&nbsp;05&nbsp;—&nbsp;Contact</span>
+      <h2 id="contact-title" class="contact__title" data-reveal>Say&nbsp;hello.</h2>
 
-      <div class="contact">
-        <a class="contact__card" href="mailto:hello@vaclavmudra.com" data-email>
-          <span class="contact__label">Email</span>
-          <span class="contact__value" data-email-text>hello@vaclavmudra.com</span>
-        </a>
-        <a class="contact__card" href="https://cz.linkedin.com/in/vmudra" target="_blank" rel="noopener">
-          <span class="contact__label">LinkedIn</span>
-          <span class="contact__value">linkedin.com/in/vmudra</span>
-        </a>
-        <a class="contact__card" href="https://github.com/eLh0m3r0" target="_blank" rel="noopener">
-          <span class="contact__label">GitHub</span>
-          <span class="contact__value">github.com/eLh0m3r0</span>
-        </a>
+      <a class="contact__email" href="mailto:hello@vaclavmudra.com" data-email data-email-copied="copied · opening mail…" data-reveal>
+        <span data-email-text>hello@vaclavmudra.com</span>
+      </a>
+
+      <div class="contact__links mono" data-reveal>
+        <a href="https://cz.linkedin.com/in/vmudra" target="_blank" rel="noopener">LinkedIn&nbsp;<span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/eLh0m3r0" target="_blank" rel="noopener">GitHub&nbsp;<span aria-hidden="true">↗</span></a>
+        <span class="contact__loc">Prague, CZ</span>
       </div>
+
+      <footer class="footer mono">
+        <span>©&nbsp;2026 Václav Mudra</span>
+        <span>Built static. No trackers. Type: Archivo&nbsp;&amp;&nbsp;Instrument&nbsp;Sans. <a class="u-link" href="/old/en/">v4&nbsp;archive</a> · <a class="u-link" href="/" lang="cs" hreflang="cs">Česky</a></span>
+      </footer>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container site-footer__inner">
-    <span>© 2026 Václav Mudra</span>
-    <span>Built static. No trackers. <a href="/" lang="cs" hreflang="cs">Česká verze</a></span>
-  </div>
-</footer>
+<button class="topstar" type="button" aria-label="Back to top" data-topstar>
+  <span aria-hidden="true">✳</span>
+</button>
 
 <script src="../main.js" defer></script>
 </body>

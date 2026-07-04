@@ -23,10 +23,12 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+
+  <link rel="preload" href="fonts/archivo-normal-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/archivo-normal-100-900-latin-ext.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/instrument-sans-normal-400-700-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- JSON-LD: Person -->
   <script type="application/ld+json">
@@ -52,19 +54,18 @@
 </head>
 <body>
 
+<a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="brand" href="#top" aria-label="Václav Mudra">
-      <span class="brand__mark" aria-hidden="true">VM</span>
-      <span class="brand__name">Václav Mudra</span>
-    </a>
+    <a class="wordmark" href="#top" aria-label="Václav Mudra — nahoru"><span class="ast" aria-hidden="true">✳</span>Václav Mudra</a>
     <nav class="nav" aria-label="Hlavní navigace">
       <ul class="nav__list">
-        <li><a class="nav__link" href="#what">Co dělám</a></li>
-        <li><a class="nav__link" href="#sector">Pro koho pracuji</a></li>
-        <li><a class="nav__link" href="#projects">Projekty</a></li>
-        <li><a class="nav__link" href="#about">O mně</a></li>
-        <li><a class="nav__link" href="#contact">Kontakt</a></li>
+        <li><a href="#co-delam">Co dělám</a></li>
+        <li><a href="#pro-koho">Pro koho</a></li>
+        <li><a href="#projekty">Projekty</a></li>
+        <li><a href="#o-mne">O mně</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
       <div class="lang" role="group" aria-label="Jazyk">
         <a href="/" class="is-active" lang="cs" hreflang="cs" aria-current="page">CS</a>
@@ -74,294 +75,341 @@
   </div>
 </header>
 
-<main id="top">
+<main id="obsah">
 
   <!-- ============ HERO ============ -->
-  <section class="hero" aria-labelledby="hero-name">
-    <div class="container hero__grid">
-      <div>
-        <span class="eyebrow">Praha · Czech Republic</span>
-        <h1 class="hero__name" id="hero-name">Václav Mudra</h1>
-        <p class="hero__role">
-          <span>Software Engineer</span><span class="sep">/</span><span>Solution Architect</span>
-        </p>
-        <p class="hero__lede">
-          Pracuji na pomezí soukromého sektoru, veřejné správy a vlastních produktů.
-          Specializuji se na systémovou integraci, databáze a stavbu malých,
-          dobře navržených webových aplikací.
-        </p>
-        <div class="hero__meta">
-          <span class="status is-live">Otevřený ke spolupráci</span>
-        </div>
+  <section class="hero" id="top" aria-labelledby="hero-name">
+    <div class="container">
+      <div class="hero__meta mono" aria-hidden="true">
+        <span>Praha, Česko</span>
+        <span>50.0755°&nbsp;N&nbsp;/&nbsp;14.4378°&nbsp;E</span>
       </div>
 
-      <div class="hero__photo-wrap">
-        <figure class="hero__photo">
-          <img
-            src="assets/photo-dog.jpeg"
-            alt="Václav venku v lese, po boku jeho pes Kvido, bostonský terriér."
-            width="820" height="1024" />
-          <figcaption class="hero__photo-caption">Václav & Kvido</figcaption>
-        </figure>
+      <div class="hero__grid">
+        <div class="hero__main">
+          <h1 class="hero__name" id="hero-name">Václav<br />Mudra<span class="ast" aria-hidden="true">✳</span></h1>
+
+          <p class="hero__role mono"><span class="hl">Software Engineer</span>&nbsp;&nbsp;<span class="ast" aria-hidden="true">✳</span>&nbsp;&nbsp;<span class="hl">Solution Architect</span></p>
+
+          <p class="hero__lede">
+            Pracuji na pomezí soukromého sektoru, veřejné správy a&nbsp;vlastních produktů.
+            Specializuji se na systémovou integraci, databáze a&nbsp;stavbu malých,
+            dobře navržených webových aplikací.
+          </p>
+        </div>
+
+        <div class="hero__viz">
+          <canvas data-schematic aria-hidden="true"></canvas>
+          <a class="stamp" href="#kontakt" aria-label="Otevřený ke spolupráci — přejít na kontakt" data-stamp>
+            <svg class="stamp__spin" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <defs>
+                <path id="stamp-circle" d="M 100,22 A 78,78 0 1 1 99.99,22" />
+              </defs>
+              <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="2.5" />
+              <circle cx="100" cy="100" r="58" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <text class="stamp__text">
+                <textPath href="#stamp-circle" textLength="489" lengthAdjust="spacingAndGlyphs">OTEVŘENÝ KE SPOLUPRÁCI&#160;&#160;✳&#160;&#160;VÁCLAV MUDRA&#160;&#160;✳&#160;&#160;</textPath>
+              </text>
+              <text class="stamp__center" x="100" y="100" text-anchor="middle" dominant-baseline="central">✳</text>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHAT I DO ============ -->
-  <section id="what" aria-labelledby="what-title">
+  <!-- ============ MARQUEE BAND ============ -->
+  <!-- Pás A: stack, postupně od datové vrstvy k modelování.
+       Pás B: disciplíny, postupně od analýzy přes architekturu k realizaci — a pro koho. -->
+  <p class="sr-only">Stack: PostgreSQL, MSSQL, SQL (CTE, rekurze), Python, JavaScript, REST API, JSON Schema, ArchiMate. Disciplíny: IT analýza, business analýza, solution architecture, systémová integrace, digitální transformace, SaaS produkty, AI tooling, veřejná správa, výrobní SME.</p>
+  <div class="band" aria-hidden="true">
+    <div class="band__row" data-band="-1">
+      <div class="band__track">
+        <span class="band__seq">
+          <span>PostgreSQL</span><i>✳</i><span>MSSQL</span><i>✳</i><span>SQL&nbsp;·&nbsp;CTE&nbsp;·&nbsp;rekurze</span><i>✳</i><span>Python</span><i>✳</i><span>JavaScript</span><i>✳</i><span>REST&nbsp;API</span><i>✳</i><span>JSON&nbsp;Schema</span><i>✳</i><span>ArchiMate</span><i>✳</i>
+        </span>
+      </div>
+    </div>
+    <div class="band__row band__row--b" data-band="1">
+      <div class="band__track">
+        <span class="band__seq">
+          <span>IT&nbsp;analýza</span><i>✳</i><span>business&nbsp;analýza</span><i>✳</i><span>solution&nbsp;architecture</span><i>✳</i><span>systémová&nbsp;integrace</span><i>✳</i><span>digitální&nbsp;transformace</span><i>✳</i><span>SaaS&nbsp;produkty</span><i>✳</i><span>AI&nbsp;tooling</span><i>✳</i><span>veřejná&nbsp;správa</span><i>✳</i><span>výrobní&nbsp;SME</span><i>✳</i>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ 01 CO DĚLÁM ============ -->
+  <section id="co-delam" class="section" aria-labelledby="co-delam-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">01 / Co dělám</span>
-          <h2 id="what-title">Pět věcí, ve kterých jsem doma</h2>
-        </div>
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">01&nbsp;—&nbsp;Co dělám</span>
+        <h2 id="co-delam-title">Pět věcí, ve&nbsp;kterých jsem doma</h2>
+        <span class="section-head__note mono">rejstřík</span>
       </header>
 
-      <div class="do-grid">
-        <article class="card do-card tone-blue">
-          <span class="num">01</span>
-          <h3>Návrh & vývoj softwaru</h3>
-          <p>Python, JavaScript, SQL. Stavba SaaS produktů od datové vrstvy po UI. Důraz na malé, srozumitelné, udržitelné systémy.</p>
-        </article>
+      <ol class="index-list">
+        <li class="index-list__row" data-reveal style="--i:0">
+          <span class="index-list__num mono" aria-hidden="true">01</span>
+          <h3 class="index-list__title">Návrh &amp;&nbsp;vývoj softwaru</h3>
+          <p class="index-list__desc">Python, JavaScript, SQL. Stavba SaaS produktů od datové vrstvy po&nbsp;UI. Důraz na malé, srozumitelné, udržitelné systémy.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:1">
+          <span class="index-list__num mono" aria-hidden="true">02</span>
+          <h3 class="index-list__title">Databázový design &amp;&nbsp;datová integrace</h3>
+          <p class="index-list__desc">PostgreSQL a&nbsp;MSSQL. Komplexní SQL (CTE, rekurze, deduplikace), návrh schémat, migrace, datová validace.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:2">
+          <span class="index-list__num mono" aria-hidden="true">03</span>
+          <h3 class="index-list__title">Systémová integrace &amp;&nbsp;solution architecture</h3>
+          <p class="index-list__desc">Propojování enterprise systémů, API návrh, JSON schema, ArchiMate modelování, BE/FE specifikace. Mosty mezi business požadavky a&nbsp;implementací.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:3">
+          <span class="index-list__num mono" aria-hidden="true">04</span>
+          <h3 class="index-list__title">Konzultace pro výrobní SME</h3>
+          <p class="index-list__desc">Digitální transformace, IT strategie, vendor management, jednoúčelové aplikace, management consulting v&nbsp;rámci dlouhodobých spoluprací.</p>
+        </li>
+        <li class="index-list__row" data-reveal style="--i:4">
+          <span class="index-list__num mono" aria-hidden="true">05</span>
+          <h3 class="index-list__title">AI tooling &amp;&nbsp;experimenty</h3>
+          <p class="index-list__desc">Lokální LLM inference na Apple Silicon, autonomní agentní systémy postavené nad Claude Code.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-        <article class="card do-card tone-green">
-          <span class="num">02</span>
-          <h3>Databázový design & datová integrace</h3>
-          <p>PostgreSQL a MSSQL. Komplexní SQL (CTE, rekurze, deduplikace), návrh schémat, migrace, datová validace.</p>
-        </article>
+  <!-- ============ 02 PRO KOHO ============ -->
+  <section id="pro-koho" class="section" aria-labelledby="pro-koho-title">
+    <div class="container">
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">02&nbsp;—&nbsp;Pro koho pracuji</span>
+        <h2 id="pro-koho-title">Soukromý sektor i&nbsp;veřejná správa</h2>
+      </header>
 
-        <article class="card do-card tone-yellow">
-          <span class="num">03</span>
-          <h3>Systémová integrace & solution architecture</h3>
-          <p>Propojování enterprise systémů, API návrh, JSON schema, ArchiMate modelování, BE/FE specifikace. Budování mostů mezi business požadavky a implementací.</p>
+      <div class="sectors">
+        <article class="sectors__col" data-reveal style="--i:0">
+          <span class="tag mono"><span class="ast" aria-hidden="true">✳</span>&nbsp;Soukromý sektor · SME</span>
+          <h3>Tailor-made aplikace a&nbsp;dlouhodobé spolupráce</h3>
+          <p>Stavím tailor-made aplikace pro malé a&nbsp;střední firmy, vedu digitální transformaci
+          a&nbsp;doprovázím klienty od první analýzy přes implementaci až po&nbsp;provoz.
+          Typicky dlouhodobé spolupráce.</p>
         </article>
-
-        <article class="card do-card tone-red">
-          <span class="num">04</span>
-          <h3>Konzultace pro výrobní SME</h3>
-          <p>Digitální transformace, IT strategie, vendor management, jednoúčelové aplikace, management consulting v rámci dlouhodobých spoluprací.</p>
-        </article>
-
-        <article class="card do-card tone-purple">
-          <span class="num">05</span>
-          <h3>AI tooling & experimenty</h3>
-          <p>Lokální LLM inference na Apple Silicon, autonomní agentní systémy postavené nad Claude Code.</p>
+        <article class="sectors__col" data-reveal style="--i:1">
+          <span class="tag mono"><span class="ast" aria-hidden="true">✳</span>&nbsp;Veřejná správa</span>
+          <h3>Analýza, integrace a&nbsp;architektura</h3>
+          <p>Analýza, integrace a&nbsp;architektura informačních systémů státní správy —
+          typicky jako externí konzultant ve spolupráci s&nbsp;etablovanými českými
+          IT&nbsp;integrátory.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ SECTOR & CLIENTS ============ -->
-  <section id="sector" aria-labelledby="sector-title">
+  <!-- ============ 03 PROJEKTY ============ -->
+  <section id="projekty" class="section section--deck" aria-labelledby="projekty-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">02 / Pro koho pracuji</span>
-          <h2 id="sector-title">Soukromý sektor i veřejná správa</h2>
-        </div>
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">03&nbsp;—&nbsp;Projekty</span>
+        <h2 id="projekty-title">Veřejně dostupné věci, na&nbsp;kterých dělám</h2>
+        <span class="section-head__note mono">scrollujte — karty se skládají</span>
       </header>
-
-      <div class="sector">
-        <article class="card sector__card tone-blue">
-          <span class="sector__tag">Soukromý sektor · SME</span>
-          <h3>Tailor-made aplikace a dlouhodobé spolupráce</h3>
-          <p>Stavím tailor-made aplikace pro malé a střední firmy, vedu digitální transformaci a doprovázím klienty od první analýzy přes implementaci až po provoz. Typicky dlouhodobé spolupráce.</p>
-        </article>
-
-        <article class="card sector__card tone-red">
-          <span class="sector__tag">Veřejná správa</span>
-          <h3>Analýza, integrace a architektura</h3>
-          <p>Analýza, integrace a architektura informačních systémů státní správy — typicky jako externí konzultant ve spolupráci s etablovanými českými IT integrátory.</p>
-        </article>
-      </div>
     </div>
-  </section>
 
-  <!-- ============ PROJECTS ============ -->
-  <section id="projects" aria-labelledby="projects-title">
-    <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">03 / Projekty</span>
-          <h2 id="projects-title">Veřejně dostupné věci, na kterých dělám</h2>
-        </div>
-      </header>
-
-      <div class="projects">
-        <article class="project tone-blue">
-          <div class="project__head">
-            <span class="project__name">Assoluto</span>
-            <span class="status is-live">Live</span>
+    <div class="deck">
+      <article class="deck__card" style="--i:0">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Projekt 01&nbsp;/&nbsp;05</span>
+            <span class="status status--live">●&nbsp;Live</span>
           </div>
-          <p class="project__desc">Open-source zákaznický portál pro české výrobní firmy. Zakázky, výkresy, stav výroby na jednom místě.</p>
-          <span class="project__tag">SaaS · Open source</span>
-          <div class="project__foot">
-            <span class="project__url">assoluto.eu</span>
+          <h3 class="deck__name">Assoluto</h3>
+          <p class="deck__desc">Open-source zákaznický portál pro české výrobní firmy.
+          Zakázky, výkresy, stav výroby na jednom místě.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">SaaS&nbsp;·&nbsp;Open source</span>
+            <span class="deck__url">assoluto.eu&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
           <a class="cover" href="https://assoluto.eu" target="_blank" rel="noopener" aria-label="Assoluto — assoluto.eu"></a>
-        </article>
+        </div>
+      </article>
 
-        <article class="project tone-green">
-          <div class="project__head">
-            <span class="project__name">Docházka.net</span>
-            <span class="status is-beta">Beta</span>
+      <article class="deck__card deck__card--alt" style="--i:1">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Projekt 02&nbsp;/&nbsp;05</span>
+            <span class="status status--beta">◐&nbsp;Beta</span>
           </div>
-          <p class="project__desc">Evidence docházky pro malé a střední české firmy s využitím Jablotron alarmu jako terminálu.</p>
-          <span class="project__tag">SaaS</span>
-          <div class="project__foot">
-            <span class="project__url">dochazka.net</span>
+          <h3 class="deck__name">Docházka.net</h3>
+          <p class="deck__desc">Evidence docházky pro malé a&nbsp;střední české firmy
+          s&nbsp;využitím Jablotron alarmu jako terminálu.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">SaaS</span>
+            <span class="deck__url">dochazka.net&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
-          <a class="cover" href="https://dochazka.net" target="_blank" rel="noopener" aria-label="dochazka.net"></a>
-        </article>
+          <a class="cover" href="https://dochazka.net" target="_blank" rel="noopener" aria-label="Docházka.net — dochazka.net"></a>
+        </div>
+      </article>
 
-        <article class="project tone-red">
-          <div class="project__head">
-            <span class="project__name">DissConnect</span>
-            <span class="status is-live">Live</span>
+      <article class="deck__card" style="--i:2">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Projekt 03&nbsp;/&nbsp;05</span>
+            <span class="status status--live">●&nbsp;Live</span>
           </div>
-          <p class="project__desc">AI tool, co z nudného korporátního LinkedIn profilu udělá brutální diss track. Žert pro kolegu za $1.99.</p>
-          <span class="project__tag">Side project · AI</span>
-          <div class="project__foot">
-            <span class="project__url">dissconnect.lol</span>
+          <h3 class="deck__name">DissConnect</h3>
+          <p class="deck__desc">AI tool, co z&nbsp;nudného korporátního LinkedIn profilu
+          udělá brutální diss track. Žert pro kolegu za&nbsp;$1.99.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">Side project&nbsp;·&nbsp;AI</span>
+            <span class="deck__url">dissconnect.lol&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
           <a class="cover" href="https://dissconnect.lol" target="_blank" rel="noopener" aria-label="DissConnect — dissconnect.lol"></a>
-        </article>
+        </div>
+      </article>
 
-        <article class="project tone-yellow">
-          <div class="project__head">
-            <span class="project__name">Geodaily</span>
-            <span class="status is-live">Live</span>
+      <article class="deck__card deck__card--alt" style="--i:3">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Projekt 04&nbsp;/&nbsp;05</span>
+            <span class="status status--live">●&nbsp;Live</span>
           </div>
-          <p class="project__desc">AI-generated denní geopolitický newsletter.</p>
-          <span class="project__tag">Newsletter · AI</span>
-          <div class="project__foot">
-            <span class="project__url">buttondown.com/geodaily</span>
+          <h3 class="deck__name">Geodaily</h3>
+          <p class="deck__desc">AI-generated denní geopolitický newsletter.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">Newsletter&nbsp;·&nbsp;AI</span>
+            <span class="deck__url">buttondown.com/geodaily&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
-          <a class="cover" href="https://buttondown.com/geodaily" target="_blank" rel="noopener" aria-label="Geodaily newsletter"></a>
-        </article>
+          <a class="cover" href="https://buttondown.com/geodaily" target="_blank" rel="noopener" aria-label="Geodaily — buttondown.com/geodaily"></a>
+        </div>
+      </article>
 
-        <article class="project tone-purple">
-          <div class="project__head">
-            <span class="project__name">Genesis Factory</span>
-            <span class="status is-wip">WIP</span>
+      <article class="deck__card deck__card--ink" style="--i:4">
+        <div class="container deck__inner">
+          <div class="deck__head mono">
+            <span>Projekt 05&nbsp;/&nbsp;05</span>
+            <span class="status status--wip">○&nbsp;WIP</span>
           </div>
-          <p class="project__desc">Autonomní agentní systém pro vývoj softwaru postavený nad Claude Code.</p>
-          <span class="project__tag">Open source · Tooling</span>
-          <div class="project__foot">
-            <span class="project__url">github.com/eLh0m3r0/Genesis-Factory</span>
+          <h3 class="deck__name">Genesis Factory</h3>
+          <p class="deck__desc">Autonomní agentní systém pro vývoj softwaru
+          postavený nad Claude Code.</p>
+          <div class="deck__foot mono">
+            <span class="deck__tags">Open source&nbsp;·&nbsp;Tooling</span>
+            <span class="deck__url">github.com/eLh0m3r0/Genesis-Factory&nbsp;<span aria-hidden="true">↗</span></span>
           </div>
           <a class="cover" href="https://github.com/eLh0m3r0/Genesis-Factory" target="_blank" rel="noopener" aria-label="Genesis Factory na GitHubu"></a>
-        </article>
-      </div>
+        </div>
+      </article>
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" aria-labelledby="about-title">
+  <!-- ============ 04 O MNĚ ============ -->
+  <section id="o-mne" class="section" aria-labelledby="o-mne-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">04 / O mně</span>
-          <h2 id="about-title">Profil, vzdělání, pracovní historie</h2>
-        </div>
+      <header class="section-head" data-reveal>
+        <span class="section-head__index mono">04&nbsp;—&nbsp;O&nbsp;mně</span>
+        <h2 id="o-mne-title">Profil, vzdělání, pracovní historie</h2>
       </header>
 
-      <div class="about-grid">
-        <div class="about-meta">
-          <h3>Vzdělání</h3>
-          <dl>
-            <dt>2017–2019</dt>
-            <dd><strong>Ing.</strong>, Projektové řízení (program <em>Systémové inženýrství a informatika</em>). DP: agilní metody projektového řízení v auditních zakázkách.</dd>
-            <dt>2014–2017</dt>
-            <dd><strong>Bc.</strong>, Systémové inženýrství. BP: cloud computing v sektoru SME.</dd>
-          </dl>
+      <div class="about">
+        <div class="about__side">
+          <figure class="photo" data-reveal>
+            <img src="assets/photo-dog-720.jpeg"
+                 alt="Václav venku v lese, po boku jeho pes Kvido, bostonský teriér."
+                 width="720" height="879" loading="lazy" />
+            <figcaption class="mono">Václav &amp;&nbsp;Kvido, bostonský teriér</figcaption>
+          </figure>
 
-          <h3>Certifikace</h3>
-          <dl>
-            <dt>2024</dt>
-            <dd>ArchiMate 3 — Practitioner (Level 2)</dd>
-          </dl>
-
-          <h3>Jazyky</h3>
-          <dl>
-            <dt>CS</dt><dd>Rodilý mluvčí</dd>
-            <dt>EN</dt><dd>Plná profesionální znalost</dd>
-            <dt>FR</dt><dd>Omezená znalost</dd>
-            <dt>DE</dt><dd>Začátečník</dd>
-          </dl>
+          <div class="about-meta" data-reveal>
+            <h3 class="mono">Vzdělání</h3>
+            <dl>
+              <dt class="mono">2017–2019</dt>
+              <dd><strong>Ing.</strong>, Projektové řízení (program <em>Systémové inženýrství a&nbsp;informatika</em>). DP: agilní metody projektového řízení v&nbsp;auditních zakázkách.</dd>
+              <dt class="mono">2014–2017</dt>
+              <dd><strong>Bc.</strong>, Systémové inženýrství. BP: cloud computing v&nbsp;sektoru SME.</dd>
+            </dl>
+            <h3 class="mono">Certifikace</h3>
+            <dl>
+              <dt class="mono">2024</dt>
+              <dd>ArchiMate&nbsp;3 — Practitioner (Level&nbsp;2)</dd>
+            </dl>
+            <h3 class="mono">Jazyky</h3>
+            <dl>
+              <dt class="mono">CS</dt><dd>Rodilý mluvčí</dd>
+              <dt class="mono">EN</dt><dd>Plná profesionální znalost</dd>
+              <dt class="mono">FR</dt><dd>Omezená znalost</dd>
+              <dt class="mono">DE</dt><dd>Začátečník</dd>
+            </dl>
+          </div>
         </div>
 
-        <ol class="timeline" aria-label="Pracovní historie">
-          <li class="is-current">
-            <span class="tl__period">10/2024 → dnes</span>
-            <p class="tl__role">IT Analyst / Solution Architect</p>
-            <p class="tl__via"><span class="label">přes</span>Aricoma</p>
-            <p class="tl__desc">Projekty pro veřejný sektor — analýza a architektura informačních systémů státní správy.</p>
+        <div class="timeline" data-timeline>
+          <span class="timeline__rail" aria-hidden="true"></span>
+          <span class="timeline__line" aria-hidden="true"></span>
+          <ol class="timeline__list" aria-label="Pracovní historie">
+          <li class="is-current" data-reveal style="--i:0">
+            <span class="tl__period mono">10/2024&nbsp;→&nbsp;dnes</span>
+            <p class="tl__role">IT Analyst&nbsp;/ Solution Architect</p>
+            <p class="tl__via mono"><span class="label">přes</span>Aricoma</p>
+            <p class="tl__desc">Projekty pro veřejný sektor — analýza a&nbsp;architektura informačních systémů státní správy.</p>
           </li>
-          <li>
-            <span class="tl__period">02/2023 → 10/2024</span>
-            <p class="tl__role">IT Analyst / Solution Architect</p>
-            <p class="tl__via"><span class="label">přes</span>European Code Factory</p>
-            <p class="tl__desc">Projekty pro veřejný i soukromý sektor — analýza, integrace.</p>
+          <li data-reveal style="--i:1">
+            <span class="tl__period mono">02/2023&nbsp;→&nbsp;10/2024</span>
+            <p class="tl__role">IT Analyst&nbsp;/ Solution Architect</p>
+            <p class="tl__via mono"><span class="label">přes</span>European Code Factory</p>
+            <p class="tl__desc">Projekty pro veřejný i&nbsp;soukromý sektor — analýza, integrace.</p>
           </li>
-          <li>
-            <span class="tl__period">04/2021 → 01/2023</span>
+          <li data-reveal style="--i:2">
+            <span class="tl__period mono">04/2021&nbsp;→&nbsp;01/2023</span>
             <p class="tl__role">Digital Transformation Lead, interim CEO</p>
-            <p class="tl__via"><span class="label">přes</span>in-house</p>
-            <p class="tl__desc">Vedení digitální transformace a IT strategie ve výrobní skupině v severních Čechách. ERP/CRM implementace, vendor management.</p>
+            <p class="tl__via mono"><span class="label">přes</span>in-house</p>
+            <p class="tl__desc">Vedení digitální transformace a&nbsp;IT strategie ve výrobní skupině v&nbsp;severních Čechách. ERP/CRM implementace, vendor management.</p>
           </li>
-          <li>
-            <span class="tl__period">11/2017 → 12/2020</span>
+          <li data-reveal style="--i:3">
+            <span class="tl__period mono">11/2017&nbsp;→&nbsp;12/2020</span>
             <p class="tl__role">Consultant, Senior Analyst</p>
-            <p class="tl__via"><span class="label">přes</span>Deloitte CE</p>
-            <p class="tl__desc">Bankovní a regulátorní sektor — analýza, RPA Center of Excellence, IT risk assessment.</p>
+            <p class="tl__via mono"><span class="label">přes</span>Deloitte CE</p>
+            <p class="tl__desc">Bankovní a&nbsp;regulátorní sektor — analýza, RPA Center of Excellence, IT risk assessment.</p>
           </li>
-          <li class="is-current">
-            <span class="tl__period">06/2014 → dnes</span>
+          <li class="is-current" data-reveal style="--i:4">
+            <span class="tl__period mono">06/2014&nbsp;→&nbsp;dnes</span>
             <p class="tl__role">IT konzultant na volné noze</p>
-            <p class="tl__via"><span class="label">přes</span>vlastní</p>
+            <p class="tl__via mono"><span class="label">přes</span>vlastní</p>
             <p class="tl__desc">Tailor-made řešení pro SME — vývoj, implementace, dlouhodobé spolupráce.</p>
           </li>
-        </ol>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTACT ============ -->
-  <section id="contact" aria-labelledby="contact-title">
+  <!-- ============ 05 KONTAKT ============ -->
+  <section id="kontakt" class="section section--ink" aria-labelledby="kontakt-title">
     <div class="container">
-      <header class="section-head">
-        <div>
-          <span class="section-head__index">05 / Kontakt</span>
-          <h2 id="contact-title">Ozvěte se</h2>
-        </div>
-      </header>
+      <span class="contact__index mono" data-reveal><span class="ast" aria-hidden="true">✳</span>&nbsp;05&nbsp;—&nbsp;Kontakt</span>
+      <h2 id="kontakt-title" class="contact__title" data-reveal>Ozvěte&nbsp;se.</h2>
 
-      <div class="contact">
-        <a class="contact__card" href="mailto:hello@vaclavmudra.com" data-email>
-          <span class="contact__label">Email</span>
-          <span class="contact__value" data-email-text>hello@vaclavmudra.com</span>
-        </a>
-        <a class="contact__card" href="https://cz.linkedin.com/in/vmudra" target="_blank" rel="noopener">
-          <span class="contact__label">LinkedIn</span>
-          <span class="contact__value">linkedin.com/in/vmudra</span>
-        </a>
-        <a class="contact__card" href="https://github.com/eLh0m3r0" target="_blank" rel="noopener">
-          <span class="contact__label">GitHub</span>
-          <span class="contact__value">github.com/eLh0m3r0</span>
-        </a>
+      <a class="contact__email" href="mailto:hello@vaclavmudra.com" data-email data-reveal>
+        <span data-email-text>hello@vaclavmudra.com</span>
+      </a>
+
+      <div class="contact__links mono" data-reveal>
+        <a href="https://cz.linkedin.com/in/vmudra" target="_blank" rel="noopener">LinkedIn&nbsp;<span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/eLh0m3r0" target="_blank" rel="noopener">GitHub&nbsp;<span aria-hidden="true">↗</span></a>
+        <span class="contact__loc">Praha, CZ</span>
       </div>
+
+      <footer class="footer mono">
+        <span>©&nbsp;2026 Václav Mudra</span>
+        <span>Statické HTML. Žádné trackery. Sazba: Archivo&nbsp;&amp;&nbsp;Instrument&nbsp;Sans. <a class="u-link" href="/old/">Archiv&nbsp;v4</a> · <a class="u-link" href="/en/" lang="en" hreflang="en">English</a></span>
+      </footer>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="container site-footer__inner">
-    <span>© 2026 Václav Mudra</span>
-    <span>Built static. No trackers. <a href="/en/" lang="en" hreflang="en">English version</a></span>
-  </div>
-</footer>
+<button class="topstar" type="button" aria-label="Zpět nahoru" data-topstar>
+  <span aria-hidden="true">✳</span>
+</button>
 
 <script src="main.js" defer></script>
 </body>

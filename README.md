@@ -1,46 +1,55 @@
 # vaclavmudra.com
 
-Static personal site. Plain HTML + CSS + a sprinkle of vanilla JS. No build step.
+Static personal site. Plain HTML + CSS + vanilla JS. No build step, no external
+requests, no trackers.
+
+Design: **v5.1 „Modrotisk"** — bright technical look (cool white, ink, cobalt,
+acid). Scroll choreography (marquee bands, sticky project deck, self-drawing
+timeline) plus an animated canvas system schematic in the hero. Full
+`prefers-reduced-motion` fallback.
 
 ## Structure
 
 ```
 /
-├── index.html          # CS (root, primary)
-├── en/index.html       # EN
-├── styles.css          # Shared CSS (Raycast-inspired dark mode)
-├── main.js             # Smooth scroll + email click-to-copy
+├── index.html            # CS (root, primary)
+├── en/index.html         # EN
+├── styles.css            # Shared CSS
+├── main.js               # Scroll choreography + canvas schematic (~12 kB, no libs)
+├── fonts/                # Self-hosted woff2 (Archivo, Instrument Sans, Spline Sans Mono)
+├── old/                  # Archived v4 (Raycast-inspired dark), noindex
+│   ├── index.html        #   CS
+│   ├── en/index.html     #   EN
+│   ├── styles.css
+│   └── main.js
 ├── robots.txt
 ├── sitemap.xml
-└── assets/
-    ├── photo-dog.jpeg  # Hero photo (dog)
-    ├── prod-meme.png   # "Real men test in production" easter egg
-    ├── favicon.svg
-    └── fonts/          # (optional) drop Inter-Variable.woff2 + GeistMono here
+├── assets/
+│   ├── photo-dog-720.jpeg  # About photo (compressed)
+│   ├── photo-dog.jpeg      # Original (used by /old)
+│   ├── og-image.png        # 1200×630 social preview
+│   └── favicon.svg
+└── uploads/              # Design briefs & source material
 ```
 
 ## Fonts
 
-The CSS is wired to use **Inter** (sans) and **GeistMono** (mono). To self-host,
-drop `Inter-Variable.woff2` and `GeistMono-Variable.woff2` into `assets/fonts/`
-and uncomment the `@font-face` block at the top of `styles.css`. Until you do,
-the page falls back gracefully to the system sans/mono stack.
+Self-hosted variable woff2, latin + latin-ext subsets:
 
-No Google Fonts CDN — per the brief.
+- **Archivo** (display; wdth axis) — headings, project names
+- **Instrument Sans** — body copy
+- **Spline Sans Mono** — labels, nav, metadata
+
+No Google Fonts CDN — the "no trackers" line in the footer is meant literally.
 
 ## Deployment
 
-Pick one — all three deploy from a `git push`:
-
-- **Cloudflare Pages** — connect the repo, build command empty, output directory `/`.
-- **Netlify** — drop the folder in, or connect the repo with `publish = "."` and no build.
-- **GitHub Pages** — push to a repo, enable Pages from the root of `main`.
-
-Set up the apex `vaclavmudra.com` (and `www` redirect) in the host's DNS panel.
+GitHub Pages from the root of `main`. Push to deploy. `CNAME` handles the apex
+domain.
 
 ## Adding a CV / phone
 
-Phone is intentionally not on the site (per the brief). Keep it on the CV and on LinkedIn.
+Phone is intentionally not on the site. Keep it on the CV and on LinkedIn.
 
 ## License
 
