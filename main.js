@@ -70,8 +70,11 @@
     { x: 0.86, y: 0.18, w: 0.17, h: 0.13, label: 'ERP' },
     { x: 0.10, y: 0.74, w: 0.17, h: 0.13, label: 'DB' },
     /* SaaS byl na 0.88/0.72, kam přes něj sedá razítko — na 1440 px ho
-       překrývalo z 95 % a uzel byl nečitelný. Posun mimo pravý dolní roh. */
-    { x: 0.87, y: 0.40, w: 0.17, h: 0.13, label: 'SaaS' },
+       překrývalo z 95 % a uzel byl nečitelný. Posunut mimo pravý dolní
+       roh, ale dost nízko, aby nesplynul s ERP: rozestup uzlů je jinde
+       ~0.20 šířky plátna a tenhle drží 0.185. Níž už nemůže, tam začíná
+       razítko (spodek boxu i s pasovacím křížkem musí zůstat nad 0.67). */
+    { x: 0.87, y: 0.55, w: 0.17, h: 0.13, label: 'SaaS' },
     { x: 0.52, y: 0.88, w: 0.19, h: 0.13, label: 'LLM', acid: true }
   ];
   var EDGES = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];
