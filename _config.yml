@@ -1,0 +1,19 @@
+# GitHub Pages (Jekyll) — co se NEMÁ publikovat na doménu.
+#
+# Repozitář obsahuje i věci, které patří do verzování, ale ne na web:
+# projektovou dokumentaci a zdrojové zadání. Bez tohohle výčtu je Jekyll
+# zkopíruje do výstupu a jsou volně stažitelné na vaclavmudra.com/<soubor>.
+#
+# uploads/ je tu záměrně: zadání v něm obsahuje telefonní číslo, které podle
+# tvého vlastního briefu na web nepatří ("defaultně NEZOBRAZUJ na webu,
+# patří do CV"). Smazat je z Gitu nemusíš, jen se přestanou servírovat.
+exclude:
+  - README.md
+  - PRODUCT.md
+  - DESIGN.md
+  - uploads/
+  - .impeccable/
+  - .gitignore
+
+# Web je ručně psané statické HTML — Jekyll nemá nic generovat ani přepisovat.
+plugins: []

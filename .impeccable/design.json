@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-26T14:14:43Z",
+  "title": "Design System: vaclavmudra.com",
+  "extensions": {
+    "colorMeta": {
+      "cool-white": {
+        "role": "neutral",
+        "displayName": "Cool White",
+        "canonical": "oklch(97% 0.003 165)",
+        "purpose": "Base surface, and the text color on inverted ink surfaces. Deliberately not pure white — green-tinted cold white so ink and cobalt read as printed rather than screen-lit.",
+        "tonalRamp": [
+          "oklch(15% 0.003 165)",
+          "oklch(26% 0.003 165)",
+          "oklch(37% 0.003 165)",
+          "oklch(48% 0.003 165)",
+          "oklch(58% 0.003 165)",
+          "oklch(69% 0.003 165)",
+          "oklch(80% 0.003 165)",
+          "oklch(95% 0.003 165)"
+        ]
+      },
+      "cool-white-shade": {
+        "role": "neutral",
+        "displayName": "Cool White Shade",
+        "canonical": "oklch(94% 0.003 160)",
+        "purpose": "Alternating surface, used only to separate adjacent project cards in the sticky stack.",
+        "tonalRamp": [
+          "oklch(15% 0.003 160)",
+          "oklch(26% 0.003 160)",
+          "oklch(37% 0.003 160)",
+          "oklch(48% 0.003 160)",
+          "oklch(58% 0.003 160)",
+          "oklch(69% 0.003 160)",
+          "oklch(80% 0.003 160)",
+          "oklch(95% 0.003 160)"
+        ]
+      },
+      "cool-ink": {
+        "role": "neutral",
+        "displayName": "Cool Ink",
+        "canonical": "oklch(19% 0.005 165)",
+        "purpose": "Body text, full-strength hairlines, and the two inverted block surfaces (final project card, contact section).",
+        "tonalRamp": [
+          "oklch(15% 0.005 165)",
+          "oklch(26% 0.005 165)",
+          "oklch(37% 0.005 165)",
+          "oklch(48% 0.005 165)",
+          "oklch(58% 0.005 165)",
+          "oklch(69% 0.005 165)",
+          "oklch(80% 0.005 165)",
+          "oklch(95% 0.005 165)"
+        ]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "oklch(44% 0.008 165)",
+        "purpose": "Secondary and descriptive copy — ledes, list descriptions, timeline detail.",
+        "tonalRamp": [
+          "oklch(15% 0.008 165)",
+          "oklch(26% 0.008 165)",
+          "oklch(37% 0.008 165)",
+          "oklch(48% 0.008 165)",
+          "oklch(58% 0.008 165)",
+          "oklch(69% 0.008 165)",
+          "oklch(80% 0.008 165)",
+          "oklch(95% 0.008 165)"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "oklch(52% 0.010 165)",
+        "purpose": "Metadata that should recede — row numbers, section glosses, period labels, the inactive language chip, registration crosses. Measures 4.62:1 on cool white, clearing AA at the 11–12px sizes it is used at. Was #7f8985 (3.35:1) until the July 2026 pass, where it failed the project's own standard while carrying work-history dates and certification years. Recession is the lightest legible step, not an illegible one.",
+        "tonalRamp": [
+          "oklch(15% 0.010 165)",
+          "oklch(26% 0.010 165)",
+          "oklch(37% 0.010 165)",
+          "oklch(48% 0.010 165)",
+          "oklch(58% 0.010 165)",
+          "oklch(69% 0.010 165)",
+          "oklch(80% 0.010 165)",
+          "oklch(95% 0.010 165)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "rgba(16, 20, 19, 0.13)",
+        "purpose": "The 64px drafting grid and dividers internal to a section. An alpha token over the base surface — no tonal ramp applies.",
+        "note": "Alpha-over-surface token; use cool-ink's ramp for solid equivalents."
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "rgba(16, 20, 19, 0.38)",
+        "purpose": "Structural rules — between sections, under section heads, between the two sector columns.",
+        "note": "Alpha-over-surface token; use cool-ink's ramp for solid equivalents."
+      },
+      "electric-cobalt": {
+        "role": "primary",
+        "displayName": "Electric Cobalt",
+        "canonical": "oklch(51% 0.24 267)",
+        "purpose": "The line weight of a technical drawing. Structure: section indices, the asterisk mark, schematic edges and pulses, the availability stamp, the timeline rail, growing nav underlines, the photo's offset overprint, focus rings on light grounds.",
+        "tonalRamp": [
+          "oklch(15% 0.24 267)",
+          "oklch(26% 0.24 267)",
+          "oklch(37% 0.24 267)",
+          "oklch(48% 0.24 267)",
+          "oklch(58% 0.24 267)",
+          "oklch(69% 0.24 267)",
+          "oklch(80% 0.24 267)",
+          "oklch(95% 0.24 267)"
+        ]
+      },
+      "cobalt-deep": {
+        "role": "primary",
+        "displayName": "Cobalt Deep",
+        "canonical": "oklch(42% 0.21 267)",
+        "purpose": "Hover state for cobalt objects only. No independent role.",
+        "tonalRamp": [
+          "oklch(15% 0.21 267)",
+          "oklch(26% 0.21 267)",
+          "oklch(37% 0.21 267)",
+          "oklch(48% 0.21 267)",
+          "oklch(58% 0.21 267)",
+          "oklch(69% 0.21 267)",
+          "oklch(80% 0.21 267)",
+          "oklch(95% 0.21 267)"
+        ]
+      },
+      "acid-green": {
+        "role": "secondary",
+        "displayName": "Acid Green",
+        "canonical": "oklch(94% 0.20 118)",
+        "purpose": "The highlighter. Pulse: sector tags, LIVE status, hero role words, photo caption, active language chip, the second marquee band, ::selection, contact underline, current timeline markers, the LLM node. Used as a ground beneath ink text, not as text.",
+        "tonalRamp": [
+          "oklch(15% 0.20 118)",
+          "oklch(26% 0.20 118)",
+          "oklch(37% 0.20 118)",
+          "oklch(48% 0.20 118)",
+          "oklch(58% 0.20 118)",
+          "oklch(69% 0.20 118)",
+          "oklch(80% 0.20 118)",
+          "oklch(95% 0.20 118)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The hero name, two lines in a single left-aligned block, uppercase. Its close relative at 680 weight / wdth 112% and clamp(44px, 8vw, 112px) is the contact heading."
+      },
+      "display-contact": {
+        "displayName": "Display Contact",
+        "purpose": "The contact heading (\"OZVĚTE SE.\"), uppercase. The largest type on the page and the page's end frame — heavier and wider than the hero name at wdth 112%."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Project names on the deck cards. Mixed case, not uppercase — these are proper nouns and read as marks."
+      },
+      "address": {
+        "displayName": "Address",
+        "purpose": "The contact e-mail. Archivo at 500 weight and wdth 100% — lighter and narrower than any other display use, because it is an address rather than a headline."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Section headings. Always paired with a cobalt mono index to the left and a hairline beneath."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Competency row titles, sector column headings, timeline roles (fixed 19px at line-height 1.3)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy at 17px/1.65. Measure capped per block: 52–58ch descriptions, ~56ch ledes, ~22ch display-set headings."
+      },
+      "body-lede": {
+        "displayName": "Body Lede",
+        "purpose": "The hero summary paragraph and other opening copy, one step up from body."
+      },
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Descriptive copy inside dense structures — register descriptions, timeline detail, definition lists."
+      },
+      "role": {
+        "displayName": "Role",
+        "purpose": "Timeline job titles at a fixed 19px — Archivo at wdth 105%, the smallest display use on the page."
+      },
+      "body-meta": {
+        "displayName": "Body Meta",
+        "purpose": "Definition-list values in the About sidebar at 15px: education, certification, languages."
+      },
+      "glyph": {
+        "displayName": "Glyph",
+        "purpose": "The scroll-progress asterisk at 24px. A glyph size, not a text step."
+      },
+      "glyph-lg": {
+        "displayName": "Glyph Large",
+        "purpose": "The stamp's centre asterisk at 44px inside the SVG. A glyph size, not a text step."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The .mono utility. Every index, tag, URL, status, period and nav item. Variants: wordmark 13px/600 at 0.1em; nav 11.5px/500 at 0.09em; marquee 13px/500 at 0.12em; stamp text 13.5px/600 at 0.2em; footer 11px at 0.05em in sentence case — the one place mono is not uppercased."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.2, 0.7, 0, 1)",
+        "purpose": "The system's only easing token (--ease-out). Fast out, long settle. Used for every transform and background-size transition."
+      },
+      {
+        "name": "reveal",
+        "value": "700ms var(--ease-out)",
+        "purpose": "Opacity + 18px translateY on [data-reveal] elements, triggered by IntersectionObserver at threshold 0.15 with rootMargin 0px 0px -8% 0px. Gated behind the .js class so content is visible without JS."
+      },
+      {
+        "name": "reveal-stagger",
+        "value": "70ms",
+        "purpose": "transition-delay multiplied by the element's --i index. The floor obligation for any new section. At --i:4 the last row reaches full opacity in ~980ms."
+      },
+      {
+        "name": "hero-rise",
+        "value": "800ms var(--ease-out) backwards",
+        "purpose": "One-shot 0.3em rise + fade on the hero name at load."
+      },
+      {
+        "name": "underline-grow",
+        "value": "280ms var(--ease-out)",
+        "purpose": "background-size from 0% to 100% on a 1px currentColor gradient — the standard text-link affordance. Nav variant is 240ms on a 2px cobalt gradient."
+      },
+      {
+        "name": "micro-shift",
+        "value": "200ms var(--ease-out)",
+        "purpose": "translate(3px, -3px) on the ↗ glyph of external links; translateX(14px) at 320ms on register row titles."
+      },
+      {
+        "name": "state-color",
+        "value": "160ms–240ms ease",
+        "purpose": "Plain color and border-color transitions on hover. Linear ease, no custom curve."
+      },
+      {
+        "name": "stamp-spin",
+        "value": "48s linear infinite",
+        "purpose": "Base rotation of the availability stamp, plus a scroll-velocity increment accumulated into the --boost custom property."
+      },
+      {
+        "name": "scroll-lerp",
+        "value": "0.12",
+        "purpose": "Smoothing factor applied to scroll velocity in the single rAF loop (smoothV += (v - smoothV) * 0.12). Drives band acceleration, stamp boost, and schematic pulse rate."
+      },
+      {
+        "name": "band-drift",
+        "value": "0.55px per frame",
+        "purpose": "Base marquee speed before scroll acceleration; direction from the data-band attribute (-1 left, 1 right). Normalized to 60fps via a dt factor capped at 3."
+      },
+      {
+        "name": "schematic-draw",
+        "value": "300ms delay + 140ms stagger, 500ms per edge",
+        "purpose": "Canvas schematic build-in: edges draw from the hub via lineDashOffset, nodes fade in 120ms apart over 300ms. Complete inside 2s. DPR capped at 2."
+      }
+    ],
+    "breakpoints": [
+      { "name": "hero", "value": "920px", "purpose": "Hero grid collapses to one column; stamp repositions to 104px at the corner." },
+      { "name": "about", "value": "880px", "purpose": "About grid collapses to one column." },
+      { "name": "register", "value": "860px", "purpose": "Competency rows drop to 48px 1fr; description reflows under the title." },
+      { "name": "nav", "value": "760px", "purpose": "Nav reduces to Projects + Contact; sectors stack and swap their dividing hairline from left border to top border." },
+      { "name": "head", "value": "720px", "purpose": "Section-head gloss hides and the head wraps; deck cards grow to 70vh." },
+      { "name": "compact", "value": "480px", "purpose": "Nav reduces to Contact alone." }
+    ],
+    "accessibility": {
+      "focus": "2px solid cobalt at 3px offset on light grounds; acid inside ink sections. Deck cards use a 2px inset cobalt outline via :focus-within because the click target is a full-bleed overlay.",
+      "reducedMotion": "prefers-reduced-motion collapses all durations to 0.01ms, stops the stamp, sets the timeline line to scaleY(1), clears band and glyph transforms, and renders the schematic complete and pulse-free. The result is a full static drawing, not a degraded page.",
+      "noJs": "html:not(.js) renders the timeline line complete; reveal and hero-rise animations are gated behind the .js class so all content is visible without JS.",
+      "decorative": "Canvas schematic, marquee bands and stamp glyphs are aria-hidden; the bands carry an sr-only paragraph with the same content in reading order.",
+      "statusRedundancy": "Status is encoded three ways at once — glyph (● ◐ ○), border treatment (filled / solid / dashed) and color — so it survives without color perception."
+    }
+  },
+  "components": [
+    {
+      "name": "Acid Chip",
+      "kind": "chip",
+      "refersTo": "chip-acid",
+      "description": "The system's loudest object, kept small on purpose. Sector tags, LIVE status, photo captions, highlighted role words.",
+      "html": "<span class=\"ds-chip-acid\">✳ Soukromý sektor · SME</span>",
+      "css": ".ds-chip-acid { display: inline-block; background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 3px 9px; border-radius: 0; font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.4; }"
+    },
+    {
+      "name": "Status Chip Ladder",
+      "kind": "chip",
+      "refersTo": "chip-outline",
+      "description": "Live / Beta / WIP as one ladder: filled → outlined → dashed, each with its own leading glyph so the state survives without color.",
+      "html": "<div class=\"ds-status-row\"><span class=\"ds-status ds-status--live\">● Live</span><span class=\"ds-status ds-status--beta\">◐ Beta</span><span class=\"ds-status ds-status--wip\">○ WIP</span></div>",
+      "css": ".ds-status-row { display: flex; gap: 12px; align-items: baseline; } .ds-status { font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 0; } .ds-status--live { background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 2px 8px; } .ds-status--beta { color: var(--ink-2, #4c5551); border: 1px solid var(--line-strong, rgba(16,20,19,.38)); padding: 2px 8px; } .ds-status--wip { color: var(--ink-2, #4c5551); border: 1px dashed var(--line-strong, rgba(16,20,19,.38)); padding: 2px 8px; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Mono uppercase item whose 2px cobalt underline grows from the left. The system's standard link affordance.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#\">Projekty</a><a class=\"ds-nav-link\" href=\"#\">Kontakt</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 22px; } .ds-nav-link { font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 11.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-2, #4c5551); text-decoration: none; padding-bottom: 3px; background-image: linear-gradient(var(--blue, #2547f0), var(--blue, #2547f0)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 2px; transition: background-size 240ms cubic-bezier(0.2,0.7,0,1), color 160ms ease; } .ds-nav-link:hover { color: var(--ink, #101413); background-size: 100% 2px; } .ds-nav-link:focus-visible { outline: 2px solid var(--blue, #2547f0); outline-offset: 3px; }"
+    },
+    {
+      "name": "Language Toggle",
+      "kind": "nav",
+      "refersTo": "lang-toggle",
+      "description": "Two square mono chips. The active one inverts to ink ground with acid text — the single place acid is used as a text color, legible at roughly 12:1.",
+      "html": "<div class=\"ds-lang\" role=\"group\" aria-label=\"Jazyk\"><a class=\"ds-lang-item is-active\" href=\"/\" aria-current=\"page\">CS</a><a class=\"ds-lang-item\" href=\"/en/\">EN</a></div>",
+      "css": ".ds-lang { display: inline-flex; gap: 2px; } .ds-lang-item { font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 11px; letter-spacing: 0.08em; padding: 3px 8px; color: var(--ink-3, #68726e); border: 1px solid var(--line, rgba(16,20,19,.13)); border-radius: 0; text-decoration: none; transition: color 160ms ease, border-color 160ms ease; } .ds-lang-item:hover { color: var(--ink, #101413); border-color: var(--line-strong, rgba(16,20,19,.38)); } .ds-lang-item.is-active { background: var(--ink, #101413); color: var(--acid, #d7f94b); border-color: var(--ink, #101413); } .ds-lang-item:focus-visible { outline: 2px solid var(--blue, #2547f0); outline-offset: 3px; }"
+    },
+    {
+      "name": "Section Head",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The page's rhythm device: cobalt mono index, Archivo title, muted mono gloss pushed right, all baseline-aligned over a structural hairline.",
+      "html": "<header class=\"ds-section-head\"><span class=\"ds-section-head__index\">01 — Co dělám</span><h2 class=\"ds-section-head__title\">Pět věcí, ve kterých jsem doma</h2><span class=\"ds-section-head__note\">rejstřík</span></header>",
+      "css": ".ds-section-head { display: flex; align-items: baseline; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line-strong, rgba(16,20,19,.38)); } .ds-section-head__index { flex-shrink: 0; color: var(--blue, #2547f0); font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } .ds-section-head__title { margin: 0; font-family: var(--font-display, Archivo, sans-serif); font-weight: 620; font-stretch: 108%; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink, #101413); } .ds-section-head__note { margin-left: auto; flex-shrink: 0; color: var(--ink-3, #68726e); font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } @media (max-width: 720px) { .ds-section-head { flex-wrap: wrap; gap: 10px 24px; } .ds-section-head__note { display: none; } }"
+    },
+    {
+      "name": "Competency Register Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "An index row in a technical document, not a feature card. Hover response is purely typographic: the title shifts right and a cobalt asterisk fades in.",
+      "html": "<ol class=\"ds-index-list\"><li class=\"ds-index-row\"><span class=\"ds-index-num\">01</span><h3 class=\"ds-index-title\">Návrh &amp; vývoj softwaru</h3><p class=\"ds-index-desc\">Python, JavaScript, SQL. Stavba SaaS produktů od datové vrstvy po UI.</p></li></ol>",
+      "css": ".ds-index-list { margin: 0; padding: 0; list-style: none; } .ds-index-row { display: grid; grid-template-columns: 72px 1.1fr 1.3fr; gap: 12px 40px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line, rgba(16,20,19,.13)); } .ds-index-num { color: var(--ink-3, #68726e); font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 200ms ease; } .ds-index-title { position: relative; margin: 0; font-family: var(--font-display, Archivo, sans-serif); font-weight: 600; font-stretch: 105%; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.2; letter-spacing: -0.005em; color: var(--ink, #101413); transition: transform 320ms cubic-bezier(0.2,0.7,0,1); } .ds-index-title::before { content: \"✳\"; position: absolute; left: -1em; top: 0.25em; font-size: 0.7em; color: var(--blue, #2547f0); opacity: 0; transition: opacity 240ms ease; } .ds-index-desc { margin: 0; max-width: 58ch; color: var(--ink-2, #4c5551); font-family: var(--font-text, Instrument Sans, sans-serif); font-size: 15.5px; line-height: 1.65; } .ds-index-row:hover .ds-index-title { transform: translateX(14px); } .ds-index-row:hover .ds-index-title::before { opacity: 1; } .ds-index-row:hover .ds-index-num { color: var(--blue, #2547f0); } @media (max-width: 860px) { .ds-index-row { grid-template-columns: 48px 1fr; } .ds-index-desc { grid-column: 2; } }"
+    },
+    {
+      "name": "Project Card",
+      "kind": "card",
+      "refersTo": "card-project",
+      "description": "A sheet laid on the page — 1.5px ink top border only, no side or bottom borders, no radius, no shadow. In situ these are position: sticky and physically stack. A full-area .cover anchor makes the whole card clickable, at the cost of text inside not being selectable.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card__head\"><span>Projekt 01 / 05</span><span class=\"ds-card__status\">● Live</span></div><h3 class=\"ds-card__name\">Assoluto</h3><p class=\"ds-card__desc\">Open-source zákaznický portál pro české výrobní firmy. Zakázky, výkresy, stav výroby na jednom místě.</p><div class=\"ds-card__foot\"><span>SaaS · Open source</span><span class=\"ds-card__url\">assoluto.eu <span aria-hidden=\"true\">↗</span></span></div></article>",
+      "css": ".ds-card { display: flex; flex-direction: column; gap: 24px; min-height: 340px; padding: 28px 0 40px; background: var(--bg, #f5f7f6); border-top: 1.5px solid var(--ink, #101413); border-radius: 0; } .ds-card__head, .ds-card__foot { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } .ds-card__head { color: var(--ink-3, #68726e); } .ds-card__status { background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 2px 8px; letter-spacing: 0.1em; } .ds-card__name { margin: 24px 0 0; font-family: var(--font-display, Archivo, sans-serif); font-weight: 680; font-stretch: 110%; font-size: clamp(36px, 6.2vw, 84px); line-height: 1; letter-spacing: -0.015em; color: var(--ink, #101413); transition: color 240ms ease; } .ds-card__desc { margin: auto 0 0; max-width: 54ch; color: var(--ink-2, #4c5551); font-family: var(--font-text, Instrument Sans, sans-serif); font-size: clamp(16px, 1.8vw, 19px); line-height: 1.65; } .ds-card__foot { color: var(--ink-2, #4c5551); border-top: 1px solid var(--line, rgba(16,20,19,.13)); padding-top: 16px; } .ds-card__url span { display: inline-block; transition: transform 200ms cubic-bezier(0.2,0.7,0,1); } .ds-card:hover .ds-card__name { color: var(--blue, #2547f0); } .ds-card:hover .ds-card__url span { transform: translate(3px, -3px); } .ds-card:focus-within { outline: 2px solid var(--blue, #2547f0); outline-offset: -2px; }"
+    },
+    {
+      "name": "Photo Frame",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The system's depth model in one object: grayscale print in a 1px ink border with a cobalt border misregistered 12px behind it, and an acid caption chip stuck inside the image.",
+      "html": "<figure class=\"ds-photo\"><div class=\"ds-photo__plate\" role=\"img\" aria-label=\"Placeholder for the About photograph\"></div><figcaption class=\"ds-photo__cap\">Václav &amp; Kvido, bostonský teriér</figcaption></figure>",
+      "css": ".ds-photo { position: relative; max-width: 300px; margin: 0 0 16px 0; } .ds-photo__plate { aspect-ratio: 720 / 879; border: 1px solid var(--ink, #101413); background-color: var(--bg-2, #eceeec); background-image: repeating-linear-gradient(135deg, rgba(16,20,19,.10) 0 1px, transparent 1px 9px); filter: grayscale(1) contrast(1.05); } .ds-photo::before { content: \"\"; position: absolute; inset: 0; transform: translate(12px, 12px); border: 1px solid var(--blue, #2547f0); z-index: -1; } .ds-photo__cap { position: absolute; left: 12px; bottom: 12px; background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 3px 8px; font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Contact E-mail",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Display type set lighter and narrower than any other display use, because it is an address rather than a headline. The acid underline thickens from 2px to 6px on hover.",
+      "html": "<div class=\"ds-ink-block\"><a class=\"ds-contact-email\" href=\"mailto:hello@vaclavmudra.com\">hello@vaclavmudra.com</a></div>",
+      "css": ".ds-ink-block { background: var(--ink, #101413); padding: 40px 32px; } .ds-contact-email { display: inline-block; font-family: var(--font-display, Archivo, sans-serif); font-weight: 500; font-stretch: 100%; font-size: clamp(22px, 4vw, 50px); letter-spacing: -0.01em; color: var(--bg, #f5f7f6); text-decoration: none; padding-bottom: 6px; background-image: linear-gradient(var(--acid, #d7f94b), var(--acid, #d7f94b)); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 2px; transition: color 240ms ease, background-size 320ms cubic-bezier(0.2,0.7,0,1); } .ds-contact-email:hover { color: var(--acid, #d7f94b); background-size: 100% 6px; } .ds-contact-email:focus-visible { outline: 2px solid var(--acid, #d7f94b); outline-offset: 3px; }"
+    },
+    {
+      "name": "Scroll-Progress Button",
+      "kind": "button",
+      "refersTo": "topstar",
+      "description": "A dial, not a button: the cobalt asterisk rotates in direct proportion to document scroll progress. One of only two circular objects in the system.",
+      "html": "<button class=\"ds-topstar\" type=\"button\" aria-label=\"Zpět nahoru\"><span aria-hidden=\"true\">✳</span></button>",
+      "css": ".ds-topstar { display: grid; place-items: center; width: 48px; height: 48px; background: var(--bg, #f5f7f6); border: 1px solid var(--ink, #101413); border-radius: 50%; color: var(--blue, #2547f0); font-size: 24px; line-height: 1; cursor: pointer; transition: background 200ms ease, color 200ms ease; } .ds-topstar span { display: block; transform: rotate(78deg); } .ds-topstar:hover { background: var(--acid, #d7f94b); color: var(--ink, #101413); } .ds-topstar:focus-visible { outline: 2px solid var(--blue, #2547f0); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Modrotisk",
+    "overview": "Modrotisk is the Czech word for indigo-resist block printing — a folk textile craft where a resist paste is stamped onto cloth, the cloth is dipped in indigo, and the pattern emerges as bright figures on a deep blue ground. Read literally, the same word decomposes into modrý + tisk: blue print. Both readings are load-bearing here. From the craft comes the discipline of a stamped mark, a registration that either aligns or visibly does not, and ink that sits in the surface rather than floating above it. From the literal reading comes the drafting table: a 64px grid, orthogonal elbow joins as in an ArchiMate diagram, registration crosses at the corners of every node, cobalt as the line weight of a technical drawing.\n\nThe system is bright, cool and orthogonal. Cool white ground, cool-black ink, one structural blue and one highlighter green. Depth is achieved by offset and hairline rather than by blur: the About photograph carries a cobalt frame displaced 12px down and right, exactly as a misregistered second pass would print. There are no shadows anywhere in the stylesheet, no gradients other than the grid's own fade-out mask, no grain, no glass. Nothing is rounded except two things that are literally circles — the availability stamp and the scroll-progress button.\n\nThe counter-position is explicit and was the reason for the redesign. This replaced a dark, Raycast-inspired v4 whose genre — dark ground, glow blobs, a grid of hairline-bordered cards, five rainbow accents, mono eyebrow labels — is now the default output of any code-generating model. It also replaced an intermediate v5 (\"Papír a stroj\": warm paper, Fraunces, vermilion) rejected for sepia tones and typographic overacting. Brightness is the first differentiator; the second is that the graphics carry meaning. The hero's animated canvas schematic says solution architect without a word of copy, and it earns the space a decorative illustration would have wasted.\n\nOn the status of what follows: every rule in this system describes the shipped v5.1 implementation and holds until a deliberate decision replaces it. None of them is sacred. They are named and stated forcefully because a design system that hedges gets ignored, not because they are beyond revision — a future direction is free to overturn any of them, as long as it does so on purpose and system-wide rather than by drift on one section.",
+    "keyCharacteristics": [
+      "Bright cool-white ground; dark surfaces are the rare exception, not the mode",
+      "Exactly two accents, each with one job: cobalt structures, acid pulses",
+      "Zero radius everywhere except literal circles; zero shadows anywhere",
+      "Depth by offset overprint and hairline, never by blur",
+      "Full-bleed hairlines set the vertical rhythm; sections are separated by rules, not cards",
+      "Three type roles on three faces: Archivo display, Instrument Sans text, Spline Sans Mono meta",
+      "Graphics are technical artifacts (grid, registration crosses, stamp, schematic), not ornament",
+      "Scroll produces motion in several directions and speeds at once; prefers-reduced-motion yields a complete static drawing"
+    ],
+    "rules": [
+      {
+        "name": "The Two Jobs Rule",
+        "body": "Cobalt structures, acid pulses. A third accent hue would require deciding what job it does, and there is no third job. When a new element needs color, it is asking to be either structure or pulse; decide which, then use that accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Acid Never Speaks Rule",
+        "body": "Acid is a ground or an underline, never a text color. As text on cool white it measures 1.11:1 — invisible. As a ground under cool ink it measures 15.5:1. The rule is a legibility fact wearing a doctrine's clothes.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Ink Blocks Rule",
+        "body": "The inverted ink surface appears twice on the page — the final project card and the contact section — and it lands because it is rare. A third would make the page look like it has a dark theme it does not have.",
+        "section": "colors"
+      },
+      {
+        "name": "The Inverse Opacity Ladder",
+        "body": "On ink surfaces, secondary text is cool white at 0.75, metadata at 0.6, muted at 0.5, and borders at 0.25. These are written as literal rgba(245, 247, 246, …) in the stylesheet rather than as tokens; treat the ladder as the token until it is promoted into one.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width-Axis Rule",
+        "body": "Display type is set on Archivo's wdth axis between 105% and 115%, wider as it gets larger. Reaching for more presence means going wider and heavier, not just bigger — the axis is what distinguishes this setting from any default sans at a big size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Third Voice Rule",
+        "body": "Every piece of metadata is mono, uppercase, and tracked open. Anything that is a label, an index, a URL, a status, or a date belongs to Spline Sans Mono; anything a person reads as a sentence belongs to Instrument Sans. There is no overlap, which is what keeps the two from competing. The footer is the one place mono is not uppercased.",
+        "section": "typography"
+      },
+      {
+        "name": "The Czech Typography Rule",
+        "body": "Correct Czech typesetting is a requirement, not a finish: „low-high quotes\", em dashes, non-breaking spaces after single-letter prepositions and inside broken numerals and coordinates, and no orphans in headings. The English mutation follows English conventions with the same rigor. Both files carry these as literal entities in the markup.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rule-Not-Card Rule",
+        "body": "Structure is expressed with lines across the page. When a new block needs separating, give it a hairline and vertical space; do not give it a border box, a background panel, or a radius.",
+        "section": "layout"
+      },
+      {
+        "name": "The Own-Proportion Rule",
+        "body": "Each section declares the grid its content wants. Consistency lives in the gutter, the container, the rules, and the type — not in a shared column count.",
+        "section": "layout"
+      },
+      {
+        "name": "The Offset-Not-Blur Rule",
+        "body": "Depth is produced by displacing a line, changing a tone, or stacking a real surface. A shadow would introduce a light source the page has otherwise decided not to have.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Two-Radii Rule",
+        "body": "0 for anything rectangular, 50% for anything that is a physical round object. No 4px, no 8px, no pills.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Orthogonal Rule",
+        "body": "Connections turn at right angles. No diagonals, no bezier curves, no organic paths.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do give each accent its one job: cobalt for structure (links, indices, rails, connections, focus), acid for pulse (chips, live status, underlines, selection).",
+      "Do put acid behind ink text rather than in it — as a ground or an underline. The one exception in the system, acid text on an ink ground in the active language chip, works because the contrast is 15.5:1.",
+      "Do separate blocks with a full-bleed hairline and vertical space. --line-strong for structure, --line for internal dividers.",
+      "Do set display type on Archivo's width axis (105–115%) as well as its weight when it needs more presence.",
+      "Do keep every label, index, URL, status and date in Spline Sans Mono, uppercase, tracked at 0.08em or wider.",
+      "Do cap measure per block — 52–58ch for descriptions, ~56ch for ledes, ~22ch for display-set headings.",
+      "Do create depth by offsetting a line, changing a tone, or stacking a real surface.",
+      "Do give every new section the staggered reveal (data-reveal plus a --i index, 70ms apart over 700ms). A dedicated scroll behavior — a sticky stack, a self-drawing line — is earned by content that genuinely justifies one, not granted by default.",
+      "Do hide decorative motion from assistive technology (aria-hidden) and provide an sr-only equivalent whenever it carries real content.",
+      "Do encode status redundantly — glyph and border treatment and color, as in ● LIVE / ◐ BETA / ○ WIP.",
+      "Do run new motion through the single requestAnimationFrame loop in main.js, animate only transform and opacity, cache measurements outside the loop, and keep the try/catch so one bad frame cannot kill the sequence.",
+      "Do verify that prefers-reduced-motion leaves a complete, usable static page — the schematic fully drawn, the timeline line at full height, bands and glyphs untransformed.",
+      "Do keep the non-JS path intact: .js gates the reveal and rise animations, so content is visible when the class never lands."
+    ],
+    "donts": [
+      "Don't add a third accent hue. If a new element needs color, decide whether it is structure or pulse and use that accent.",
+      "Don't introduce box-shadow, blur, backdrop filters, or grain. The page has decided not to have a light source.",
+      "Don't use a radius between 0 and 50%. No 4px, no 8px, no pills.",
+      "Don't enclose content in bordered boxes or background panels to group it — that was the v4 card-grid pattern this design replaced.",
+      "Don't add a third inverted ink surface. Two is what keeps them rare enough to register.",
+      "Don't tile the 64px drafting grid beyond the hero, where it fades out by design.",
+      "Don't draw a diagonal or curved connection. Elbows turn at right angles.",
+      "Don't put the photograph in the hero or crop it to a circle — it belongs in About, rectangular, grayscale, in its offset frame.",
+      "Don't let a decorative element overlap a meaning-carrying one. The stamp and the schematic are both cobalt; where they overlapped, a visitor read it as a rendering bug, not as intentional misregistration.",
+      "Don't place load-bearing text in --ink-3 at display sizes below 11px, and don't reintroduce a muted token that fails 4.5:1. Recession is the lightest legible step, not an illegible one.",
+      "Don't load a font, script, or image from a third-party origin. Zero external requests is a claim the footer makes literally.",
+      "Don't let a change land in one language mutation only. index.html and en/index.html share styles.css and main.js; a structural edit to one is unfinished until the other matches.",
+      "Don't reintroduce the v4 dark-glow vocabulary or the rejected v5 warm-paper vocabulary. Both are anti-references on record."
+    ]
+  }
+}

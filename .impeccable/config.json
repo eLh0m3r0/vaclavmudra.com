@@ -1,0 +1,23 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument sans",
+        "createdAt": "2026-07-26T15:23:33.959Z",
+        "reason": "Pinned as the body face by the user's v5.1 Modrotisk brief (uploads/prompt-vaclavmudra-com-v5-redesign.md line 73)"
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "styles.css"
+        ],
+        "createdAt": "2026-07-26T15:23:34.001Z",
+        "reason": "Hero drafting grid is a literal blueprint surface behind a technical canvas schematic — inside the rule's own canvas/blueprint exemption; pinned in the v5.1 brief"
+      }
+    ]
+  }
+}
