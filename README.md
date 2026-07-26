@@ -27,7 +27,8 @@ timeline) plus an animated canvas system schematic in the hero. Full
 ├── assets/
 │   ├── photo-dog-720.jpeg  # About photo (compressed)
 │   ├── photo-dog.jpeg      # Original (used by /old)
-│   ├── og-image.png        # 1200×630 social preview
+│   ├── og-image.png        # 1200×630 social preview (CS)
+│   ├── og-image-en.png     # 1200×630 social preview (EN)
 │   └── favicon.svg
 └── uploads/              # Design briefs & source material
 ```

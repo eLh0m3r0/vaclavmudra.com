@@ -69,7 +69,9 @@
     { x: 0.50, y: 0.07, w: 0.15, h: 0.12, label: 'UI' },
     { x: 0.86, y: 0.18, w: 0.17, h: 0.13, label: 'ERP' },
     { x: 0.10, y: 0.74, w: 0.17, h: 0.13, label: 'DB' },
-    { x: 0.88, y: 0.72, w: 0.17, h: 0.13, label: 'SaaS' },
+    /* SaaS byl na 0.88/0.72, kam přes něj sedá razítko — na 1440 px ho
+       překrývalo z 95 % a uzel byl nečitelný. Posun mimo pravý dolní roh. */
+    { x: 0.87, y: 0.40, w: 0.17, h: 0.13, label: 'SaaS' },
     { x: 0.52, y: 0.88, w: 0.19, h: 0.13, label: 'LLM', acid: true }
   ];
   var EDGES = [[0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 6]];
@@ -81,7 +83,9 @@
     var dpr = Math.min(window.devicePixelRatio || 1, 2);
     var w = Math.round(box.width);
     var h = Math.round(box.width * 10 / 13);
-    if (canvas.width !== w * dpr) {
+    /* Hlídá i výšku — jinak samotná změna výšky viewportu (sbalení
+       adresního řádku na mobilu) nechá canvas v předchozím poměru stran. */
+    if (canvas.width !== w * dpr || canvas.height !== h * dpr) {
       canvas.width = w * dpr;
       canvas.height = h * dpr;
       canvas.style.height = h + 'px';
@@ -133,7 +137,7 @@
     var W = canvas._w, H = canvas._h;
     ctx.clearRect(0, 0, W, H);
 
-    var ink = '#101413', ink3 = '#7f8985', blue = '#2547f0', acid = '#d7f94b', bg = '#f5f7f6';
+    var ink = '#101413', ink3 = '#68726e', blue = '#2547f0', acid = '#d7f94b', bg = '#f5f7f6';
     var hub = nodeCenter(NODES[0]);
 
     // Hrany — kreslí se postupně (stagger po 140 ms, každá 500 ms)
@@ -329,9 +333,17 @@
     emailLink.addEventListener('click', function (e) {
       if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       if (!navigator.clipboard || !label) return;
-      try { navigator.clipboard.writeText(original.trim()); } catch (_) {}
-      label.textContent = emailLink.getAttribute('data-email-copied') || 'zkopírováno · otevírám mail…';
-      setTimeout(function () { label.textContent = original; }, 1600);
+      /* Potvrzení hlásit jen když kopie skutečně prošla — dřív se
+         „zkopírováno" objevilo i po selhání writeText. */
+      var confirmCopy = function () {
+        label.textContent = emailLink.getAttribute('data-email-copied') || 'zkopírováno';
+        setTimeout(function () { label.textContent = original; }, 1600);
+      };
+      try {
+        var p = navigator.clipboard.writeText(original.trim());
+        if (p && typeof p.then === 'function') p.then(confirmCopy, function () {});
+        else confirmCopy();
+      } catch (_) { /* schránka nedostupná — štítek necháme být */ }
     });
   }
 

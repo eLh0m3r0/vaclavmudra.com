@@ -70,7 +70,7 @@
   --bg-2: #eceeec;
   --ink: #101413;
   --ink-2: #4c5551;
-  --ink-3: #7f8985;
+  --ink-3: #68726e; /* 4.62:1 na --bg (bylo 3.35:1) — nese datumy a labely */
   --line: rgba(16, 20, 19, 0.13);
   --line-strong: rgba(16, 20, 19, 0.38);
   --blue: #2547f0;
@@ -251,12 +251,21 @@ a:focus-visible, button:focus-visible {
 }
 
 @media (max-width: 760px) {
+  /* Projekty + Kontakt zůstávají na všech šířkách — stránka je ~9000 px
+     vysoká a jinak se k projektům nedá dostat jinak než scrollováním. */
   .nav__list li:not(:nth-child(3)):not(:nth-child(5)) { display: none; }
-  .nav { gap: 16px; }
+  .nav { gap: 14px; }
   .nav__list { gap: 16px; }
-}
-@media (max-width: 480px) {
-  .nav__list li:nth-child(3) { display: none; }
+  /* Jazykový přepínač měl 33×26 px, což je pod hranicí pro palec. */
+  .lang { gap: 6px; }
+  .lang a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 10px;
+  }
 }
 
 /* ---------- Hero ---------- */
@@ -328,6 +337,9 @@ a:focus-visible, button:focus-visible {
 .hero__role .hl {
   background: var(--acid);
   padding: 2px 6px;
+  /* Na ≤390 px se „Solution Architect" lámal na dva řádky a acidové
+     zvýraznění se roztrhlo na dva kusy. Je to Brand Commitment string. */
+  white-space: nowrap;
 }
 .hero__lede {
   margin-top: 18px;
@@ -450,7 +462,10 @@ a:focus-visible, button:focus-visible {
 }
 @media (max-width: 720px) {
   .section-head { flex-wrap: wrap; gap: 10px 24px; }
-  .section-head__note { display: none; }
+  /* Glosa zůstává i na mobilu. U sekce 03 je to jediná nápověda, že se
+     karty skládají — a byla schovaná přesně tam, kde je to chování
+     nejpřekvapivější. Zalomí se na vlastní řádek. */
+  .section-head__note { margin-left: 0; flex-basis: 100%; }
 }
 
 /* ---------- 01 Rejstřík kompetencí ---------- */
@@ -497,7 +512,8 @@ a:focus-visible, button:focus-visible {
   max-width: 58ch;
 }
 @media (max-width: 860px) {
-  .index-list__row { grid-template-columns: 48px 1fr; }
+  /* Číslice je aria-hidden dekorace — na mobilu brala 12 % šířky textu. */
+  .index-list__row { grid-template-columns: 32px 1fr; gap: 10px 16px; }
   .index-list__desc { grid-column: 2; }
 }
 
@@ -749,7 +765,9 @@ html:not(.js) .timeline__line { transform: scaleY(1); }
   background: var(--ink);
   color: var(--bg);
   border-top: 0;
-  padding-bottom: 40px;
+  /* Rezerva pro fixní ✳ vpravo dole (48 px + 22 px odsazení). Bez ní
+     tlačítko sedělo na odkazu „English" (58 % na 390 px, 60 % na 1000 px). */
+  padding-bottom: clamp(88px, 12vh, 112px);
 }
 .contact__index { display: block; color: rgba(245, 247, 246, 0.6); margin-bottom: 28px; }
 .contact__index .ast { color: var(--acid); }
