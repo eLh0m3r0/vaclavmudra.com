@@ -38,8 +38,8 @@ It is a well-made personal page belonging to someone who builds things.
 
 ## Positioning
 
-**Shipped products as proof.** Assoluto, Dochazka.net, DissConnect, Geodaily and
-Genesis Factory are running things anyone can open — not claims on a slide. A
+**Shipped products as proof.** Trailmap, DB Mastermind, Assoluto, Dochazka.net,
+Geodaily, DissConnect and Genesis Factory are running things anyone can open — not claims on a slide. A
 neighboring Czech IT consultant can describe the same competencies; almost none
 can hand over live URLs to products they built and operate themselves.
 
@@ -101,8 +101,8 @@ keep visible without turning either into the headline:
   removed, and change status (Live / Beta / WIP); treat it as a variable-length
   list. Everything else on the page — roles, timeline, education,
   certification, languages — is current as of July 2026.
-- AI-generated or AI-powered projects (Geodaily, DissConnect) stay explicitly
-  labelled as such. Transparency, not masking.
+- AI-generated or AI-powered projects (DB Mastermind, Geodaily, DissConnect)
+  stay explicitly labelled as such. Transparency, not masking.
 
 **Undecided**
 
@@ -126,8 +126,11 @@ keep visible without turning either into the headline:
 
 ## Evidence on Hand
 
-- **Live product URLs** (the core proof): `assoluto.eu`, `dochazka.net`,
-  `dissconnect.lol`, `buttondown.com/geodaily`,
+- **Live product URLs** (the core proof): `trailmap.fyi` (paid Azure DevOps
+  extension on the Visual Studio Marketplace), `dbmastermind.app` (MIT desktop
+  DB client, `github.com/eLh0m3r0/db-mastermind`), `assoluto.eu`,
+  `dochazka.net`, `elh0m3r0.github.io/geodaily` (newsletter also on
+  `buttondown.com/geodaily`), `dissconnect.lol`,
   `github.com/eLh0m3r0/Genesis-Factory`.
 - **Photograph** — `assets/photo-dog-720.jpeg` (original `assets/photo-dog.jpeg`):
   Václav outdoors in a forest with Kvido, his Boston terrier. Personal and
