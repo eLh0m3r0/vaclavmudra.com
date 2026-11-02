@@ -1,2 +1,5 @@
 # Impeccable live-mode recovery state (local, not project source)
 .impeccable/live/sessions/
+
+# taste-skill working files (inspector screenshots, direction sheets)
+.taste-skill/
