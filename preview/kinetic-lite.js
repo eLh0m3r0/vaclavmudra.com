@@ -63,21 +63,26 @@
     var y = window.scrollY, vh = window.innerHeight;
     var py = pointer.y + y;
     // rychlost scrollu (vyhlazená) → amplituda vlny; při klidu klesá k nule
-    vel += ((y - lastY) - vel) * 0.18; lastY = y;
-    var amp = Math.min(Math.abs(vel) / 30, 1);
-    phase += 0.06 + amp * 0.22;
-    var active = amp > 0.01;
+    // silné vyhlazení: trhnutí kolečkem se do písmen nepropíše skokem
+    vel += (Math.max(-80, Math.min(80, y - lastY)) - vel) * 0.06; lastY = y;
+    var amp = Math.min(Math.abs(vel) / 60, 1);
+    phase += 0.035 + amp * 0.05;                         // vlna se s rychlostí skoro nezrychluje
+    var active = amp > 0.005;
     if (++frame % 15 === 0) measure();
     all.forEach(function (l) {
-      if (l.cy < y - 200 || l.cy > y + vh + 200) return;    // jen viditelné nadpisy
+      if (l.cy < y - 200 || l.cy > y + vh + 200) {          // mimo obraz rovnou do klidu
+        if (l.lw || l.lg) { l.el.style.setProperty('--dw', '0%'); l.el.style.setProperty('--dg', '0'); }
+        l.dw = l.dg = l.vw = l.vg = l.lw = l.lg = 0;
+        return;
+      }
       var dx = pointer.x - l.cx, dy = (py - l.cy) * 1.4;
       var g = inf * Math.exp(-(dx * dx + dy * dy) / (R * R));
       var wave = Math.sin(l.i * 0.55 - phase);
-      var tw = 16 * g + 9 * amp * wave;
-      var tg = 120 * g + 45 * amp * Math.max(0, wave);
-      // pružina: tuhost 0.14, tlumení 0.7 — dosedne zhruba za půl vteřiny
-      l.vw = (l.vw + (tw - l.dw) * 0.14) * 0.7;
-      l.vg = (l.vg + (tg - l.dg) * 0.14) * 0.7;
+      var tw = 10 * g + 4 * amp * wave;
+      var tg = 80 * g + 20 * amp * Math.max(0, wave);
+      // měkká pružina bez překmitu: tuhost 0.08, tlumení 0.62
+      l.vw = (l.vw + (tw - l.dw) * 0.08) * 0.62;
+      l.vg = (l.vg + (tg - l.dg) * 0.08) * 0.62;
       l.dw += l.vw; l.dg += l.vg;
       if (Math.abs(l.dw - tw) < 0.05 && Math.abs(l.vw) < 0.02) { l.dw = tw; l.vw = 0; }
       if (Math.abs(l.dg - tg) < 0.4 && Math.abs(l.vg) < 0.1) { l.dg = tg; l.vg = 0; }
