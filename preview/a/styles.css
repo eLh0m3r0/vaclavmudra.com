@@ -348,15 +348,19 @@ button { font: inherit; color: inherit; }
 
 .skills {
   position: relative;
-  --mx: -999px; --my: -999px;
+  --mx: 50%; --my: 50%;
 }
 .skills::before {
+  /* kužel přesahuje seznam o víc, než sahá jeho světlo (60 % z 420 px),
+     takže nikde nenarazí na hranu; mimo sekci jen pohasne */
   content: "";
-  position: absolute; inset: 0;
+  position: absolute; inset: -320px;
   pointer-events: none;
-  background: radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 184, 119, 0.13), transparent 60%);
-  transition: opacity 400ms ease;
+  background: radial-gradient(420px circle at calc(var(--mx) + 320px) calc(var(--my) + 320px), rgba(255, 184, 119, 0.13), transparent 60%);
+  opacity: 0;
+  transition: opacity 700ms ease;
 }
+.skills.is-lit::before { opacity: 1; }
 .skill {
   position: relative;
   display: grid;
