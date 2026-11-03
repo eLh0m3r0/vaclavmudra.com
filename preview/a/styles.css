@@ -389,7 +389,7 @@ button { font: inherit; color: inherit; }
 .sectors { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(16px, 2vw, 28px); }
 .sector {
   position: relative;
-  padding: clamp(28px, 4vw, 56px);
+  padding: clamp(26px, 3.2vw, 44px);
   border-radius: 20px;
   background: linear-gradient(160deg, rgba(22, 29, 46, 0.85), rgba(11, 15, 26, 0.85));
   overflow: hidden;
@@ -411,7 +411,7 @@ button { font: inherit; color: inherit; }
 .sector__tag { font-size: 15px; color: var(--text-3); }
 .sector__tag b { font-weight: 500; color: var(--c, var(--warm)); }
 .sector h3 {
-  margin: clamp(48px, 10vh, 120px) 0 18px;
+  margin: clamp(16px, 2vw, 24px) 0 14px;
   font-weight: 320; font-stretch: 110%;
   font-size: clamp(28px, 3vw, 48px);
   line-height: 1.08; letter-spacing: -0.03em; max-width: 16ch;
