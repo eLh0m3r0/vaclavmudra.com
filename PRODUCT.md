@@ -39,7 +39,7 @@ It is a well-made personal page belonging to someone who builds things.
 ## Positioning
 
 **Shipped products as proof.** Trailmap, DB Mastermind, Assoluto, Dochazka.net,
-Geodaily, DissConnect and Genesis Factory are running things anyone can open — not claims on a slide. A
+Geodaily and DissConnect are running things anyone can open — not claims on a slide. A
 neighboring Czech IT consultant can describe the same competencies; almost none
 can hand over live URLs to products they built and operate themselves.
 
@@ -62,8 +62,11 @@ keep visible without turning either into the headline:
   between other tasks — after a referral, from LinkedIn, or from a signature.
 - Static hosting on GitHub Pages from the root of `main`; `git push` deploys.
   `CNAME` handles the apex domain `vaclavmudra.com`.
-- The archived v4 design lives at `/old/` under `noindex` and outside
-  `sitemap.xml`.
+- Every design generation stays reachable, linked from a version switcher in
+  each footer: v6a at `/` (current, the only indexed one), v6b at `/v6b/`
+  (same system, contour-line shader), v5.1 at `/v5/`, v4 at `/old/`. Archives
+  are `noindex`, outside `sitemap.xml`, and carry the same project set as the
+  current version.
 
 ## Capabilities and Constraints
 
@@ -74,8 +77,8 @@ keep visible without turning either into the headline:
 - Zero external requests. No trackers, no analytics, no Google Fonts CDN — the
   "no trackers" line in the footer is meant literally. Fonts are self-hosted
   `woff2` (latin + latin-ext).
-- Shared `styles.css` and `main.js` across both language mutations. JS budget
-  ≤ 12 kB, no libraries.
+- Shared `styles.css`, `main.js` and `kinetic-lite.js` across both language
+  mutations. JS budget ≤ 10 kB gzipped, no libraries (v6a: ~8.4 kB gz).
 - Performance budget: Lighthouse ≥ 95 on mobile in both mutations,
   LCP < 1.5 s, CLS ≈ 0, TBT < 200 ms.
 - SEO surface that must survive any redesign: per-language `<title>` and
@@ -130,12 +133,13 @@ keep visible without turning either into the headline:
   extension on the Visual Studio Marketplace), `dbmastermind.app` (MIT desktop
   DB client, `github.com/eLh0m3r0/db-mastermind`), `assoluto.eu`,
   `dochazka.net`, `elh0m3r0.github.io/geodaily` (newsletter also on
-  `buttondown.com/geodaily`), `dissconnect.lol`,
-  `github.com/eLh0m3r0/Genesis-Factory`.
+  `buttondown.com/geodaily`), `dissconnect.lol`. Genesis Factory was dropped
+  from the site in v6 (WIP repo, weaker than the shipped products).
 - **Photograph** — `assets/photo-dog-720.jpeg` (original `assets/photo-dog.jpeg`):
   Václav outdoors in a forest with Kvido, his Boston terrier. Personal and
   informal by intent; explicitly not a corporate headshot, never a circle crop.
-- **Social preview** — `assets/og-image.png` (1200×630), `assets/favicon.svg`.
+- **Social preview** — `assets/og-image.jpg` / `og-image-en.jpg` (1200×630, v6a hero), `assets/favicon.svg`.
+- **Project previews** — `assets/previews/*-1440.webp` / `-800.webp`: homepages captured at an identical 1440×900 viewport (Docházka at 1920×1200 scaled 0.75).
 - **Verifiable credentials** — Ing. in Project Management within the Systems
   Engineering & Informatics program (2017–2019, thesis: agile project
   management methods in audit engagements); Bc. in Systems Engineering
@@ -146,7 +150,8 @@ keep visible without turning either into the headline:
   named and end clients not.
 - **Source briefs** — `uploads/prompt-vaclavmudra-com-v4.md`,
   `uploads/prompt-vaclavmudra-com-v5-redesign.md`,
-  `uploads/DESIGN-raycast.md` (v4-era design system, superseded).
+  `uploads/DESIGN-raycast.md` (v4-era design system, superseded),
+  `uploads/DESIGN-v5.1-modrotisk.md` (v5.1 design system, archived).
 
 **Absent — must not be fabricated:** testimonials, client logos, named
 references, engagement metrics, case studies, revenue or user numbers, pricing,

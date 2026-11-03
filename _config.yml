@@ -12,6 +12,9 @@ exclude:
   - PRODUCT.md
   - DESIGN.md
   - uploads/
+  # Pracovní náhledy variant redesignu (A, A2, A3, B…) — publikují se jen
+  # vybrané verze: v6a v kořeni a v6b na /v6b/.
+  - preview/
   - .impeccable/
   - .gitignore
 
