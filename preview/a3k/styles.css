@@ -346,21 +346,20 @@ button { font: inherit; color: inherit; }
 
 /* ---------- 01 Co dělám — seznam se světelným kuželem ---------- */
 
-.skills {
-  position: relative;
-  --mx: 50%; --my: 50%;
-}
-.skills::before {
-  /* kužel přesahuje seznam o víc, než sahá jeho světlo (60 % z 420 px),
-     takže nikde nenarazí na hranu; mimo sekci jen pohasne */
+.section--spot { isolation: isolate; --mx: 50%; --my: 50%; }
+.section--spot::before {
+  /* světlo pod kurzorem leží pod textem přes celou šířku sekce; k horní
+     a spodní hraně sekce slábne do ztracena, mimo sekci pohasne */
   content: "";
-  position: absolute; inset: -320px;
+  position: absolute; inset: 0; z-index: -1;
   pointer-events: none;
-  background: radial-gradient(420px circle at calc(var(--mx) + 320px) calc(var(--my) + 320px), rgba(255, 184, 119, 0.13), transparent 60%);
+  background: radial-gradient(420px circle at var(--mx) var(--my), rgba(255, 184, 119, 0.13), transparent 60%);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 260px, #000 calc(100% - 260px), transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 260px, #000 calc(100% - 260px), transparent);
   opacity: 0;
   transition: opacity 700ms ease;
 }
-.skills.is-lit::before { opacity: 1; }
+.section--spot.is-lit::before { opacity: 1; }
 .skill {
   position: relative;
   display: grid;

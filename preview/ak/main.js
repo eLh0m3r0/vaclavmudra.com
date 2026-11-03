@@ -164,17 +164,17 @@
 
   if (fine) {
     $$('[data-spot]').forEach(function (el) {
-      // data-spot="section": světlo sleduje kurzor v celé sekci a po odchodu pohasne
-      var area = el.getAttribute('data-spot') === 'section' ? el.closest('section') : el;
-      area.addEventListener('pointermove', function (e) {
+      // data-spot="fade": po odchodu kurzoru světlo jen pohasne (zůstane na místě)
+      var fade = el.getAttribute('data-spot') === 'fade';
+      el.addEventListener('pointermove', function (e) {
         var r = el.getBoundingClientRect();
         el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
         el.style.setProperty('--my', (e.clientY - r.top) + 'px');
         el.classList.add('is-lit');
       });
-      area.addEventListener('pointerleave', function () {
+      el.addEventListener('pointerleave', function () {
         el.classList.remove('is-lit');
-        if (area !== el) return;
+        if (fade) return;
         el.style.setProperty('--mx', '-999px');
         el.style.setProperty('--my', '-999px');
       });
