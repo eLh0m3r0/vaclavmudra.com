@@ -451,6 +451,15 @@
           "oklch(80% 0.218 144.8)",
           "oklch(95% 0.218 144.8)"
         ]
+      },
+      "window-shadow": {
+        "role": "neutral",
+        "displayName": "Window Shadow",
+        "canonical": "oklch(0% 0 0 / 0.8)",
+        "purpose": "Drop shadow of project windows only (window-stack, window-focus).",
+        "tonalRamp": [
+          "rgba(0, 0, 0, 0.8)"
+        ]
       }
     },
     "typographyMeta": {
@@ -513,6 +522,18 @@
       "label-url": {
         "displayName": "Label URL",
         "purpose": "Inside the window URL pill only."
+      },
+      "title-sector": {
+        "displayName": "Title Sector",
+        "purpose": "Headings of the two sector cards (Pro koho / Who for)."
+      },
+      "facts": {
+        "displayName": "Facts",
+        "purpose": "About section fact list (dl)."
+      },
+      "window-url": {
+        "displayName": "Window URL",
+        "purpose": "URL text in the browser-window bar."
       }
     },
     "shadows": [

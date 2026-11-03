@@ -26,6 +26,7 @@ colors:
   window-well: "#0b1019"
   window-url-text: "#9aa0ae"
   window-bar-rule: "rgba(237, 234, 228, 0.07)"
+  window-shadow: "rgba(0, 0, 0, 0.8)"
   glass-sheen: "rgba(255, 255, 255, 0.07)"
   traffic-red: "#ff6159"
   traffic-amber: "#ffbd2e"
@@ -153,6 +154,7 @@ typography:
     lineHeight: "20px"
     letterSpacing: "normal"
 rounded:
+  email-sweep: "4px"
   url-pill: "6px"
   window: "14px"
   photo: "18px"
