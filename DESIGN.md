@@ -1,742 +1,403 @@
 ---
 name: vaclavmudra.com
-description: Bright technical blueprint — cool white, ink, cobalt, acid; drafting grid, orthogonal joins, scroll choreography.
+description: Dark, filmic single page lit by a live WebGL light field; one variable face (Archivo) in light weights, warm and cool light as the only accents.
 colors:
-  cool-white: "#f5f7f6"
-  cool-white-shade: "#eceeec"
-  cool-ink: "#101413"
-  ink-secondary: "#4c5551"
-  ink-muted: "#68726e"
-  hairline: "rgba(16, 20, 19, 0.13)"
-  hairline-strong: "rgba(16, 20, 19, 0.38)"
-  electric-cobalt: "#2547f0"
-  cobalt-deep: "#1c36bd"
-  acid-green: "#d7f94b"
+  night: "#070a12"
+  night-surface: "#111725"
+  sector-glass-high: "rgba(22, 29, 46, 0.85)"
+  sector-glass-low: "rgba(11, 15, 26, 0.85)"
+  header-scrim: "rgba(7, 10, 18, 0.82)"
+  photo-scrim: "rgba(7, 10, 18, 0.75)"
+  bone: "#edeae4"
+  bone-secondary: "#b4b8c4"
+  bone-muted: "#858b9b"
+  highlight-white: "#ffffff"
+  hairline: "rgba(237, 234, 228, 0.10)"
+  hairline-strong: "rgba(237, 234, 228, 0.22)"
+  outline-stroke: "rgba(237, 234, 228, 0.42)"
+  ember: "#ffb877"
+  ember-glow: "rgba(255, 184, 119, 0.55)"
+  ember-spot: "rgba(255, 184, 119, 0.13)"
+  moonlight: "#8fb8ff"
+  moonlight-glow: "rgba(143, 184, 255, 0.45)"
+  live-mint: "#8be0b0"
+  window-body: "#0d121d"
+  window-bar: "#151b29"
+  window-well: "#0b1019"
+  window-url-text: "#9aa0ae"
+  window-bar-rule: "rgba(237, 234, 228, 0.07)"
+  glass-sheen: "rgba(255, 255, 255, 0.07)"
+  traffic-red: "#ff6159"
+  traffic-amber: "#ffbd2e"
+  traffic-green: "#28c941"
 typography:
   display:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(38px, 6.8vw, 96px)"
-    fontWeight: 640
-    lineHeight: 1
-    letterSpacing: "-0.015em"
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(78px, 15.6vw, 260px)"
+    fontWeight: 260
+    lineHeight: 0.84
+    letterSpacing: "-0.05em"
     fontVariation: "'wdth' 115"
   display-contact:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(44px, 8vw, 112px)"
-    fontWeight: 680
-    lineHeight: 1
-    letterSpacing: "-0.02em"
-    fontVariation: "'wdth' 112"
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(72px, 14vw, 230px)"
+    fontWeight: 260
+    lineHeight: 0.86
+    letterSpacing: "-0.05em"
+    fontVariation: "'wdth' 115"
   headline:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(36px, 6.2vw, 84px)"
-    fontWeight: 680
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(40px, 6vw, 96px)"
+    fontWeight: 300
     lineHeight: 1
+    letterSpacing: "-0.04em"
+    fontVariation: "'wdth' 110"
+  band:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(34px, 5.4vw, 84px)"
+    fontWeight: 280
+    lineHeight: 1.15
+    letterSpacing: "-0.03em"
+    fontVariation: "'wdth' 112"
+  email:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(28px, 5vw, 84px)"
+    fontWeight: 320
+    lineHeight: 1.1
+    letterSpacing: "-0.03em"
+    fontVariation: "'wdth' 108"
+  title-project:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(32px, 3.6vw, 60px)"
+    fontWeight: 320
+    lineHeight: 1
+    letterSpacing: "-0.035em"
+    fontVariation: "'wdth' 112"
+  title:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(26px, 3vw, 46px)"
+    fontWeight: 320
+    lineHeight: 1.08
+    letterSpacing: "-0.03em"
+    fontVariation: "'wdth' 110"
+  role:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(22px, 2vw, 30px)"
+    fontWeight: 380
+    lineHeight: 1.2
     letterSpacing: "-0.015em"
     fontVariation: "'wdth' 110"
-  address:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(22px, 4vw, 50px)"
-    fontWeight: 500
-    lineHeight: 1.1
-    letterSpacing: "-0.01em"
-    fontVariation: "'wdth' 100"
-  title:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(24px, 3.2vw, 40px)"
-    fontWeight: 620
-    lineHeight: 1.1
-    letterSpacing: "-0.01em"
-    fontVariation: "'wdth' 108"
-  subtitle:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(19px, 2.1vw, 25px)"
-    fontWeight: 600
-    lineHeight: 1.2
-    letterSpacing: "-0.005em"
-    fontVariation: "'wdth' 105"
-  subtitle-wide:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(20px, 2.2vw, 26px)"
-    fontWeight: 600
-    lineHeight: 1.2
-    letterSpacing: "-0.005em"
-    fontVariation: "'wdth' 105"
-  body:
-    fontFamily: "Instrument Sans, -apple-system, Segoe UI, sans-serif"
-    fontSize: "17px"
-    fontWeight: 400
-    lineHeight: 1.65
-    letterSpacing: "normal"
-    fontFeature: "'kern', 'liga'"
   body-lede:
-    fontFamily: "Instrument Sans, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(17px, 1.9vw, 20px)"
-    fontWeight: 400
-    lineHeight: 1.6
-    letterSpacing: "normal"
-  body-card:
-    fontFamily: "Instrument Sans, -apple-system, Segoe UI, sans-serif"
-    fontSize: "clamp(16px, 1.8vw, 19px)"
-    fontWeight: 400
-    lineHeight: 1.65
-    letterSpacing: "normal"
-  body-small:
-    fontFamily: "Instrument Sans, -apple-system, Segoe UI, sans-serif"
-    fontSize: "15.5px"
-    fontWeight: 400
-    lineHeight: 1.65
-    letterSpacing: "normal"
-  body-meta:
-    fontFamily: "Instrument Sans, -apple-system, Segoe UI, sans-serif"
-    fontSize: "15px"
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(18px, 1.5vw, 22px)"
     fontWeight: 400
     lineHeight: 1.55
     letterSpacing: "normal"
-  role:
-    fontFamily: "Archivo, -apple-system, Segoe UI, sans-serif"
-    fontSize: "19px"
-    fontWeight: 620
-    lineHeight: 1.3
+  body:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "18px"
+    fontWeight: 400
+    lineHeight: 1.6
     letterSpacing: "normal"
-    fontVariation: "'wdth' 105"
+    fontFeature: "'tnum'"
+  body-small:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "17px"
+    fontWeight: 400
+    lineHeight: 1.6
+    letterSpacing: "normal"
+    fontFeature: "'tnum'"
+  wordmark:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "17px"
+    fontWeight: 500
+    lineHeight: 1.6
+    letterSpacing: "-0.01em"
+    fontVariation: "'wdth' 112"
   label:
-    fontFamily: "Spline Sans Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
-    fontSize: "12px"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "0.08em"
-  label-lg:
-    fontFamily: "Spline Sans Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
-    fontSize: "13px"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "0.12em"
-  label-nav:
-    fontFamily: "Spline Sans Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
-    fontSize: "11.5px"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "0.09em"
-  label-sm:
-    fontFamily: "Spline Sans Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
-    fontSize: "11px"
-    fontWeight: 500
-    lineHeight: 1.4
-    letterSpacing: "0.08em"
-  label-stamp:
-    fontFamily: "Spline Sans Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
-    fontSize: "13.5px"
-    fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "0.2em"
-  glyph:
-    fontFamily: "Instrument Sans, -apple-system, Segoe UI, sans-serif"
-    fontSize: "24px"
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "15px"
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 1.6
     letterSpacing: "normal"
-  glyph-lg:
-    fontFamily: "Instrument Sans, -apple-system, Segoe UI, sans-serif"
-    fontSize: "44px"
+    fontFeature: "'tnum'"
+  label-sm:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "14px"
     fontWeight: 400
-    lineHeight: 1
+    lineHeight: 1.6
+    letterSpacing: "normal"
+  label-url:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "13px"
+    fontWeight: 400
+    lineHeight: "24px"
     letterSpacing: "normal"
 rounded:
-  sharp: "0"
+  url-pill: "6px"
+  window: "14px"
+  photo: "18px"
+  sector: "20px"
+  pill: "999px"
   circle: "50%"
 spacing:
-  gutter: "clamp(20px, 4vw, 48px)"
-  header: "56px"
-  section-y: "clamp(80px, 11vh, 128px)"
-  rule-gap: "18px"
-  grid-unit: "64px"
-  container: "1360px"
+  gutter: "clamp(20px, 4.4vw, 72px)"
+  container: "1440px"
+  header: "68px"
+  section-y: "clamp(96px, 16vh, 200px)"
+  section-head-gap: "clamp(48px, 9vh, 104px)"
+  column-gap: "clamp(24px, 4vw, 64px)"
+  band-y: "clamp(28px, 5vh, 56px)"
+  card-gap: "clamp(28px, 4vw, 72px)"
+  row-y: "clamp(26px, 4.4vh, 44px)"
 components:
-  chip-acid:
-    backgroundColor: "{colors.acid-green}"
-    textColor: "{colors.cool-ink}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sharp}"
-    padding: "3px 9px"
-  chip-outline:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink-secondary}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sharp}"
-    padding: "2px 8px"
-  chip-dashed:
-    backgroundColor: "transparent"
-    textColor: "{colors.ink-secondary}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sharp}"
-    padding: "2px 8px"
   nav-link:
     backgroundColor: "transparent"
-    textColor: "{colors.ink-secondary}"
+    textColor: "{colors.bone-secondary}"
     typography: "{typography.label}"
-    rounded: "{rounded.sharp}"
-    padding: "0 0 3px"
-  nav-link-hover:
-    textColor: "{colors.cool-ink}"
+  nav-link-active:
+    textColor: "{colors.bone}"
   lang-toggle:
     backgroundColor: "transparent"
-    textColor: "{colors.ink-muted}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sharp}"
-    padding: "3px 8px"
+    textColor: "{colors.bone-muted}"
+    typography: "{typography.label-sm}"
+    rounded: "{rounded.pill}"
+    padding: "0 10px"
+    height: "32px"
   lang-toggle-active:
-    backgroundColor: "{colors.cool-ink}"
-    textColor: "{colors.acid-green}"
-    rounded: "{rounded.sharp}"
-    padding: "3px 8px"
-  card-project:
-    backgroundColor: "{colors.cool-white}"
-    textColor: "{colors.cool-ink}"
-    rounded: "{rounded.sharp}"
-    padding: "28px 0 40px"
-  card-project-alt:
-    backgroundColor: "{colors.cool-white-shade}"
-    textColor: "{colors.cool-ink}"
-    rounded: "{rounded.sharp}"
-    padding: "28px 0 40px"
-  card-project-ink:
-    backgroundColor: "{colors.cool-ink}"
-    textColor: "{colors.cool-white}"
-    rounded: "{rounded.sharp}"
-    padding: "28px 0 40px"
-  topstar:
-    backgroundColor: "{colors.cool-white}"
-    textColor: "{colors.electric-cobalt}"
-    rounded: "{rounded.circle}"
-    size: "48px"
-  topstar-hover:
-    backgroundColor: "{colors.acid-green}"
-    textColor: "{colors.cool-ink}"
+    backgroundColor: "{colors.bone}"
+    textColor: "{colors.night}"
+    rounded: "{rounded.pill}"
+  header-scrolled:
+    backgroundColor: "{colors.header-scrim}"
+    height: "{spacing.header}"
   skip-link:
-    backgroundColor: "{colors.cool-ink}"
-    textColor: "{colors.cool-white}"
-    typography: "{typography.label}"
-    rounded: "{rounded.sharp}"
+    backgroundColor: "{colors.bone}"
+    textColor: "{colors.night}"
     padding: "10px 16px"
+  skill-row:
+    backgroundColor: "transparent"
+    textColor: "{colors.bone}"
+    typography: "{typography.title}"
+    padding: "{spacing.row-y} 0"
+  skill-row-hover:
+    textColor: "{colors.highlight-white}"
+  sector-card:
+    backgroundColor: "{colors.sector-glass-high}"
+    textColor: "{colors.bone}"
+    rounded: "{rounded.sector}"
+    padding: "clamp(26px, 3.2vw, 44px)"
+  project-window:
+    backgroundColor: "{colors.window-body}"
+    rounded: "{rounded.window}"
+    width: "min(50vw, 820px, calc((100vh - 380px) * 1.6))"
+  project-window-bar:
+    backgroundColor: "{colors.window-bar}"
+    height: "38px"
+    padding: "0 14px"
+  project-window-url:
+    backgroundColor: "{colors.window-well}"
+    textColor: "{colors.window-url-text}"
+    typography: "{typography.label-url}"
+    rounded: "{rounded.url-pill}"
+    height: "24px"
+    padding: "0 12px"
+  work-hud:
+    textColor: "{colors.bone-muted}"
+    typography: "{typography.label}"
+  photo-frame:
+    backgroundColor: "{colors.night-surface}"
+    rounded: "{rounded.photo}"
+  text-link:
+    textColor: "{colors.bone}"
+    typography: "{typography.body}"
+    padding: "0 0 3px"
+  contact-email:
+    textColor: "{colors.bone}"
+    typography: "{typography.email}"
+    padding: "0 0 12px"
+  contact-email-hover:
+    textColor: "{colors.highlight-white}"
+  footer:
+    textColor: "{colors.bone-muted}"
+    typography: "{typography.label-sm}"
+    padding: "22px 0 0"
 ---
 
 # Design System: vaclavmudra.com
 
 ## Overview
 
-**Creative North Star: "Modrotisk"**
+**Creative North Star: "Light in a Dark Room"**
 
-*Modrotisk* is the Czech word for indigo-resist block printing — a folk textile
-craft where a resist paste is stamped onto cloth, the cloth is dipped in indigo,
-and the pattern emerges as bright figures on a deep blue ground. Read literally,
-the same word decomposes into *modrý* + *tisk*: **blue print**. Both readings
-are load-bearing here. From the craft comes the discipline of a stamped mark, a
-registration that either aligns or visibly does not, and ink that sits *in* the
-surface rather than floating above it. From the literal reading comes the
-drafting table: a 64px grid, orthogonal elbow joins as in an ArchiMate diagram,
-registration crosses at the corners of every node, cobalt as the line weight of
-a technical drawing.
+A near-black page (night) lit from behind by a hand-written WebGL fragment shader: domain-warped fbm noise with thin filaments that shift between moonlight and ember, bending toward the pointer and glowing where it rests. Everything on top is type. One variable face, Archivo, set very light (260–320) and wide (108–115%) at display sizes, so the letters read as lit edges rather than ink. The only colors besides bone-white text are the two lights the field itself emits, ember and moonlight, plus a single mint status dot.
 
-The system is **bright, cool and orthogonal**. Cool white ground, cool-black
-ink, one structural blue and one highlighter green. Depth is achieved by offset
-and hairline rather than by blur: the About photograph carries a cobalt frame
-displaced 12px down and right, exactly as a misregistered second pass would
-print. There are no shadows anywhere in the stylesheet, no gradients other than
-the grid's own fade-out mask, no grain, no glass. Nothing is rounded except two
-things that are literally circles — the availability stamp and the
-scroll-progress button.
+The field is atmosphere, not decoration under the words: text blocks marked as calm zones push the shader down to 7% in a soft-edged rectangle around them, the field dims as the hero scrolls away, and it brightens again toward the contact section. Motion is filmic and slow (quint ease-out, 1000–1500 ms reveals) and always settles: kinetic letters, tilted project windows and the cursor spotlights return to rest when the pointer and scroll stop. Every effect has a static path for `prefers-reduced-motion` and a content-complete no-JS path.
 
-The counter-position is explicit and was the reason for the redesign. This
-replaced a dark, Raycast-inspired v4 whose genre — dark ground, glow blobs, a
-grid of hairline-bordered cards, five rainbow accents, mono eyebrow labels — is
-now the default output of any code-generating model. It also replaced an
-intermediate v5 ("Papír a stroj": warm paper, Fraunces, vermilion) rejected for
-sepia tones and typographic overacting. Brightness is the first differentiator;
-the second is that the graphics carry meaning. The hero's animated canvas
-schematic says *solution architect* without a word of copy, and it earns the
-space a decorative illustration would have wasted.
-
-**On the status of what follows:** every rule in this file describes the shipped
-v5.1 system and holds until a deliberate decision replaces it. None of them is
-sacred. They are named and stated forcefully because a design system that hedges
-gets ignored, not because they are beyond revision — a future direction is free
-to overturn any of them, as long as it does so on purpose and system-wide rather
-than by drift on one section.
+Archived generations stay linked from the footer: v4 at `/old/`, v5.1 "modrotisk" blueprint at `/v5/`, and v6b at `/v6b/` (this same system with a contour-line shader background).
 
 **Key Characteristics:**
-
-- Bright cool-white ground; dark surfaces are the rare exception, not the mode
-- Exactly two accents, each with one job: cobalt structures, acid pulses
-- Zero radius everywhere except literal circles; zero shadows anywhere
-- Depth by offset overprint and hairline, never by blur
-- Full-bleed hairlines set the vertical rhythm; sections are separated by rules, not cards
-- Three type roles on three faces: Archivo display, Instrument Sans text, Spline Sans Mono meta
-- Graphics are technical artifacts (grid, registration crosses, stamp, schematic), not ornament
-- Scroll produces motion in several directions and speeds at once; `prefers-reduced-motion` yields a complete static drawing
+- Dark base (night) with a live WebGL light field fixed behind the page; a 6% SVG noise grain sits over everything.
+- One typeface, Archivo variable (wght 100–900, wdth 62–125%); hierarchy through weight, width and size, never a second family.
+- Display type light (260–320) with tight negative tracking; kinetic headings modulate width and weight per letter.
+- Two light accents, ember (warm) and moonlight (cool); mint only for "live" status.
+- Rounded glass containers (14–20px) against 1px hairline rules; no hard boxes.
+- Shared single `styles.css`, `main.js`, `kinetic-lite.js` across CS and EN.
 
 ## Colors
 
-A cold, high-contrast palette: two near-neutral grounds, a three-step ink ramp,
-and two saturated accents that never trade jobs.
+A cold-dark neutral ground lit by two emitted lights; color appears as light sources, not as painted surfaces.
 
 ### Primary
-
-- **Electric Cobalt** (`--blue`): the line weight of a technical drawing. It
-  carries every structural signal — section indices (`01 — CO DĚLÁM`), the
-  asterisk mark, the schematic's edges and travelling pulses, the availability
-  stamp, the self-drawing timeline rail, the growing nav underline, the About
-  photo's offset overprint frame, and every focus ring on a light ground. It is
-  the color of things that hold the page together.
-- **Cobalt Deep** (`--blue-deep`): hover state for cobalt objects only. It has
-  no independent role.
+- **Ember** (ember): the warm light. Section index numerals, the "&" in the hero role, education/certification headings in About, the current-job timeline node, the focus ring, text selection, the wordmark dot. Its glow variant (ember-glow) halos the band dots and the timeline progress line; ember-spot is the 13% radial wash of the skills-section cursor spotlight.
 
 ### Secondary
+- **Moonlight** (moonlight): the cool light. Second sector card's edge light and tag dot, outline-band separator dots, the cool end of every gradient line. moonlight-glow is the default under-glow of project windows.
 
-- **Acid Green** (`--acid`): the highlighter. It appears as a ground beneath ink
-  text and never as text itself — sector tags, the `● LIVE` status chip, the
-  role words in the hero, the photo's caption label, the active language chip,
-  the second marquee band, `::selection`, the contact e-mail's underline, the
-  current-position markers on the timeline, the LLM node in the schematic, and
-  the top-star's hover fill. Where cobalt is structure, acid is pulse: it marks
-  what is alive right now.
+### Tertiary
+- **Live Mint** (live-mint): status only. The pulsing "available" dot in the hero meta and the Live dot on project cards. Never used for text or decoration.
 
 ### Neutral
-
-- **Cool White** (`--bg`): the base surface. Deliberately not pure white — a
-  cold green-tinted white, so the ink and cobalt read as printed rather than
-  screen-lit. Also the text color on inverted ink surfaces.
-- **Cool White Shade** (`--bg-2`): the alternating surface, used only to
-  separate adjacent project cards in the sticky stack.
-- **Cool Ink** (`--ink`): body text, all hairline borders at full strength, and
-  the two inverted block surfaces.
-- **Ink Secondary** (`--ink-2`): secondary and descriptive copy — ledes, list
-  descriptions, timeline detail.
-- **Ink Muted** (`--ink-3`): metadata that should recede — row numbers, section
-  glosses, period labels, the inactive language chip, the registration crosses in
-  the schematic. Measured at **4.62:1** on cool white, so it clears AA at the
-  11–12px sizes it is actually used at. It was `#7f8985` (3.35:1) until the July
-  2026 pass; that value failed the standard the project sets for itself while
-  carrying work-history dates and certification years, which is exactly the text
-  a verifier came to read. Recession is achieved by being the lightest *legible*
-  step, not by being illegible.
-- **Hairline** (`--line`): the drafting grid and internal dividers inside a
-  section.
-- **Hairline Strong** (`--line-strong`): structural rules — between sections,
-  under section heads, between the two sector columns.
+- **Night** (night): page ground, `theme-color`, text on inverted surfaces (active language pill, skip link, selection).
+- **Night Surface** (night-surface): placeholder under the photo while it loads.
+- **Sector Glass** (sector-glass-high to sector-glass-low): 160deg translucent gradient filling sector cards so the field still glows faintly through them.
+- **Header Scrim** (header-scrim) and **Photo Scrim** (photo-scrim): translucent night used for the scrolled header and the bottom fade on the photo that carries its caption.
+- **Bone** (bone): primary text; 16.5:1 on night.
+- **Bone Secondary** (bone-secondary): descriptive copy, ledes, nav at rest; 10:1 on night.
+- **Bone Muted** (bone-muted): meta labels, numerals, dates, footer; 5.8:1 on night.
+- **Highlight White** (highlight-white): hover state of skill titles and the contact e-mail, and the hot core of radial light dots.
+- **Hairline** / **Hairline Strong** (hairline, hairline-strong): 1px dividers between skill rows, footer rule, timeline rail; strong for link underlines at rest, HUD track, scroll cue.
+- **Outline Stroke** (outline-stroke): 1px text stroke of the second marquee band.
+- **Window chrome** (window-body, window-bar, window-well, window-url-text, window-bar-rule, glass-sheen, traffic-red/amber/green): the framed browser window around project screenshots. A literal object, not part of the palette logic.
 
 ### Named Rules
+**The Lights Not Paint Rule.** Ember and moonlight appear only as small emissive things: dots, numerals, single words, 1–2px lines, glows and spotlights. No accent-filled buttons, panels or section backgrounds.
 
-**The Two Jobs Rule.** Cobalt structures, acid pulses. A third accent hue would
-require deciding what job it does, and there is no third job. When a new element
-needs color, it is asking to be either structure or pulse; decide which, then
-use that accent.
+**The Two Lights Rule.** Every gradient line pairs moonlight and ember (HUD progress bar, timeline progress, contact e-mail underline). No third hue enters a gradient.
 
-**The Acid Never Speaks Rule.** Acid is a ground or an underline, never a text
-color. As text on cool white it measures **1.11:1** — invisible. As a ground
-under cool ink it measures **15.5:1**. The rule is a legibility fact wearing a
-doctrine's clothes.
-
-**The Two Ink Blocks Rule.** The inverted ink surface appears twice on the page
-— the final project card and the contact section — and it lands because it is
-rare. A third would make the page look like it has a dark theme it does not
-have.
-
-**The Inverse Opacity Ladder.** On ink surfaces, secondary text is cool white at
-0.75, metadata at 0.6, muted at 0.5, and borders at 0.25. These are written as
-literal `rgba(245, 247, 246, …)` in the stylesheet rather than as tokens; treat
-the ladder as the token until it is promoted into one.
+**The Translucent Night Rule.** Surfaces over the field are translucent night (0.75–0.85 alpha), never opaque, so the light behind stays readable as one continuous space.
 
 ## Typography
 
-**Display Font:** Archivo (variable, `wght 100–900`, `wdth 62–125`)
-**Body Font:** Instrument Sans (variable, `wght 400–700`)
-**Label/Mono Font:** Spline Sans Mono (`wght 400–600`)
+**Display Font:** Archivo (variable, self-hosted woff2 latin + latin-ext, with system-ui, -apple-system, Segoe UI fallback)
+**Body Font:** Archivo
+**Label/Mono Font:** none; labels are Archivo at 14–15px
 
-All three are self-hosted variable `woff2` in latin and latin-ext subsets, with
-`font-display: swap`; the two Archivo subsets and two Instrument Sans subsets
-are preloaded. There is no font CDN — the "no trackers" line in the footer is a
-factual claim about the page.
-
-**Character:** Archivo is set wide and heavy — width axis between 105% and 115%,
-weight 600 to 680 — so headings read as *stamped* rather than merely large. The
-width axis is the signature move: it is what makes the display type feel
-industrially set rather than defaulted. Instrument Sans underneath is quiet,
-neutral, and slightly narrow, deliberately staying out of the way. Spline Sans
-Mono handles every piece of metadata in uppercase with open tracking, which is
-what gives the page its instrument-panel undertone.
+**Character:** One family carries everything. Large type is thin and wide with tight tracking so it reads as light; small type sits at regular weight with tabular numerals throughout the body.
 
 ### Hierarchy
-
-- **Display** (Archivo 640, `wdth 115%`, `clamp(38px, 6.8vw, 96px)`, line-height 1,
-  `-0.015em`, uppercase): the name in the hero, two lines in a single
-  left-aligned block. Its close relative at 680 weight and `wdth 112%`,
-  `clamp(44px, 8vw, 112px)`, is the contact heading.
-- **Headline** (Archivo 680, `wdth 110%`, `clamp(36px, 6.2vw, 84px)`, line-height 1,
-  `-0.015em`, mixed case): project names on the deck cards. Not uppercase —
-  these are proper nouns and read as marks.
-- **Title** (Archivo 620, `wdth 108%`, `clamp(24px, 3.2vw, 40px)`, line-height 1.1,
-  `-0.01em`): section headings, always paired with a cobalt mono index to their
-  left and a hairline beneath.
-- **Subtitle** (Archivo 600, `wdth 105%`, `clamp(19px, 2.1vw, 25px)`, line-height 1.2):
-  competency row titles, sector column headings, timeline roles (fixed 19px,
-  line-height 1.3).
-- **Body** (Instrument Sans 400, 17px, line-height 1.65): running copy. The lede
-  variant is `clamp(17px, 1.9vw, 20px)` at line-height 1.6; descriptive copy
-  drops to 15.5px. Measure is capped per block: 52–58ch for descriptions, 56ch
-  for the hero lede, 54ch for card copy, 22ch for sector headings.
-- **Label** (Spline Sans Mono 500, 12px, `0.08em`, uppercase): the `.mono`
-  utility — indices, tags, URLs, periods, statuses. Variants: wordmark 13px/600
-  at `0.1em`; nav 11.5px/500 at `0.09em`; marquee 13px/500 at `0.12em`; stamp
-  text 13.5px/600 at `0.2em`; footer 11px at `0.05em` in sentence case, the one
-  place mono is not uppercased.
+- **Display** (260, clamp(78px, 15.6vw, 260px), 0.84): the hero name on two masked lines, second line indented clamp(40px, 12vw, 240px). Width narrows from 115% to 70% as the hero scrolls away. 24vw under 520px.
+- **Display Contact** (260, clamp(72px, 14vw, 230px), 0.86): the closing "Ozvěte se." heading; 21vw under 520px.
+- **Headline** (300, clamp(40px, 6vw, 96px), 1): section h2s, `text-wrap: balance`.
+- **Band** (280, clamp(34px, 5.4vw, 84px), 1.15): marquee band words; second band is outline-only.
+- **Email** (320, clamp(28px, 5vw, 84px), 1.1): contact e-mail address.
+- **Title Project** (320, clamp(32px, 3.6vw, 60px), 1): project names under the windows.
+- **Title** (320, clamp(26px, 3vw, 46px), 1.08): skill and sector headings (sectors use clamp(28px, 3vw, 48px), max 16ch).
+- **Role** (380, clamp(22px, 2vw, 30px), 1.2): hero role line; timeline roles use 360 / 108% / 1.15.
+- **Body Lede** (400, clamp(18px, 1.5vw, 22px), 1.55): hero lede, max 48ch.
+- **Body** (400, 18px, 1.6): running text, max 52–56ch. Small variant 17px for card and timeline descriptions; 16px in fact lists.
+- **Label** (400, 15px): section index, numerals, card meta, HUD, dates, nav. Emphasis inside labels is weight 500, never uppercase or tracking.
+- **Label Small** (400, 14px): footer and language toggle. **Label URL** (13px) only inside the window URL pill.
 
 ### Named Rules
+**The One Family Rule.** Archivo only. Hierarchy comes from weight (260–500), width (108–115% on display roles) and size. No mono, no serif, no second sans.
 
-**The Width-Axis Rule.** Display type is set on Archivo's `wdth` axis between
-105% and 115%, wider as it gets larger. Reaching for more presence means going
-wider and heavier, not just bigger — the axis is what distinguishes this
-setting from any default sans at a big size.
+**The Light Display Rule.** Anything above 26px sits at weight 260–380 with negative tracking (-0.015em to -0.05em). Heavier display weight exists only transiently, as kinetic response (+80 at most).
 
-**The Third Voice Rule.** Every piece of metadata is mono, uppercase, and
-tracked open. Anything that is a label, an index, a URL, a status, or a date
-belongs to Spline Sans Mono; anything a person reads as a sentence belongs to
-Instrument Sans. There is no overlap, which is what keeps the two from
-competing. The footer is the one place mono is not uppercased.
-
-**The Czech Typography Rule.** Correct Czech typesetting is a requirement, not a
-finish: „low-high quotes", em dashes, non-breaking spaces after single-letter
-prepositions (`v&nbsp;rámci`) and inside broken numerals and coordinates, and no
-orphans in headings. The English mutation follows English conventions with the
-same rigor. Both files carry these as literal entities in the markup.
+**The Sentence Case Rule.** No uppercase and no letter-spaced labels anywhere; meta reads as quiet sentence-case text in bone-muted.
 
 ## Layout
 
-**Container and gutter.** Content is capped at 1360px with a fluid gutter of
-`clamp(20px, 4vw, 48px)`. The sticky header is a fixed 56px, and
-`scroll-padding-top: calc(56px + 16px)` keeps anchor targets clear of it.
+Single page, anchored sections, max container 1440px with fluid gutter (gutter). Sections breathe vertically (section-y) and open with a two-column section head: a numbered index (minmax(140px, 0.32fr)) beside the h2, collapsing to one column under 760px. The hero fills 100svh with content bottom-aligned; meta line (location with coordinates, availability) pinned under the header.
 
-**Rhythm by rule, not by card.** Vertical rhythm comes from full-bleed
-horizontal hairlines. Each section is separated by a 1px `--line-strong` top
-border and padded `clamp(80px, 11vh, 128px)` vertically. Section heads are a
-baseline-aligned three-part row — cobalt mono index, Archivo title, muted mono
-gloss pushed right by `margin-left: auto` — with 18px of space above their own
-hairline. Nothing is enclosed in a bordered box; the page is organized by lines
-across it, not containers within it.
+Order: hero, two marquee bands, 01 skills list, 02 two sector cards (1fr 1fr, stacked under 860px), 03 horizontally pinned project carousel, 04 about (photo + facts | timeline, 0.9fr/1.1fr, stacked under 900px), 05 contact with footer.
 
-**Asymmetric grids, per section.** No single column grid governs the page; each
-section states its own proportion. Hero is `1.15fr 0.85fr`. About is
-`0.9fr 1.1fr`. Sectors are `1fr 1fr` divided by a vertical hairline with
-matching `clamp(32px, 5vw, 80px)` padding on the inner edge. The competency
-register is `72px 1.1fr 1.3fr`, aligned on the baseline so the row number, title
-and description sit on one optical line. Definition lists in the About sidebar
-use `max-content 1fr`.
+The project section pins (sticky, 100vh) and translates its track horizontally with vertical scroll only on fine pointers with viewport at least 900x560 and no reduced motion; otherwise it is a native horizontal scroll-snap carousel (cards min(84vw, 640px)) with a "scroll sideways" hint. The pinned track starts aligned to the container edge and ends with 18vw trailing space.
 
-**The drafting grid.** A 64px square grid is painted with two `--line` gradients
-in the hero only, centered at top, and erased downward by a
-`linear-gradient(180deg, transparent 30%, var(--bg) 96%)` overlay. It
-establishes the drawing-board premise once and then gets out of the way.
-
-**Responsive behavior.** Breakpoints are per-component rather than global, each
-placed where its own layout actually breaks: 920px (hero collapses to one
-column, stamp repositions), 880px (About goes single-column), 860px (register
-drops to `32px 1fr` with the description reflowing under the title), 760px (nav
-reduces to Projects + Contact and the language chips take 44×44 hit areas,
-sectors stack and swap their dividing hairline from left border to top border),
-720px (head wraps and the mono gloss moves to its own full-width line, deck cards
-grow to 70vh). The mobile navigation drops items rather than collapsing into a
-hamburger — at 56px tall there is nothing to hide behind — and it never falls
-below Projects + Contact: the page is ~9,000px long, and those two are the only
-way to reach the proof and the CTA.
-
-### Named Rules
-
-**The Rule-Not-Card Rule.** Structure is expressed with lines across the page.
-When a new block needs separating, give it a hairline and vertical space; do not
-give it a border box, a background panel, or a radius.
-
-**The Own-Proportion Rule.** Each section declares the grid its content wants.
-Consistency lives in the gutter, the container, the rules, and the type — not in
-a shared column count.
+Breakpoints: 900px (hero foot, about, card info to one column; scroll cue hidden; pin gate), 860px (nav keeps only Projects and Contact; skills to 36px numeral column; sectors stack; 44px language targets), 760px (section head stacks), 520px (coordinates hidden; display sizes switch to vw), 440px (wordmark dot hidden).
 
 ## Elevation & Depth
 
-**There are no shadows in this system.** The stylesheet contains no `box-shadow`,
-no `filter: blur()`, no backdrop filter, and no grain. Depth is entirely a
-function of printing metaphors:
+Depth is light, not shadow. Three planes: the WebGL field (fixed, z -1, half resolution, fades in over 1600ms; its ground is exactly night and its lights are shader-space approximations of moonlight and ember; without WebGL two fixed radial gradients of the same lights at 16% and 10% stand in), the grain overlay (fixed, 6%), and content. Within content, translucent glass panels and spotlights give lift; the only true drop shadow belongs to the project windows, which also sit in a 3D context (perspective 1400px, translateZ 40px) and rotate toward the viewer as they move off-center.
 
-- **Offset overprint.** The About photograph sits in a 1px ink border with a
-  second 1px cobalt border displaced `translate(12px, 12px)` behind it — a
-  deliberate misregistration, which is what makes it read as printed rather
-  than as a shadowed card.
-- **Tonal layering.** Adjacent project cards alternate between cool white and
-  cool white shade; the final card inverts to ink entirely. Surface change, not
-  lift.
-- **Physical stacking.** The project deck's depth is real: five `position: sticky`
-  cards, each offset `calc(56px + var(--i) * 15px)` from the top, each with a
-  1.5px ink top border, physically overlapping as you scroll. The stack is the
-  elevation.
-- **Grayscale conversion.** The photograph is `grayscale(1) contrast(1.05)`, so
-  it recedes to the same ink-and-white register as everything else and the
-  cobalt frame stays the only chromatic event in the frame.
+### Shadow Vocabulary
+- **Window stack** (`box-shadow: 0 0 0 1px rgba(237,234,228,0.10), 0 40px 80px -30px rgba(0,0,0,0.8), 0 0 120px -40px var(--glow, rgba(143,184,255,0.45))`): project windows only; `--glow` is tinted per project.
+- **Point glow** (`box-shadow: 0 0 12–24px` of ember, ember-glow or moonlight): light dots (wordmark, band separators, current timeline node, Live dot), and the timeline progress line (`0 0 14px rgba(255,184,119,0.5)`).
+- **Focus ring on cards** (`box-shadow: 0 0 0 2px ember` replacing the hairline in the window stack).
 
 ### Named Rules
+**The Calm Under Text Rule.** Every non-heading text block over the open field carries `data-calm`; the shader reduces itself to 7% within a soft margin (18px pad, 2–14% of viewport height falloff) around it. Up to 8 zones. Headings are allowed to sit in the light; paragraphs are not.
 
-**The Offset-Not-Blur Rule.** Depth is produced by displacing a line, changing a
-tone, or stacking a real surface. A shadow would introduce a light source the
-page has otherwise decided not to have.
+**The Field Breathes With Story Rule.** Field intensity is tied to position: full in the hero, down to 14% after it, rising back toward 76% as the contact section enters.
 
 ## Shapes
 
-**Zero radius is the default.** Every rectangle in the system is square-cornered
-— chips, cards, tags, the language toggle, the skip link, the photo frame, every
-schematic node. Two elements are circular, both because they are literally
-round objects: the availability stamp (a rotating rubber stamp) and the
-scroll-progress button (a dial). `50%` and `0` are the only two radii in the
-system; there is no intermediate step, and introducing one would soften the
-drafting premise.
-
-**Line weights are a scale.** 1px is the default hairline (borders, dividers,
-schematic node outlines, registration crosses). 1.5px marks structure that is
-being asserted — the schematic's cobalt edges, the hub circle, the project
-cards' top borders. 2px is reserved for state: focus rings, the nav's grown
-underline, the timeline's drawn line, the contact e-mail's resting underline
-(which thickens to 6px on hover).
-
-**Recurring geometry.** The asterisk `✳` is the system's mark: in the wordmark,
-after the hero name, in section eyebrows, as the register's hover bullet, as the
-rotating hub of the schematic, and as the scroll-progress glyph. Registration
-crosses — two 6px crossed strokes — mark the top-left and bottom-right of every
-schematic node. Connections between nodes are orthogonal elbows (out, across,
-in) with a mid-height break, never diagonals or curves, matching ArchiMate
-convention.
-
-### Named Rules
-
-**The Two-Radii Rule.** `0` for anything rectangular, `50%` for anything that is
-a physical round object. No `4px`, no `8px`, no pills.
-
-**The Orthogonal Rule.** Connections turn at right angles. No diagonals, no
-bezier curves, no organic paths.
+Soft containers, hard lines. Windows, photo and sector cards use generous radii (14px / 18px / 20px) with `overflow: hidden`; the language toggle is a full pill; status, nodes and separators are circles (8–11px). Everything structural (row dividers, timeline rail, footer rule, link underlines, HUD track) is a 1px hairline. Sector cards draw their edge as a masked 1px ring that the cursor spotlight lights from inside. The photo is a 4:5 rounded rectangle, never a circle.
 
 ## Components
 
-### Chips (tags and statuses)
-
-- **Character:** stamped, tight, mono. A chip is a label pressed onto the page.
-- **Acid chip:** acid ground, ink text, `3px 9px` padding, square corners. Used
-  for sector tags, the `● LIVE` status, the photo caption, and highlighted role
-  words in the hero. This is the loudest object in the system and it is small on
-  purpose.
-- **Outline chip:** transparent, secondary ink text, 1px `--line-strong` border,
-  `2px 8px`. Used for `◐ BETA`.
-- **Dashed chip:** identical to outline with a dashed border, for `○ WIP`. The
-  status ladder reads at a glance: filled → outlined → dashed maps to live →
-  beta → in progress, and the leading glyph (`●` / `◐` / `○`) repeats the same
-  information without relying on color.
-- **On ink surfaces:** the dashed chip switches to cool-white text with a
-  0.5-alpha border.
-
-### Cards (project deck)
-
-- **Corner style:** square (`0`).
-- **Background:** cool white, alternating to cool white shade; the last card
-  inverts to ink with cool white text and a cool-white top border.
-- **Border:** 1.5px ink top border only. No side or bottom borders — the card is
-  a sheet laid on the page, not a box.
-- **Shadow strategy:** none; see Elevation & Depth. Depth is the sticky stack.
-- **Internal padding:** container gutter horizontally, `28px` top and `40px`
-  bottom; minimum height `min(64vh, 600px)`, rising to `70vh` under 720px.
-- **Structure:** mono head row (index / status) at top, oversized project name
-  below it, description pushed to the bottom by `margin-top: auto`, mono foot
-  row (tags / URL) above a hairline.
-- **States:** the project name shifts to cobalt on hover — to acid on the ink
-  card — and the `↗` glyph in the URL translates `3px, -3px`. A full-area
-  `.cover` anchor makes the whole card clickable while keeping the accessible
-  name on one element; `:focus-within` draws a 2px inset cobalt outline around
-  the card.
-- **Known trade-off:** because `.cover` spans the card, text inside it cannot be
-  selected — a visitor cannot copy the domain by dragging. Accepted for now; the
-  fix is to drop the overlay and make the address itself the link.
-- **The card index is hand-typed** (`Projekt 01 / 05`). PRODUCT.md treats the
-  deck as variable-length, so adding a sixth project means editing all five
-  denominators by hand or they silently lie. A CSS counter would remove the
-  hazard.
-
 ### Navigation
+- **Header:** fixed, 68px, transparent at top; after 10px of scroll takes header-scrim. Hides (translateY(-100%), 300ms) when scrolling down past 70% of the viewport, returns on any upward scroll.
+- **Wordmark:** 17px / 500 / 112% with an 8px ember light dot.
+- **Links:** label size, bone-secondary, to bone on hover and when their section is current (IntersectionObserver, middle 5% band of the viewport).
+- **Language toggle:** pill links 40x32px (44x44px under 860px); active is inverted (bone fill, night text).
 
-- **Style:** mono uppercase 11.5px at `0.09em`, secondary ink, in a 56px sticky
-  header on cool white with a `--line-strong` bottom border.
-- **Hover:** text darkens to full ink while a 2px cobalt underline grows from
-  the left via `background-size` transition over 240ms. This growing underline
-  is the system's standard link affordance; the text-link variant grows a 1px
-  underline in `currentColor` over 280ms.
-- **Language toggle:** two square mono chips, `3px 8px`, muted ink on a
-  `--line` border. The active one inverts to ink ground with **acid** text —
-  the single place acid is used as a text color, legible because it sits on ink
-  at 15.5:1.
-- **Mobile:** items are removed rather than collapsed — Projects and Contact
-  remain at every width, with the language toggle always present and its chips
-  expanded to 44×44 hit areas under 760px.
+### Text links
+- Bone text with a hairline-strong 1px underline at rest; on hover a currentColor 1px line wipes in left to right (500ms quint). Trailing arrows (↘ ↗) nudge 3px up-right.
 
-### Availability stamp
-
-- **Character:** a rubber stamp caught mid-press.
-- **Structure:** a circular SVG with `OTEVŘENÝ KE SPOLUPRÁCI ✳ VÁCLAV MUDRA ✳`
-  set on a `textPath` around a 78px-radius circle with explicit `textLength` and
-  `lengthAdjust="spacingAndGlyphs"`, a 96px outer ring at 2.5px, an inner 58px
-  ring at 1.5px, and a centered asterisk.
-- **Color and placement:** cobalt, deepening on hover; `clamp(104px, 9.5vw, 136px)`
-  wide, positioned over the bottom-right corner of the hero schematic at a
-  resting `-8deg`.
-- **Behavior:** rotates once per 48s linearly, plus a scroll-velocity boost
-  accumulated into a `--boost` custom property. It is a real link to the contact
-  section, with an `aria-label` carrying the meaning the rotating text cannot.
-
-### Photo frame
-
-- **Character:** a print with a visible second pass.
-- Grayscale image (`grayscale(1) contrast(1.05)`) in a 1px ink border, capped at
-  360px wide, with a 1px cobalt border offset `12px, 12px` behind it via
-  `::before` at `z-index: -1`.
-- The caption is an acid chip positioned *inside* the image at `12px` from the
-  bottom-left — a label stuck on the print, not a `Fig. 1` line beneath it.
-
-### Competency register
-
-- **Character:** an index in a technical document, not a grid of feature cards.
-- Three-column baseline-aligned rows (`72px 1.1fr 1.3fr`) separated by 1px
-  `--line`: muted mono number, Archivo subtitle, secondary-ink description.
-- **Hover:** the title translates `14px` right over 320ms while a cobalt `✳`
-  fades in at `left: -1em`, and the row number turns cobalt. Nothing about the
-  row's box changes — the response is typographic.
-
-### Timeline
-
-- A 1px `--line` rail with a 2px cobalt line drawn over it, scaling from
-  `transform-origin: top` in proportion to scroll position through the block.
-  Entries are marked by 9px squares — cool white with an ink border, filled acid
-  when the position is current. Two entries are current at once (the Aricoma
-  engagement and the freelance practice), which is a fact about the timeline
-  rather than a sorting error; the `→ dnes` label carries that, the marker only
-  signals it by fill colour. Without JS the cobalt line renders complete
-  (`html:not(.js)` sets `scaleY(1)`).
+### Hero
+- Name lines rise from behind a mask (1500ms, translateY 108% with 6deg skew and wdth 62% to rest), staggered 130ms after a 200ms delay. Meta and foot rise 18px at 700ms. On scroll the name narrows (115% to 70%), lifts 60px and fades to 10%.
+- Availability: mint dot with a 2.6s ping ring. Scroll cue: 1px x 54px line with a travelling highlight.
 
 ### Marquee bands
+- Two aria-hidden rows moving in opposite directions (0.6px per frame plus 0.9x smoothed scroll velocity), edge-masked to transparent over 10%. Row A is solid bone with ember dots; row B is outline-stroke with moonlight dots. An sr-only paragraph carries the same content.
 
-- Two counter-running rows between hairlines: the upper on cool white with
-  secondary-ink text and cobalt asterisk separators running left, the lower on
-  **acid** with ink text and ink separators running right, divided by a 1px ink
-  border. Mono 13px at `0.12em`. Content is ordered, not random — the first band
-  runs the stack from data layer to modeling, the second runs disciplines from
-  analysis through architecture to delivery. The pair is `aria-hidden` with an
-  `sr-only` paragraph carrying the same content in reading order.
-- The counter-running pair is a pinned element of the v5.1 brief, not filler.
-  Its content overlaps sections 01 and 02, but a marquee is read as texture
-  rather than as information, so the overlap is not a cost. Removing one of the
-  two was tried and reverted in July 2026: it destroyed the counter-running idea
-  without resolving anything, since either both bands earn their place or
-  neither does.
+### Skills list with section spotlight
+- Ordered rows: 72px numeral column, title, description; hairlines top and bottom. Hover: title shifts 14px right and goes highlight-white, numeral turns ember.
+- The whole section carries a 420px ember-spot radial light that follows the pointer under the text, masked to fade out over 260px at the section top and bottom; on leave it fades in place (700ms) rather than jumping.
 
-### Scroll-progress button
+### Sector cards
+- Sector glass fill, 20px radius, masked 1px edge that the pointer lights (360px radial of the card's light), plus a 520px inner wash at 14% of that light. First card ember, second moonlight; the tag dot matches.
 
-- 48px circle, cool white ground, 1px ink border, cobalt asterisk glyph at 24px,
-  fixed 22px from the bottom-right. Fades in past 400px of scroll. The glyph
-  rotates in direct proportion to document progress, so it reads as a dial.
-  Hover fills it acid with ink glyph. Clicking scrolls to top.
+### Project window cards + HUD (signature)
+- Browser-window frame (window-body, 38px bar with traffic dots and centered URL pill, 16:10 view) around a 1440x900 homepage screenshot, object-fit cover from the top, scaled 1.05.
+- Depth: off-center cards rotate up to 16deg on Y; pointer tilt adds up to 5deg / 4deg; the screenshot parallaxes against the motion and a 7% white sheen slides with the tilt. All values lerp at 0.12 per frame.
+- Info row: muted "NN / NN" numeral, project name (title-project) whose link covers the whole card, description, meta with mint Live dot (hollow ring for WIP), tags and the URL in bone.
+- HUD under the pinned track: current index, a 1px track filled by a moonlight-to-ember bar scaled to progress, and the current project name. Hidden when not pinned. Focusing a card scrolls it to center.
 
-### Contact e-mail
+### About
+- Photo frame (4:5, 18px, max 560px) with a slow vertical parallax and a photo-scrim fade carrying the caption. Facts as two-column definition lists (7.5em term column) under ember 15px/500 headings.
+- Timeline: 1px hairline rail with a 2px ember-to-moonlight progress line that fills with scroll; 10px hollow nodes, ember filled and glowing for current roles.
 
-- Archivo at 500 weight and `wdth 100%` — lighter and narrower than any other
-  display use, because it is an address rather than a headline —
-  `clamp(22px, 4vw, 50px)`, cool white on ink, over a resting 2px acid
-  underline that thickens to 6px while the text itself turns acid on hover.
-  Clicking both follows the `mailto:` and copies the address to the clipboard.
-  **The confirmation fires only when the write actually resolves** — the label is
-  left alone on rejection, because a swallowed failure that still reports
-  "zkopírováno" is worse than no feedback.
-- The `mailto:` carries a `?subject=` so the compose window is never blank.
-- **Open gap:** the block offers an address and nothing else — no response
-  expectation, no engagement shape, no prompt for what to write. Availability is
-  stated only 8,000px earlier, on a rotating textPath where it cannot be read.
-  Closing this needs a commitment only Václav can make, so it stays open rather
-  than being filled with invented copy.
+### Contact
+- Display Contact heading, then the e-mail in Email type. Underline is a 2px moonlight-to-ember line resting at 18% width, extending to full on hover/focus (700ms) while a blurred light runs along it (1100ms). Click copies the address and swaps the label with a 220ms blur cross-fade, then swaps back after 1.9s.
+- Social links as text links; location right-aligned in label size.
+
+### Footer
+- Hairline top rule, label-small, bone-muted. Copyright, the literal "static HTML, no trackers, set in Archivo" line, and the version switcher: v4, v5, v6a (current, `aria-current`, plain text), v6b, plus the other language. Marked `data-calm`.
+
+### Kinetic headings
+- Headings with `data-kin` (hero name, section h2s, contact title) are split into per-letter spans after 1900ms. Letters within 11vw of the pointer widen by up to +10% and gain up to +80 weight; scrolling sends a gentle sine wave (±4% width, +20 weight) scaled by smoothed velocity. Spring stiffness 0.08, damping 0.62, no overshoot; everything returns to zero within ~0.5s of the pointer stopping. Pointer response on fine pointers only; disabled entirely under reduced motion.
 
 ### Focus treatment
-
-- 2px solid cobalt outline at `3px` offset on light grounds, switching to acid
-  inside ink sections. The deck card uses a 2px inset cobalt outline via
-  `:focus-within` because its clickable area is a full-bleed overlay. The skip
-  link is an ink-on-cool-white mono chip that slides down from `-48px` to `12px`
-  on focus.
+- Global `:focus-visible` is a 2px ember outline at 4px offset. Project cards move focus to an ember ring on the window. Skip link drops in from the top as an inverted bone tab.
 
 ## Do's and Don'ts
 
-These are the conventions of the shipped v5.1 system. They are worth following
-by default and worth overturning deliberately — as a system-wide decision, not
-as an exception on one section.
-
 ### Do:
-
-- **Do** give each accent its one job: cobalt for structure (links, indices,
-  rails, connections, focus), acid for pulse (chips, live status, underlines,
-  selection).
-- **Do** put acid behind ink text rather than in it — as a ground or an
-  underline. The one exception in the system, acid text on an ink ground in the
-  active language chip, works because the contrast is 15.5:1.
-- **Do** separate blocks with a full-bleed hairline and vertical space.
-  `--line-strong` for structure, `--line` for internal dividers.
-- **Do** set display type on Archivo's width axis (105–115%) as well as its
-  weight when it needs more presence.
-- **Do** keep every label, index, URL, status and date in Spline Sans Mono,
-  uppercase, tracked at `0.08em` or wider.
-- **Do** cap measure per block — 52–58ch for descriptions, ~56ch for ledes,
-  ~22ch for display-set headings.
-- **Do** create depth by offsetting a line, changing a tone, or stacking a real
-  surface.
-- **Do** give every new section the staggered reveal (`data-reveal` plus a
-  `--i` index, 70ms apart over 700ms). A dedicated scroll behavior — a sticky
-  stack, a self-drawing line — is earned by content that genuinely justifies
-  one, not granted by default.
-- **Do** hide decorative motion from assistive technology (`aria-hidden`) and
-  provide an `sr-only` equivalent whenever it carries real content.
-- **Do** encode status redundantly — glyph *and* border treatment *and* color,
-  as in `● LIVE` / `◐ BETA` / `○ WIP`.
-- **Do** run new motion through the single `requestAnimationFrame` loop in
-  `main.js`, animate only `transform` and `opacity`, cache measurements outside
-  the loop, and keep the `try/catch` so one bad frame cannot kill the sequence.
-- **Do** verify that `prefers-reduced-motion` leaves a complete, usable static
-  page — the schematic fully drawn, the timeline line at full height, bands and
-  glyphs untransformed.
-- **Do** keep the non-JS path intact: `.js` gates the reveal and rise
-  animations, so content is visible when the class never lands.
+- **Do** mark every paragraph-level text block placed over the open field with `data-calm` (max 8 per page).
+- **Do** keep display type at weight 260–320 with width 108–115% and tracking between -0.03em and -0.05em.
+- **Do** use ember and moonlight only as light: dots, numerals, single words, 1–2px lines, glows and spotlights.
+- **Do** run every gradient line between moonlight and ember.
+- **Do** frame project screenshots in the browser window, captured at the same 1440x900 viewport, and tint each window's `--glow` from the project's own color.
+- **Do** use the quint ease-out (cubic-bezier(0.22, 1, 0.36, 1)) for reveals and 600–1500ms durations for entrances; 200–300ms for state color changes.
+- **Do** give every motion a settled rest state and a reduced-motion path where all content is visible and static.
+- **Do** keep the version switcher in both language footers whenever a generation is archived.
 
 ### Don't:
-
-- **Don't** add a third accent hue. If a new element needs color, decide whether
-  it is structure or pulse and use that accent.
-- **Don't** introduce `box-shadow`, `blur`, backdrop filters, or grain. The page
-  has decided not to have a light source.
-- **Don't** use a radius between `0` and `50%`. No `4px`, no `8px`, no pills.
-- **Don't** enclose content in bordered boxes or background panels to group it —
-  that was the v4 card-grid pattern this design replaced.
-- **Don't** add a third inverted ink surface. Two is what keeps them rare enough
-  to register.
-- **Don't** tile the 64px drafting grid beyond the hero, where it fades out by
-  design.
-- **Don't** draw a diagonal or curved connection. Elbows turn at right angles.
-- **Don't** put the photograph in the hero or crop it to a circle — it belongs
-  in About, rectangular, grayscale, in its offset frame.
-- **Don't** let a decorative element overlap a meaning-carrying one. The stamp
-  and the schematic are both cobalt; where they overlapped, a visitor read it as
-  a rendering bug, not as intentional misregistration.
-- **Don't** place load-bearing text in `--ink-3` at display sizes below 11px, and
-  don't reintroduce a muted token that fails 4.5:1. Recession is the lightest
-  legible step, not an illegible one.
-- **Don't** load a font, script, or image from a third-party origin. Zero
-  external requests is a claim the footer makes literally.
-- **Don't** let a change land in one language mutation only. `index.html` and
-  `en/index.html` share `styles.css` and `main.js`; a structural edit to one is
-  unfinished until the other matches.
-- **Don't** reintroduce the v4 dark-glow vocabulary or the rejected v5 warm-paper
-  vocabulary. Both are anti-references on record.
+- **Don't** add a second typeface, uppercase labels or letter-spaced captions.
+- **Don't** fill buttons, panels or sections with ember, moonlight or mint.
+- **Don't** make surfaces over the field opaque; use translucent night at 0.75–0.85 alpha.
+- **Don't** add dark drop shadows to anything other than project windows; depth elsewhere comes from glass, light glows and the field.
+- **Don't** let kinetic or tilt effects keep moving once pointer and scroll are idle.
+- **Don't** use mint for anything other than live/available status.

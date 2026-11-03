@@ -1,470 +1,846 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-07-26T14:14:43Z",
+  "generatedAt": "2026-11-03T10:58:12Z",
   "title": "Design System: vaclavmudra.com",
   "extensions": {
     "colorMeta": {
-      "cool-white": {
+      "night": {
         "role": "neutral",
-        "displayName": "Cool White",
-        "canonical": "oklch(97% 0.003 165)",
-        "purpose": "Base surface, and the text color on inverted ink surfaces. Deliberately not pure white — green-tinted cold white so ink and cobalt read as printed rather than screen-lit.",
+        "displayName": "Night",
+        "canonical": "oklch(14.6% 0.018 266.8)",
+        "purpose": "Page ground and theme-color; matches the shader ground exactly. Text color on inverted surfaces.",
         "tonalRamp": [
-          "oklch(15% 0.003 165)",
-          "oklch(26% 0.003 165)",
-          "oklch(37% 0.003 165)",
-          "oklch(48% 0.003 165)",
-          "oklch(58% 0.003 165)",
-          "oklch(69% 0.003 165)",
-          "oklch(80% 0.003 165)",
-          "oklch(95% 0.003 165)"
+          "oklch(15% 0.018 266.8)",
+          "oklch(26% 0.018 266.8)",
+          "oklch(37% 0.018 266.8)",
+          "oklch(48% 0.018 266.8)",
+          "oklch(58% 0.018 266.8)",
+          "oklch(69% 0.018 266.8)",
+          "oklch(80% 0.018 266.8)",
+          "oklch(95% 0.018 266.8)"
         ]
       },
-      "cool-white-shade": {
+      "night-surface": {
         "role": "neutral",
-        "displayName": "Cool White Shade",
-        "canonical": "oklch(94% 0.003 160)",
-        "purpose": "Alternating surface, used only to separate adjacent project cards in the sticky stack.",
+        "displayName": "Night Surface",
+        "canonical": "oklch(20.6% 0.030 266.1)",
+        "purpose": "Photo placeholder while loading.",
         "tonalRamp": [
-          "oklch(15% 0.003 160)",
-          "oklch(26% 0.003 160)",
-          "oklch(37% 0.003 160)",
-          "oklch(48% 0.003 160)",
-          "oklch(58% 0.003 160)",
-          "oklch(69% 0.003 160)",
-          "oklch(80% 0.003 160)",
-          "oklch(95% 0.003 160)"
+          "oklch(15% 0.030 266.1)",
+          "oklch(26% 0.030 266.1)",
+          "oklch(37% 0.030 266.1)",
+          "oklch(48% 0.030 266.1)",
+          "oklch(58% 0.030 266.1)",
+          "oklch(69% 0.030 266.1)",
+          "oklch(80% 0.030 266.1)",
+          "oklch(95% 0.030 266.1)"
         ]
       },
-      "cool-ink": {
+      "sector-glass-high": {
         "role": "neutral",
-        "displayName": "Cool Ink",
-        "canonical": "oklch(19% 0.005 165)",
-        "purpose": "Body text, full-strength hairlines, and the two inverted block surfaces (final project card, contact section).",
+        "displayName": "Sector Glass High",
+        "canonical": "oklch(23.3% 0.035 266.6 / 0.85)",
+        "purpose": "Top-left stop of the 160deg sector-card gradient; translucent so the field glows through.",
         "tonalRamp": [
-          "oklch(15% 0.005 165)",
-          "oklch(26% 0.005 165)",
-          "oklch(37% 0.005 165)",
-          "oklch(48% 0.005 165)",
-          "oklch(58% 0.005 165)",
-          "oklch(69% 0.005 165)",
-          "oklch(80% 0.005 165)",
-          "oklch(95% 0.005 165)"
+          "rgba(22, 29, 46, 0.04)",
+          "rgba(22, 29, 46, 0.07)",
+          "rgba(22, 29, 46, 0.1)",
+          "rgba(22, 29, 46, 0.13)",
+          "rgba(22, 29, 46, 0.22)",
+          "rgba(22, 29, 46, 0.42)",
+          "rgba(22, 29, 46, 0.55)",
+          "rgba(22, 29, 46, 0.85)"
         ]
       },
-      "ink-secondary": {
+      "sector-glass-low": {
         "role": "neutral",
-        "displayName": "Ink Secondary",
-        "canonical": "oklch(44% 0.008 165)",
-        "purpose": "Secondary and descriptive copy — ledes, list descriptions, timeline detail.",
+        "displayName": "Sector Glass Low",
+        "canonical": "oklch(17.0% 0.024 268.5 / 0.85)",
+        "purpose": "Bottom-right stop of the sector-card gradient.",
         "tonalRamp": [
-          "oklch(15% 0.008 165)",
-          "oklch(26% 0.008 165)",
-          "oklch(37% 0.008 165)",
-          "oklch(48% 0.008 165)",
-          "oklch(58% 0.008 165)",
-          "oklch(69% 0.008 165)",
-          "oklch(80% 0.008 165)",
-          "oklch(95% 0.008 165)"
+          "rgba(11, 15, 26, 0.04)",
+          "rgba(11, 15, 26, 0.07)",
+          "rgba(11, 15, 26, 0.1)",
+          "rgba(11, 15, 26, 0.13)",
+          "rgba(11, 15, 26, 0.22)",
+          "rgba(11, 15, 26, 0.42)",
+          "rgba(11, 15, 26, 0.55)",
+          "rgba(11, 15, 26, 0.85)"
         ]
       },
-      "ink-muted": {
+      "header-scrim": {
         "role": "neutral",
-        "displayName": "Ink Muted",
-        "canonical": "oklch(52% 0.010 165)",
-        "purpose": "Metadata that should recede — row numbers, section glosses, period labels, the inactive language chip, registration crosses. Measures 4.62:1 on cool white, clearing AA at the 11–12px sizes it is used at. Was #7f8985 (3.35:1) until the July 2026 pass, where it failed the project's own standard while carrying work-history dates and certification years. Recession is the lightest legible step, not an illegible one.",
+        "displayName": "Header Scrim",
+        "canonical": "oklch(14.6% 0.018 266.8 / 0.82)",
+        "purpose": "Scrolled header background.",
         "tonalRamp": [
-          "oklch(15% 0.010 165)",
-          "oklch(26% 0.010 165)",
-          "oklch(37% 0.010 165)",
-          "oklch(48% 0.010 165)",
-          "oklch(58% 0.010 165)",
-          "oklch(69% 0.010 165)",
-          "oklch(80% 0.010 165)",
-          "oklch(95% 0.010 165)"
+          "rgba(7, 10, 18, 0.04)",
+          "rgba(7, 10, 18, 0.07)",
+          "rgba(7, 10, 18, 0.1)",
+          "rgba(7, 10, 18, 0.13)",
+          "rgba(7, 10, 18, 0.22)",
+          "rgba(7, 10, 18, 0.42)",
+          "rgba(7, 10, 18, 0.55)",
+          "rgba(7, 10, 18, 0.85)"
+        ]
+      },
+      "photo-scrim": {
+        "role": "neutral",
+        "displayName": "Photo Scrim",
+        "canonical": "oklch(14.6% 0.018 266.8 / 0.75)",
+        "purpose": "Bottom fade on the photo that carries the caption.",
+        "tonalRamp": [
+          "rgba(7, 10, 18, 0.04)",
+          "rgba(7, 10, 18, 0.07)",
+          "rgba(7, 10, 18, 0.1)",
+          "rgba(7, 10, 18, 0.13)",
+          "rgba(7, 10, 18, 0.22)",
+          "rgba(7, 10, 18, 0.42)",
+          "rgba(7, 10, 18, 0.55)",
+          "rgba(7, 10, 18, 0.85)"
+        ]
+      },
+      "bone": {
+        "role": "neutral",
+        "displayName": "Bone",
+        "canonical": "oklch(93.8% 0.009 84.6)",
+        "purpose": "Primary text, 16.5:1 on night.",
+        "tonalRamp": [
+          "oklch(15% 0.009 84.6)",
+          "oklch(26% 0.009 84.6)",
+          "oklch(37% 0.009 84.6)",
+          "oklch(48% 0.009 84.6)",
+          "oklch(58% 0.009 84.6)",
+          "oklch(69% 0.009 84.6)",
+          "oklch(80% 0.009 84.6)",
+          "oklch(95% 0.009 84.6)"
+        ]
+      },
+      "bone-secondary": {
+        "role": "neutral",
+        "displayName": "Bone Secondary",
+        "canonical": "oklch(78.3% 0.018 271.2)",
+        "purpose": "Descriptive copy, ledes, nav at rest; 10:1 on night.",
+        "tonalRamp": [
+          "oklch(15% 0.018 271.2)",
+          "oklch(26% 0.018 271.2)",
+          "oklch(37% 0.018 271.2)",
+          "oklch(48% 0.018 271.2)",
+          "oklch(58% 0.018 271.2)",
+          "oklch(69% 0.018 271.2)",
+          "oklch(80% 0.018 271.2)",
+          "oklch(95% 0.018 271.2)"
+        ]
+      },
+      "bone-muted": {
+        "role": "neutral",
+        "displayName": "Bone Muted",
+        "canonical": "oklch(63.7% 0.025 269.3)",
+        "purpose": "Meta labels, numerals, dates, footer; 5.8:1 on night.",
+        "tonalRamp": [
+          "oklch(15% 0.025 269.3)",
+          "oklch(26% 0.025 269.3)",
+          "oklch(37% 0.025 269.3)",
+          "oklch(48% 0.025 269.3)",
+          "oklch(58% 0.025 269.3)",
+          "oklch(69% 0.025 269.3)",
+          "oklch(80% 0.025 269.3)",
+          "oklch(95% 0.025 269.3)"
+        ]
+      },
+      "highlight-white": {
+        "role": "neutral",
+        "displayName": "Highlight White",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "purpose": "Hover of skill titles and contact e-mail; hot core of radial light dots.",
+        "tonalRamp": [
+          "oklch(15% 0.000 89.9)",
+          "oklch(26% 0.000 89.9)",
+          "oklch(37% 0.000 89.9)",
+          "oklch(48% 0.000 89.9)",
+          "oklch(58% 0.000 89.9)",
+          "oklch(69% 0.000 89.9)",
+          "oklch(80% 0.000 89.9)",
+          "oklch(95% 0.000 89.9)"
         ]
       },
       "hairline": {
         "role": "neutral",
         "displayName": "Hairline",
-        "canonical": "rgba(16, 20, 19, 0.13)",
-        "purpose": "The 64px drafting grid and dividers internal to a section. An alpha token over the base surface — no tonal ramp applies.",
-        "note": "Alpha-over-surface token; use cool-ink's ramp for solid equivalents."
+        "canonical": "oklch(93.8% 0.009 84.6 / 0.1)",
+        "purpose": "1px dividers: skill rows, footer rule, timeline rail.",
+        "tonalRamp": [
+          "rgba(237, 234, 228, 0.04)",
+          "rgba(237, 234, 228, 0.07)",
+          "rgba(237, 234, 228, 0.1)",
+          "rgba(237, 234, 228, 0.13)",
+          "rgba(237, 234, 228, 0.22)",
+          "rgba(237, 234, 228, 0.42)",
+          "rgba(237, 234, 228, 0.55)",
+          "rgba(237, 234, 228, 0.85)"
+        ]
       },
       "hairline-strong": {
         "role": "neutral",
         "displayName": "Hairline Strong",
-        "canonical": "rgba(16, 20, 19, 0.38)",
-        "purpose": "Structural rules — between sections, under section heads, between the two sector columns.",
-        "note": "Alpha-over-surface token; use cool-ink's ramp for solid equivalents."
-      },
-      "electric-cobalt": {
-        "role": "primary",
-        "displayName": "Electric Cobalt",
-        "canonical": "oklch(51% 0.24 267)",
-        "purpose": "The line weight of a technical drawing. Structure: section indices, the asterisk mark, schematic edges and pulses, the availability stamp, the timeline rail, growing nav underlines, the photo's offset overprint, focus rings on light grounds.",
+        "canonical": "oklch(93.8% 0.009 84.6 / 0.22)",
+        "purpose": "Link underline at rest, HUD track, scroll cue.",
         "tonalRamp": [
-          "oklch(15% 0.24 267)",
-          "oklch(26% 0.24 267)",
-          "oklch(37% 0.24 267)",
-          "oklch(48% 0.24 267)",
-          "oklch(58% 0.24 267)",
-          "oklch(69% 0.24 267)",
-          "oklch(80% 0.24 267)",
-          "oklch(95% 0.24 267)"
+          "rgba(237, 234, 228, 0.04)",
+          "rgba(237, 234, 228, 0.07)",
+          "rgba(237, 234, 228, 0.1)",
+          "rgba(237, 234, 228, 0.13)",
+          "rgba(237, 234, 228, 0.22)",
+          "rgba(237, 234, 228, 0.42)",
+          "rgba(237, 234, 228, 0.55)",
+          "rgba(237, 234, 228, 0.85)"
         ]
       },
-      "cobalt-deep": {
-        "role": "primary",
-        "displayName": "Cobalt Deep",
-        "canonical": "oklch(42% 0.21 267)",
-        "purpose": "Hover state for cobalt objects only. No independent role.",
+      "outline-stroke": {
+        "role": "neutral",
+        "displayName": "Outline Stroke",
+        "canonical": "oklch(93.8% 0.009 84.6 / 0.42)",
+        "purpose": "1px text stroke of the second marquee band.",
         "tonalRamp": [
-          "oklch(15% 0.21 267)",
-          "oklch(26% 0.21 267)",
-          "oklch(37% 0.21 267)",
-          "oklch(48% 0.21 267)",
-          "oklch(58% 0.21 267)",
-          "oklch(69% 0.21 267)",
-          "oklch(80% 0.21 267)",
-          "oklch(95% 0.21 267)"
+          "rgba(237, 234, 228, 0.04)",
+          "rgba(237, 234, 228, 0.07)",
+          "rgba(237, 234, 228, 0.1)",
+          "rgba(237, 234, 228, 0.13)",
+          "rgba(237, 234, 228, 0.22)",
+          "rgba(237, 234, 228, 0.42)",
+          "rgba(237, 234, 228, 0.55)",
+          "rgba(237, 234, 228, 0.85)"
         ]
       },
-      "acid-green": {
+      "ember": {
+        "role": "primary",
+        "displayName": "Ember",
+        "canonical": "oklch(83.5% 0.116 62.6)",
+        "purpose": "Warm light: index numerals, hero \"&\", About headings, current timeline node, focus ring, selection, wordmark dot. 11.7:1 on night.",
+        "tonalRamp": [
+          "oklch(15% 0.116 62.6)",
+          "oklch(26% 0.116 62.6)",
+          "oklch(37% 0.116 62.6)",
+          "oklch(48% 0.116 62.6)",
+          "oklch(58% 0.116 62.6)",
+          "oklch(69% 0.116 62.6)",
+          "oklch(80% 0.116 62.6)",
+          "oklch(95% 0.116 62.6)"
+        ]
+      },
+      "ember-glow": {
+        "role": "primary",
+        "displayName": "Ember Glow",
+        "canonical": "oklch(83.5% 0.116 62.6 / 0.55)",
+        "purpose": "Halo of ember light dots and the timeline progress line.",
+        "tonalRamp": [
+          "rgba(255, 184, 119, 0.04)",
+          "rgba(255, 184, 119, 0.07)",
+          "rgba(255, 184, 119, 0.1)",
+          "rgba(255, 184, 119, 0.13)",
+          "rgba(255, 184, 119, 0.22)",
+          "rgba(255, 184, 119, 0.42)",
+          "rgba(255, 184, 119, 0.55)",
+          "rgba(255, 184, 119, 0.85)"
+        ]
+      },
+      "ember-spot": {
+        "role": "primary",
+        "displayName": "Ember Spot",
+        "canonical": "oklch(83.5% 0.116 62.6 / 0.13)",
+        "purpose": "Skills-section cursor spotlight wash (420px radial).",
+        "tonalRamp": [
+          "rgba(255, 184, 119, 0.04)",
+          "rgba(255, 184, 119, 0.07)",
+          "rgba(255, 184, 119, 0.1)",
+          "rgba(255, 184, 119, 0.13)",
+          "rgba(255, 184, 119, 0.22)",
+          "rgba(255, 184, 119, 0.42)",
+          "rgba(255, 184, 119, 0.55)",
+          "rgba(255, 184, 119, 0.85)"
+        ]
+      },
+      "moonlight": {
         "role": "secondary",
-        "displayName": "Acid Green",
-        "canonical": "oklch(94% 0.20 118)",
-        "purpose": "The highlighter. Pulse: sector tags, LIVE status, hero role words, photo caption, active language chip, the second marquee band, ::selection, contact underline, current timeline markers, the LLM node. Used as a ground beneath ink text, not as text.",
+        "displayName": "Moonlight",
+        "canonical": "oklch(78.1% 0.111 261.1)",
+        "purpose": "Cool light: second sector light, outline-band dots, cool end of every gradient line. 9.9:1 on night.",
         "tonalRamp": [
-          "oklch(15% 0.20 118)",
-          "oklch(26% 0.20 118)",
-          "oklch(37% 0.20 118)",
-          "oklch(48% 0.20 118)",
-          "oklch(58% 0.20 118)",
-          "oklch(69% 0.20 118)",
-          "oklch(80% 0.20 118)",
-          "oklch(95% 0.20 118)"
+          "oklch(15% 0.111 261.1)",
+          "oklch(26% 0.111 261.1)",
+          "oklch(37% 0.111 261.1)",
+          "oklch(48% 0.111 261.1)",
+          "oklch(58% 0.111 261.1)",
+          "oklch(69% 0.111 261.1)",
+          "oklch(80% 0.111 261.1)",
+          "oklch(95% 0.111 261.1)"
+        ]
+      },
+      "moonlight-glow": {
+        "role": "secondary",
+        "displayName": "Moonlight Glow",
+        "canonical": "oklch(78.1% 0.111 261.1 / 0.45)",
+        "purpose": "Default under-glow of project windows (--glow fallback).",
+        "tonalRamp": [
+          "rgba(143, 184, 255, 0.04)",
+          "rgba(143, 184, 255, 0.07)",
+          "rgba(143, 184, 255, 0.1)",
+          "rgba(143, 184, 255, 0.13)",
+          "rgba(143, 184, 255, 0.22)",
+          "rgba(143, 184, 255, 0.42)",
+          "rgba(143, 184, 255, 0.55)",
+          "rgba(143, 184, 255, 0.85)"
+        ]
+      },
+      "live-mint": {
+        "role": "tertiary",
+        "displayName": "Live Mint",
+        "canonical": "oklch(84.0% 0.107 158.3)",
+        "purpose": "Status only: hero availability ping, Live dot on project cards.",
+        "tonalRamp": [
+          "oklch(15% 0.107 158.3)",
+          "oklch(26% 0.107 158.3)",
+          "oklch(37% 0.107 158.3)",
+          "oklch(48% 0.107 158.3)",
+          "oklch(58% 0.107 158.3)",
+          "oklch(69% 0.107 158.3)",
+          "oklch(80% 0.107 158.3)",
+          "oklch(95% 0.107 158.3)"
+        ]
+      },
+      "window-body": {
+        "role": "neutral",
+        "displayName": "Window Body",
+        "canonical": "oklch(18.3% 0.024 265.3)",
+        "purpose": "Browser-window frame body.",
+        "tonalRamp": [
+          "oklch(15% 0.024 265.3)",
+          "oklch(26% 0.024 265.3)",
+          "oklch(37% 0.024 265.3)",
+          "oklch(48% 0.024 265.3)",
+          "oklch(58% 0.024 265.3)",
+          "oklch(69% 0.024 265.3)",
+          "oklch(80% 0.024 265.3)",
+          "oklch(95% 0.024 265.3)"
+        ]
+      },
+      "window-bar": {
+        "role": "neutral",
+        "displayName": "Window Bar",
+        "canonical": "oklch(22.3% 0.029 266.2)",
+        "purpose": "Browser-window title bar.",
+        "tonalRamp": [
+          "oklch(15% 0.029 266.2)",
+          "oklch(26% 0.029 266.2)",
+          "oklch(37% 0.029 266.2)",
+          "oklch(48% 0.029 266.2)",
+          "oklch(58% 0.029 266.2)",
+          "oklch(69% 0.029 266.2)",
+          "oklch(80% 0.029 266.2)",
+          "oklch(95% 0.029 266.2)"
+        ]
+      },
+      "window-well": {
+        "role": "neutral",
+        "displayName": "Window Well",
+        "canonical": "oklch(17.3% 0.020 261.9)",
+        "purpose": "URL pill and screenshot well.",
+        "tonalRamp": [
+          "oklch(15% 0.020 261.9)",
+          "oklch(26% 0.020 261.9)",
+          "oklch(37% 0.020 261.9)",
+          "oklch(48% 0.020 261.9)",
+          "oklch(58% 0.020 261.9)",
+          "oklch(69% 0.020 261.9)",
+          "oklch(80% 0.020 261.9)",
+          "oklch(95% 0.020 261.9)"
+        ]
+      },
+      "window-url-text": {
+        "role": "neutral",
+        "displayName": "Window URL Text",
+        "canonical": "oklch(70.5% 0.022 267.2)",
+        "purpose": "URL text inside the pill; 7.3:1 on window-well.",
+        "tonalRamp": [
+          "oklch(15% 0.022 267.2)",
+          "oklch(26% 0.022 267.2)",
+          "oklch(37% 0.022 267.2)",
+          "oklch(48% 0.022 267.2)",
+          "oklch(58% 0.022 267.2)",
+          "oklch(69% 0.022 267.2)",
+          "oklch(80% 0.022 267.2)",
+          "oklch(95% 0.022 267.2)"
+        ]
+      },
+      "window-bar-rule": {
+        "role": "neutral",
+        "displayName": "Window Bar Rule",
+        "canonical": "oklch(93.8% 0.009 84.6 / 0.07)",
+        "purpose": "Divider under the window bar.",
+        "tonalRamp": [
+          "rgba(237, 234, 228, 0.04)",
+          "rgba(237, 234, 228, 0.07)",
+          "rgba(237, 234, 228, 0.1)",
+          "rgba(237, 234, 228, 0.13)",
+          "rgba(237, 234, 228, 0.22)",
+          "rgba(237, 234, 228, 0.42)",
+          "rgba(237, 234, 228, 0.55)",
+          "rgba(237, 234, 228, 0.85)"
+        ]
+      },
+      "glass-sheen": {
+        "role": "neutral",
+        "displayName": "Glass Sheen",
+        "canonical": "oklch(100.0% 0.000 89.9 / 0.07)",
+        "purpose": "Diagonal highlight sliding across screenshots with tilt.",
+        "tonalRamp": [
+          "rgba(255, 255, 255, 0.04)",
+          "rgba(255, 255, 255, 0.07)",
+          "rgba(255, 255, 255, 0.1)",
+          "rgba(255, 255, 255, 0.13)",
+          "rgba(255, 255, 255, 0.22)",
+          "rgba(255, 255, 255, 0.42)",
+          "rgba(255, 255, 255, 0.55)",
+          "rgba(255, 255, 255, 0.85)"
+        ]
+      },
+      "traffic-red": {
+        "role": "neutral",
+        "displayName": "Traffic Red",
+        "canonical": "oklch(69.6% 0.194 26.3)",
+        "purpose": "Window close dot.",
+        "tonalRamp": [
+          "oklch(15% 0.194 26.3)",
+          "oklch(26% 0.194 26.3)",
+          "oklch(37% 0.194 26.3)",
+          "oklch(48% 0.194 26.3)",
+          "oklch(58% 0.194 26.3)",
+          "oklch(69% 0.194 26.3)",
+          "oklch(80% 0.194 26.3)",
+          "oklch(95% 0.194 26.3)"
+        ]
+      },
+      "traffic-amber": {
+        "role": "neutral",
+        "displayName": "Traffic Amber",
+        "canonical": "oklch(83.8% 0.162 81.1)",
+        "purpose": "Window minimize dot.",
+        "tonalRamp": [
+          "oklch(15% 0.162 81.1)",
+          "oklch(26% 0.162 81.1)",
+          "oklch(37% 0.162 81.1)",
+          "oklch(48% 0.162 81.1)",
+          "oklch(58% 0.162 81.1)",
+          "oklch(69% 0.162 81.1)",
+          "oklch(80% 0.162 81.1)",
+          "oklch(95% 0.162 81.1)"
+        ]
+      },
+      "traffic-green": {
+        "role": "neutral",
+        "displayName": "Traffic Green",
+        "canonical": "oklch(73.1% 0.218 144.8)",
+        "purpose": "Window zoom dot.",
+        "tonalRamp": [
+          "oklch(15% 0.218 144.8)",
+          "oklch(26% 0.218 144.8)",
+          "oklch(37% 0.218 144.8)",
+          "oklch(48% 0.218 144.8)",
+          "oklch(58% 0.218 144.8)",
+          "oklch(69% 0.218 144.8)",
+          "oklch(80% 0.218 144.8)",
+          "oklch(95% 0.218 144.8)"
         ]
       }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "The hero name, two lines in a single left-aligned block, uppercase. Its close relative at 680 weight / wdth 112% and clamp(44px, 8vw, 112px) is the contact heading."
+        "purpose": "Hero name, two masked lines; width narrows 115% to 70% on scroll exit. Kinetic."
       },
       "display-contact": {
         "displayName": "Display Contact",
-        "purpose": "The contact heading (\"OZVĚTE SE.\"), uppercase. The largest type on the page and the page's end frame — heavier and wider than the hero name at wdth 112%."
+        "purpose": "Closing contact heading. Kinetic."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Project names on the deck cards. Mixed case, not uppercase — these are proper nouns and read as marks."
+        "purpose": "Section h2s, balanced wrap, mask reveal. Kinetic."
       },
-      "address": {
-        "displayName": "Address",
-        "purpose": "The contact e-mail. Archivo at 500 weight and wdth 100% — lighter and narrower than any other display use, because it is an address rather than a headline."
+      "band": {
+        "displayName": "Band",
+        "purpose": "Marquee band words; second row is outline-only."
+      },
+      "email": {
+        "displayName": "Email",
+        "purpose": "Contact e-mail address."
+      },
+      "title-project": {
+        "displayName": "Title Project",
+        "purpose": "Project names under the windows."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Section headings. Always paired with a cobalt mono index to the left and a hairline beneath."
-      },
-      "subtitle": {
-        "displayName": "Subtitle",
-        "purpose": "Competency row titles, sector column headings, timeline roles (fixed 19px at line-height 1.3)."
-      },
-      "body": {
-        "displayName": "Body",
-        "purpose": "Running copy at 17px/1.65. Measure capped per block: 52–58ch descriptions, ~56ch ledes, ~22ch display-set headings."
-      },
-      "body-lede": {
-        "displayName": "Body Lede",
-        "purpose": "The hero summary paragraph and other opening copy, one step up from body."
-      },
-      "body-small": {
-        "displayName": "Body Small",
-        "purpose": "Descriptive copy inside dense structures — register descriptions, timeline detail, definition lists."
+        "purpose": "Skill and sector headings."
       },
       "role": {
         "displayName": "Role",
-        "purpose": "Timeline job titles at a fixed 19px — Archivo at wdth 105%, the smallest display use on the page."
+        "purpose": "Hero role line; timeline roles at 360 / 108%."
       },
-      "body-meta": {
-        "displayName": "Body Meta",
-        "purpose": "Definition-list values in the About sidebar at 15px: education, certification, languages."
+      "body-lede": {
+        "displayName": "Body Lede",
+        "purpose": "Hero lede, max 48ch."
       },
-      "glyph": {
-        "displayName": "Glyph",
-        "purpose": "The scroll-progress asterisk at 24px. A glyph size, not a text step."
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, max 52-56ch, tabular numerals."
       },
-      "glyph-lg": {
-        "displayName": "Glyph Large",
-        "purpose": "The stamp's centre asterisk at 44px inside the SVG. A glyph size, not a text step."
+      "body-small": {
+        "displayName": "Body Small",
+        "purpose": "Project card and timeline descriptions."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Header name with ember dot."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "The .mono utility. Every index, tag, URL, status, period and nav item. Variants: wordmark 13px/600 at 0.1em; nav 11.5px/500 at 0.09em; marquee 13px/500 at 0.12em; stamp text 13.5px/600 at 0.2em; footer 11px at 0.05em in sentence case — the one place mono is not uppercased."
+        "purpose": "Section index, numerals, meta, HUD, dates, nav. Emphasis via weight 500."
+      },
+      "label-sm": {
+        "displayName": "Label Small",
+        "purpose": "Footer and language toggle."
+      },
+      "label-url": {
+        "displayName": "Label URL",
+        "purpose": "Inside the window URL pill only."
       }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "window-stack",
+        "value": "0 0 0 1px rgba(237, 234, 228, 0.10), 0 40px 80px -30px rgba(0, 0, 0, 0.8), 0 0 120px -40px var(--glow, rgba(143, 184, 255, 0.45))",
+        "purpose": "Project windows only; --glow tinted per project."
+      },
+      {
+        "name": "window-focus",
+        "value": "0 0 0 2px #ffb877, 0 40px 80px -30px rgba(0, 0, 0, 0.8)",
+        "purpose": "Project card :focus-within."
+      },
+      {
+        "name": "point-glow-ember",
+        "value": "0 0 12px #ffb877",
+        "purpose": "Wordmark dot; 14px on current timeline node."
+      },
+      {
+        "name": "band-dot-glow",
+        "value": "0 0 24px rgba(255, 184, 119, 0.55)",
+        "purpose": "Marquee separator dots (moonlight variant rgba(143, 184, 255, 0.5) on row B)."
+      },
+      {
+        "name": "timeline-glow",
+        "value": "0 0 14px rgba(255, 184, 119, 0.5)",
+        "purpose": "Timeline progress line."
+      },
+      {
+        "name": "live-glow",
+        "value": "0 0 10px rgba(139, 224, 176, 0.7)",
+        "purpose": "Live status dot on project cards."
+      }
+    ],
     "motion": [
       {
         "name": "ease-out",
-        "value": "cubic-bezier(0.2, 0.7, 0, 1)",
-        "purpose": "The system's only easing token (--ease-out). Fast out, long settle. Used for every transform and background-size transition."
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Short state transitions: header, skip link, arrows, screenshot parallax, sheen, ping."
+      },
+      {
+        "name": "ease-quint",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Entrances and reveals, link underline wipe, skill title shift, e-mail underline."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Travelling lights: scroll cue, e-mail light sweep."
+      },
+      {
+        "name": "name-in",
+        "value": "1500ms ease-quint, delay 200ms + 130ms per line",
+        "purpose": "Hero name lines rise from mask: translateY(108%) skewY(6deg), wdth 62% to rest."
+      },
+      {
+        "name": "rise",
+        "value": "1200ms ease-quint, delay 700ms",
+        "purpose": "Hero meta and foot: opacity 0, translateY(18px)."
       },
       {
         "name": "reveal",
-        "value": "700ms var(--ease-out)",
-        "purpose": "Opacity + 18px translateY on [data-reveal] elements, triggered by IntersectionObserver at threshold 0.15 with rootMargin 0px 0px -8% 0px. Gated behind the .js class so content is visible without JS."
+        "value": "1000ms ease-quint, stagger 90ms via --i",
+        "purpose": "[data-reveal]: opacity + translateY(28px); IO threshold 0.1, rootMargin 0 0 -6% 0."
       },
       {
-        "name": "reveal-stagger",
-        "value": "70ms",
-        "purpose": "transition-delay multiplied by the element's --i index. The floor obligation for any new section. At --i:4 the last row reaches full opacity in ~980ms."
+        "name": "reveal-mask",
+        "value": "1200ms ease-quint",
+        "purpose": "[data-reveal=mask] headings: clip-path from inset(0 0 100% 0) plus translateY(0.4em); observed via parent."
       },
       {
-        "name": "hero-rise",
-        "value": "800ms var(--ease-out) backwards",
-        "purpose": "One-shot 0.3em rise + fade on the hero name at load."
+        "name": "field-fade",
+        "value": "1600ms ease",
+        "purpose": "WebGL field fades in once compiled."
       },
       {
-        "name": "underline-grow",
-        "value": "280ms var(--ease-out)",
-        "purpose": "background-size from 0% to 100% on a 1px currentColor gradient — the standard text-link affordance. Nav variant is 240ms on a 2px cobalt gradient."
+        "name": "field-intensity",
+        "value": "lerp 0.08 toward max(1 - 0.86 * heroProgress, 0.14 + 0.62 * contactProgress)",
+        "purpose": "Field dims leaving the hero, brightens toward contact. Pointer follow lerp 0.05."
       },
       {
-        "name": "micro-shift",
-        "value": "200ms var(--ease-out)",
-        "purpose": "translate(3px, -3px) on the ↗ glyph of external links; translateX(14px) at 320ms on register row titles."
+        "name": "spot-fade",
+        "value": "700ms ease",
+        "purpose": "Section spotlight fade on enter/leave; data-spot=fade keeps position on leave."
       },
       {
-        "name": "state-color",
-        "value": "160ms–240ms ease",
-        "purpose": "Plain color and border-color transitions on hover. Linear ease, no custom curve."
+        "name": "state",
+        "value": "200-300ms",
+        "purpose": "Color changes on nav, lang, numerals; header hide/scrim 300ms."
       },
       {
-        "name": "stamp-spin",
-        "value": "48s linear infinite",
-        "purpose": "Base rotation of the availability stamp, plus a scroll-velocity increment accumulated into the --boost custom property."
+        "name": "link-wipe",
+        "value": "500ms ease-quint",
+        "purpose": "1px underline background-size 0 to 100%."
       },
       {
-        "name": "scroll-lerp",
-        "value": "0.12",
-        "purpose": "Smoothing factor applied to scroll velocity in the single rAF loop (smoothV += (v - smoothV) * 0.12). Drives band acceleration, stamp boost, and schematic pulse rate."
+        "name": "email-underline",
+        "value": "700ms ease-quint; light sweep 1100ms ease-in-out +120ms",
+        "purpose": "Contact e-mail hover/focus."
       },
       {
-        "name": "band-drift",
-        "value": "0.55px per frame",
-        "purpose": "Base marquee speed before scroll acceleration; direction from the data-band attribute (-1 left, 1 right). Normalized to 60fps via a dt factor capped at 3."
+        "name": "email-swap",
+        "value": "220ms blur(6px) cross-fade, revert after 1900ms",
+        "purpose": "Copy-to-clipboard confirmation."
       },
       {
-        "name": "schematic-draw",
-        "value": "300ms delay + 140ms stagger, 500ms per edge",
-        "purpose": "Canvas schematic build-in: edges draw from the hub via lineDashOffset, nodes fade in 120ms apart over 300ms. Complete inside 2s. DPR capped at 2."
+        "name": "band-speed",
+        "value": "(0.6 + 0.9 * |smoothed scroll velocity|) px/frame, velocity lerp 0.1",
+        "purpose": "Marquee rows in opposite directions."
+      },
+      {
+        "name": "card-tilt",
+        "value": "rotateY up to 16deg off-center, pointer +/-5deg Y / +/-4deg X, lerp 0.12; perspective 1400px",
+        "purpose": "Project window depth; screenshot parallax -34px x offset, sheen follows."
+      },
+      {
+        "name": "hero-exit",
+        "value": "wdth 115% to 70%, translateY -60px, opacity to 0.1 over hero height",
+        "purpose": "Hero name on scroll."
+      },
+      {
+        "name": "kinetic",
+        "value": "spring k 0.08, damping 0.62; radius 11vw; pointer +10% wdth / +80 wght; scroll wave +/-4% wdth / +20 wght; starts at 1900ms",
+        "purpose": "[data-kin] headings; settles within ~500ms of idle; fine pointer only for proximity; off under reduced motion."
+      },
+      {
+        "name": "ping",
+        "value": "2.6s ease-out infinite, 0 to 10px ring",
+        "purpose": "Availability dot."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all durations 0.01ms",
+        "purpose": "Reveals shown, scroll cue hidden, single static field frame behind the hero only, carousel unpinned, kinetics off."
       }
     ],
     "breakpoints": [
-      { "name": "hero", "value": "920px", "purpose": "Hero grid collapses to one column; stamp repositions to 104px at the corner." },
-      { "name": "about", "value": "880px", "purpose": "About grid collapses to one column." },
-      { "name": "register", "value": "860px", "purpose": "Competency rows drop to 48px 1fr; description reflows under the title." },
-      { "name": "nav", "value": "760px", "purpose": "Nav reduces to Projects + Contact; sectors stack and swap their dividing hairline from left border to top border." },
-      { "name": "head", "value": "720px", "purpose": "Section-head gloss hides and the head wraps; deck cards grow to 70vh." },
-      { "name": "compact", "value": "480px", "purpose": "Nav reduces to Contact alone." }
+      {
+        "name": "pin",
+        "value": "900px x 560px",
+        "purpose": "Pinned horizontal carousel requires fine pointer, viewport >= 900x560, no reduced motion."
+      },
+      {
+        "name": "layout",
+        "value": "900px",
+        "purpose": "Hero foot, about, card info collapse to one column; scroll cue hidden; smaller window bar."
+      },
+      {
+        "name": "nav",
+        "value": "860px",
+        "purpose": "Nav keeps Projects + Contact; 44px lang targets; skills to 36px numeral column; sectors stack."
+      },
+      {
+        "name": "head",
+        "value": "760px",
+        "purpose": "Section head stacks."
+      },
+      {
+        "name": "compact",
+        "value": "520px",
+        "purpose": "Coordinates hidden; hero name 24vw, contact title 21vw."
+      },
+      {
+        "name": "tiny",
+        "value": "440px",
+        "purpose": "Fifth nav item and wordmark dot hidden."
+      }
     ],
     "accessibility": {
-      "focus": "2px solid cobalt at 3px offset on light grounds; acid inside ink sections. Deck cards use a 2px inset cobalt outline via :focus-within because the click target is a full-bleed overlay.",
-      "reducedMotion": "prefers-reduced-motion collapses all durations to 0.01ms, stops the stamp, sets the timeline line to scaleY(1), clears band and glyph transforms, and renders the schematic complete and pulse-free. The result is a full static drawing, not a degraded page.",
-      "noJs": "html:not(.js) renders the timeline line complete; reveal and hero-rise animations are gated behind the .js class so all content is visible without JS.",
-      "decorative": "Canvas schematic, marquee bands and stamp glyphs are aria-hidden; the bands carry an sr-only paragraph with the same content in reading order.",
-      "statusRedundancy": "Status is encoded three ways at once — glyph (● ◐ ○), border treatment (filled / solid / dashed) and color — so it survives without color perception."
+      "focus": "2px solid ember outline at 4px offset globally; project cards show an ember ring on the window via :focus-within because the card link is a full-card overlay.",
+      "contrast": "bone 16.5:1, bone-secondary 10:1, bone-muted 5.8:1, ember 11.7:1, moonlight 9.9:1 on night.",
+      "reducedMotion": "Durations collapse to 0.01ms; reveals visible; field renders one static frame behind the hero; carousel becomes native scroll-snap; kinetic-lite exits early.",
+      "noJs": "Reveal, rise and kinetic states are gated behind .js; timeline line renders full; carousel is a native scroll-snap row; HUD hidden; the html background carries fallback radial lights.",
+      "decorative": "Field canvas, grain, bands, scroll cue, window bars and HUD are aria-hidden; an sr-only paragraph mirrors the band content; kinetic headings keep their text in aria-label."
     }
   },
   "components": [
     {
-      "name": "Acid Chip",
-      "kind": "chip",
-      "refersTo": "chip-acid",
-      "description": "The system's loudest object, kept small on purpose. Sector tags, LIVE status, photo captions, highlighted role words.",
-      "html": "<span class=\"ds-chip-acid\">✳ Soukromý sektor · SME</span>",
-      "css": ".ds-chip-acid { display: inline-block; background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 3px 9px; border-radius: 0; font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.4; }"
-    },
-    {
-      "name": "Status Chip Ladder",
-      "kind": "chip",
-      "refersTo": "chip-outline",
-      "description": "Live / Beta / WIP as one ladder: filled → outlined → dashed, each with its own leading glyph so the state survives without color.",
-      "html": "<div class=\"ds-status-row\"><span class=\"ds-status ds-status--live\">● Live</span><span class=\"ds-status ds-status--beta\">◐ Beta</span><span class=\"ds-status ds-status--wip\">○ WIP</span></div>",
-      "css": ".ds-status-row { display: flex; gap: 12px; align-items: baseline; } .ds-status { font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; border-radius: 0; } .ds-status--live { background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 2px 8px; } .ds-status--beta { color: var(--ink-2, #4c5551); border: 1px solid var(--line-strong, rgba(16,20,19,.38)); padding: 2px 8px; } .ds-status--wip { color: var(--ink-2, #4c5551); border: 1px dashed var(--line-strong, rgba(16,20,19,.38)); padding: 2px 8px; }"
-    },
-    {
-      "name": "Nav Link",
+      "name": "Navigation",
       "kind": "nav",
       "refersTo": "nav-link",
-      "description": "Mono uppercase item whose 2px cobalt underline grows from the left. The system's standard link affordance.",
-      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link\" href=\"#\">Projekty</a><a class=\"ds-nav-link\" href=\"#\">Kontakt</a></nav>",
-      "css": ".ds-nav { display: flex; gap: 22px; } .ds-nav-link { font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 11.5px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-2, #4c5551); text-decoration: none; padding-bottom: 3px; background-image: linear-gradient(var(--blue, #2547f0), var(--blue, #2547f0)); background-repeat: no-repeat; background-position: 0 100%; background-size: 0% 2px; transition: background-size 240ms cubic-bezier(0.2,0.7,0,1), color 160ms ease; } .ds-nav-link:hover { color: var(--ink, #101413); background-size: 100% 2px; } .ds-nav-link:focus-visible { outline: 2px solid var(--blue, #2547f0); outline-offset: 3px; }"
+      "description": "Header nav: wordmark with ember dot, quiet links, inverted pill language toggle.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-wordmark\" href=\"#\"><i></i>Václav Mudra</a><ul><li><a href=\"#\">Co dělám</a></li><li><a class=\"is-current\" href=\"#\">Projekty</a></li><li><a href=\"#\">Kontakt</a></li></ul><span class=\"ds-lang\"><a class=\"is-active\" href=\"#\">CS</a><a href=\"#\">EN</a></span></nav>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-nav{display:flex;align-items:center;gap:32px;height:68px;padding:0 24px;background:rgba(7,10,18,.82);color:var(--text);font-family: var(--f);} .ds-wordmark{font-size:17px;font-weight:500;font-stretch:112%;letter-spacing:-0.01em;text-decoration:none;color:var(--text);margin-right:auto} .ds-wordmark i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:10px;background:radial-gradient(circle at 35% 35%,#fff,var(--warm) 60%);box-shadow:0 0 12px var(--warm)} .ds-nav ul{display:flex;gap:28px;margin:0;padding:0;list-style:none} .ds-nav ul a{font-size:15px;color:var(--text-2);text-decoration:none;transition:color 200ms ease} .ds-nav ul a:hover,.ds-nav ul a.is-current{color:var(--text)} .ds-lang{display:inline-flex;gap:2px;font-size:14px} .ds-lang a{display:inline-flex;align-items:center;justify-content:center;min-width:40px;height:32px;padding:0 10px;border-radius:999px;color:var(--text-3);text-decoration:none;transition:color 200ms ease,background-color 200ms ease} .ds-lang a:hover{color:var(--text)} .ds-lang a.is-active{background:var(--text);color:var(--bg)} .ds-nav a:focus-visible{outline:2px solid var(--warm);outline-offset:4px}"
     },
     {
-      "name": "Language Toggle",
-      "kind": "nav",
-      "refersTo": "lang-toggle",
-      "description": "Two square mono chips. The active one inverts to ink ground with acid text — the single place acid is used as a text color, legible at roughly 12:1.",
-      "html": "<div class=\"ds-lang\" role=\"group\" aria-label=\"Jazyk\"><a class=\"ds-lang-item is-active\" href=\"/\" aria-current=\"page\">CS</a><a class=\"ds-lang-item\" href=\"/en/\">EN</a></div>",
-      "css": ".ds-lang { display: inline-flex; gap: 2px; } .ds-lang-item { font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 11px; letter-spacing: 0.08em; padding: 3px 8px; color: var(--ink-3, #68726e); border: 1px solid var(--line, rgba(16,20,19,.13)); border-radius: 0; text-decoration: none; transition: color 160ms ease, border-color 160ms ease; } .ds-lang-item:hover { color: var(--ink, #101413); border-color: var(--line-strong, rgba(16,20,19,.38)); } .ds-lang-item.is-active { background: var(--ink, #101413); color: var(--acid, #d7f94b); border-color: var(--ink, #101413); } .ds-lang-item:focus-visible { outline: 2px solid var(--blue, #2547f0); outline-offset: 3px; }"
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Inline link with hairline underline at rest and a 1px wipe on hover; arrow nudges up-right.",
+      "html": "<p class=\"ds-wrap\"><a class=\"ds-link\" href=\"#\">Projekty <span class=\"ds-arrow\">↘</span></a> <a class=\"ds-link\" href=\"#\">GitHub <span class=\"ds-arrow\">↗</span></a></p>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-wrap{display:flex;gap:28px;padding:24px;background:var(--bg);font-family: var(--f);font-size:18px} .ds-link{color:var(--text);text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-repeat:no-repeat;background-position:100% 100%;background-size:0% 1px;padding-bottom:3px;box-shadow:inset 0 -1px 0 var(--line-2);transition:background-size 500ms var(--ease-quint)} .ds-link:hover{background-size:100% 1px;background-position:0 100%} .ds-arrow{display:inline-block;transition:transform 300ms var(--ease-out)} .ds-link:hover .ds-arrow{transform:translate(3px,-3px)} .ds-link:focus-visible{outline:2px solid var(--warm);outline-offset:4px}"
     },
     {
       "name": "Section Head",
       "kind": "custom",
-      "refersTo": null,
-      "description": "The page's rhythm device: cobalt mono index, Archivo title, muted mono gloss pushed right, all baseline-aligned over a structural hairline.",
-      "html": "<header class=\"ds-section-head\"><span class=\"ds-section-head__index\">01 — Co dělám</span><h2 class=\"ds-section-head__title\">Pět věcí, ve kterých jsem doma</h2><span class=\"ds-section-head__note\">rejstřík</span></header>",
-      "css": ".ds-section-head { display: flex; align-items: baseline; gap: 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line-strong, rgba(16,20,19,.38)); } .ds-section-head__index { flex-shrink: 0; color: var(--blue, #2547f0); font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } .ds-section-head__title { margin: 0; font-family: var(--font-display, Archivo, sans-serif); font-weight: 620; font-stretch: 108%; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.1; letter-spacing: -0.01em; color: var(--ink, #101413); } .ds-section-head__note { margin-left: auto; flex-shrink: 0; color: var(--ink-3, #68726e); font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } @media (max-width: 720px) { .ds-section-head { flex-wrap: wrap; gap: 10px 24px; } .ds-section-head__note { display: none; } }"
+      "refersTo": "headline",
+      "description": "Ember index numeral beside a light, wide h2.",
+      "html": "<header class=\"ds-head\"><p class=\"ds-idx\"><b>01</b>Co dělám</p><h2>Pět věcí, ve&nbsp;kterých jsem doma</h2></header>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-head{display:grid;grid-template-columns:minmax(140px,.32fr) minmax(0,1fr);gap:18px 40px;align-items:baseline;padding:32px;background:var(--bg);color:var(--text);font-family: var(--f);} .ds-idx{margin:0;font-size:15px;color:var(--text-3)} .ds-idx b{font-weight:500;color:var(--warm);margin-right:10px} .ds-head h2{margin:0;font-weight:300;font-stretch:110%;font-size:clamp(40px,6vw,96px);line-height:1;letter-spacing:-0.04em;text-wrap:balance}"
     },
     {
-      "name": "Competency Register Row",
+      "name": "Skill Row",
       "kind": "custom",
-      "refersTo": null,
-      "description": "An index row in a technical document, not a feature card. Hover response is purely typographic: the title shifts right and a cobalt asterisk fades in.",
-      "html": "<ol class=\"ds-index-list\"><li class=\"ds-index-row\"><span class=\"ds-index-num\">01</span><h3 class=\"ds-index-title\">Návrh &amp; vývoj softwaru</h3><p class=\"ds-index-desc\">Python, JavaScript, SQL. Stavba SaaS produktů od datové vrstvy po UI.</p></li></ol>",
-      "css": ".ds-index-list { margin: 0; padding: 0; list-style: none; } .ds-index-row { display: grid; grid-template-columns: 72px 1.1fr 1.3fr; gap: 12px 40px; align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--line, rgba(16,20,19,.13)); } .ds-index-num { color: var(--ink-3, #68726e); font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; transition: color 200ms ease; } .ds-index-title { position: relative; margin: 0; font-family: var(--font-display, Archivo, sans-serif); font-weight: 600; font-stretch: 105%; font-size: clamp(19px, 2.1vw, 25px); line-height: 1.2; letter-spacing: -0.005em; color: var(--ink, #101413); transition: transform 320ms cubic-bezier(0.2,0.7,0,1); } .ds-index-title::before { content: \"✳\"; position: absolute; left: -1em; top: 0.25em; font-size: 0.7em; color: var(--blue, #2547f0); opacity: 0; transition: opacity 240ms ease; } .ds-index-desc { margin: 0; max-width: 58ch; color: var(--ink-2, #4c5551); font-family: var(--font-text, Instrument Sans, sans-serif); font-size: 15.5px; line-height: 1.65; } .ds-index-row:hover .ds-index-title { transform: translateX(14px); } .ds-index-row:hover .ds-index-title::before { opacity: 1; } .ds-index-row:hover .ds-index-num { color: var(--blue, #2547f0); } @media (max-width: 860px) { .ds-index-row { grid-template-columns: 48px 1fr; } .ds-index-desc { grid-column: 2; } }"
+      "refersTo": "skill-row",
+      "description": "Hairline-ruled list row; hover shifts the title and lights the numeral ember.",
+      "html": "<ol class=\"ds-skills\"><li class=\"ds-skill\"><span class=\"ds-num\">01</span><h3>Návrh &amp;&nbsp;vývoj softwaru</h3><p>Python, JavaScript, SQL. Stavba SaaS produktů od datové vrstvy po&nbsp;UI.</p></li><li class=\"ds-skill\"><span class=\"ds-num\">02</span><h3>Databázový design</h3><p>PostgreSQL a&nbsp;MSSQL. Komplexní SQL, návrh schémat, migrace.</p></li></ol>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-skills{margin:0;padding:24px;list-style:none;background:radial-gradient(420px circle at 40% 50%,rgba(255,184,119,.13),transparent 60%),var(--bg);color:var(--text);font-family: var(--f);font-size:18px;line-height:1.6} .ds-skill{display:grid;grid-template-columns:72px minmax(0,1.05fr) minmax(0,1fr);gap:10px 40px;align-items:baseline;padding:32px 0;border-top:1px solid var(--line)} .ds-skill:last-child{border-bottom:1px solid var(--line)} .ds-num{font-size:15px;color:var(--text-3);transition:color 300ms ease} .ds-skill h3{margin:0;font-weight:320;font-stretch:110%;font-size:clamp(26px,3vw,46px);line-height:1.08;letter-spacing:-0.03em;transition:transform 600ms var(--ease-quint),color 300ms ease} .ds-skill p{margin:0;color:var(--text-2)} .ds-skill:hover h3{transform:translateX(14px);color:#fff} .ds-skill:hover .ds-num{color:var(--warm)}"
     },
     {
-      "name": "Project Card",
+      "name": "Sector Card",
       "kind": "card",
-      "refersTo": "card-project",
-      "description": "A sheet laid on the page — 1.5px ink top border only, no side or bottom borders, no radius, no shadow. In situ these are position: sticky and physically stack. A full-area .cover anchor makes the whole card clickable, at the cost of text inside not being selectable.",
-      "html": "<article class=\"ds-card\"><div class=\"ds-card__head\"><span>Projekt 01 / 05</span><span class=\"ds-card__status\">● Live</span></div><h3 class=\"ds-card__name\">Assoluto</h3><p class=\"ds-card__desc\">Open-source zákaznický portál pro české výrobní firmy. Zakázky, výkresy, stav výroby na jednom místě.</p><div class=\"ds-card__foot\"><span>SaaS · Open source</span><span class=\"ds-card__url\">assoluto.eu <span aria-hidden=\"true\">↗</span></span></div></article>",
-      "css": ".ds-card { display: flex; flex-direction: column; gap: 24px; min-height: 340px; padding: 28px 0 40px; background: var(--bg, #f5f7f6); border-top: 1.5px solid var(--ink, #101413); border-radius: 0; } .ds-card__head, .ds-card__foot { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; } .ds-card__head { color: var(--ink-3, #68726e); } .ds-card__status { background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 2px 8px; letter-spacing: 0.1em; } .ds-card__name { margin: 24px 0 0; font-family: var(--font-display, Archivo, sans-serif); font-weight: 680; font-stretch: 110%; font-size: clamp(36px, 6.2vw, 84px); line-height: 1; letter-spacing: -0.015em; color: var(--ink, #101413); transition: color 240ms ease; } .ds-card__desc { margin: auto 0 0; max-width: 54ch; color: var(--ink-2, #4c5551); font-family: var(--font-text, Instrument Sans, sans-serif); font-size: clamp(16px, 1.8vw, 19px); line-height: 1.65; } .ds-card__foot { color: var(--ink-2, #4c5551); border-top: 1px solid var(--line, rgba(16,20,19,.13)); padding-top: 16px; } .ds-card__url span { display: inline-block; transition: transform 200ms cubic-bezier(0.2,0.7,0,1); } .ds-card:hover .ds-card__name { color: var(--blue, #2547f0); } .ds-card:hover .ds-card__url span { transform: translate(3px, -3px); } .ds-card:focus-within { outline: 2px solid var(--blue, #2547f0); outline-offset: -2px; }"
+      "refersTo": "sector-card",
+      "description": "Translucent glass panel whose 1px edge and inner wash are lit by the pointer in the card's own light.",
+      "html": "<article class=\"ds-sector\"><p class=\"ds-tag\"><b>●</b>&nbsp; Veřejná správa</p><h3>Analýza, integrace a&nbsp;architektura</h3><p>Analýza a&nbsp;architektura informačních systémů státní správy.</p></article>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-sector{position:relative;isolation:isolate;overflow:hidden;max-width:560px;padding:40px;border-radius:20px;background:linear-gradient(160deg,rgba(22,29,46,.85),rgba(11,15,26,.85));color:var(--text);font-family: var(--f);font-size:18px;line-height:1.6;--c:var(--cool);--mx:30%;--my:0%} .ds-sector::before{content:\"\";position:absolute;inset:0;z-index:-1;border-radius:inherit;padding:1px;background:radial-gradient(360px circle at var(--mx) var(--my),var(--c),transparent 65%),var(--line);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude} .ds-sector::after{content:\"\";position:absolute;inset:0;z-index:-2;background:radial-gradient(520px circle at var(--mx) var(--my),color-mix(in srgb,var(--c) 14%,transparent),transparent 60%)} .ds-sector:hover{--mx:70%;--my:40%} .ds-tag{margin:0;font-size:15px;color:var(--text-3)} .ds-tag b{font-weight:500;color:var(--c)} .ds-sector h3{margin:20px 0 14px;font-weight:320;font-stretch:110%;font-size:clamp(28px,3vw,48px);line-height:1.08;letter-spacing:-0.03em;max-width:16ch} .ds-sector p:last-child{margin:0;color:var(--text-2)}"
     },
     {
-      "name": "Photo Frame",
+      "name": "Project Window Card",
+      "kind": "card",
+      "refersTo": "project-window",
+      "description": "Signature: browser-window frame around a project screenshot, tinted under-glow, info row with Live status.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-win\"><div class=\"ds-bar\"><span class=\"ds-dots\"><i></i><i></i><i></i></span><span class=\"ds-url\">trailmap.fyi</span></div><div class=\"ds-view\"></div></div><div class=\"ds-info\"><span class=\"ds-n\">01&nbsp;/&nbsp;06</span><h3><a href=\"#\">Trailmap</a></h3><p class=\"ds-desc\">Roadmapy pro Azure Boards, které se kreslí samy.</p><p class=\"ds-meta\"><span class=\"ds-live\">Live</span><span>Azure DevOps · SaaS</span><span class=\"ds-u\">trailmap.fyi ↗</span></p></div></article>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-card{max-width:620px;padding:40px;background:var(--bg);color:var(--text);font-family: var(--f);font-size:18px;line-height:1.6;perspective:1400px;--glow:rgba(80,150,255,.55)} .ds-win{border-radius:14px;overflow:hidden;background:#0d121d;box-shadow:0 0 0 1px rgba(237,234,228,.10),0 40px 80px -30px rgba(0,0,0,.8),0 0 120px -40px var(--glow);transition:transform 300ms var(--ease-out)} .ds-card:hover .ds-win{transform:rotateY(-5deg) rotateX(3deg)} .ds-card:focus-within .ds-win{box-shadow:0 0 0 2px var(--warm),0 40px 80px -30px rgba(0,0,0,.8)} .ds-bar{display:flex;align-items:center;gap:14px;height:38px;padding:0 14px;background:#151b29;border-bottom:1px solid rgba(237,234,228,.07)} .ds-dots{display:flex;gap:7px} .ds-dots i{width:11px;height:11px;border-radius:50%;background:#ff6159} .ds-dots i:nth-child(2){background:#ffbd2e} .ds-dots i:nth-child(3){background:#28c941} .ds-url{flex:1;max-width:420px;margin:0 auto;height:24px;line-height:24px;border-radius:6px;background:#0b1019;color:#9aa0ae;font-size:13px;text-align:center;padding:0 12px} .ds-view{position:relative;aspect-ratio:16/10;background:linear-gradient(160deg,#1a2540,#0b1019)} .ds-view::after{content:\"\";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.07) 45%,transparent 60%)} .ds-info{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 24px;align-items:baseline;margin-top:26px} .ds-n{font-size:15px;color:var(--text-3)} .ds-info h3{margin:0;font-weight:320;font-stretch:112%;font-size:clamp(32px,3.6vw,60px);line-height:1;letter-spacing:-0.035em} .ds-info h3 a{color:inherit;text-decoration:none} .ds-info h3 a:focus-visible{outline:none} .ds-desc,.ds-meta{grid-column:2;margin:0} .ds-desc{color:var(--text-2);font-size:17px} .ds-meta{display:flex;flex-wrap:wrap;gap:4px 22px;font-size:15px;color:var(--text-3)} .ds-live{color:var(--text-2)} .ds-live::before{content:\"\";display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;background:var(--live);box-shadow:0 0 10px rgba(139,224,176,.7)} .ds-u{color:var(--text)}"
+    },
+    {
+      "name": "Work HUD",
       "kind": "custom",
-      "refersTo": null,
-      "description": "The system's depth model in one object: grayscale print in a 1px ink border with a cobalt border misregistered 12px behind it, and an acid caption chip stuck inside the image.",
-      "html": "<figure class=\"ds-photo\"><div class=\"ds-photo__plate\" role=\"img\" aria-label=\"Placeholder for the About photograph\"></div><figcaption class=\"ds-photo__cap\">Václav &amp; Kvido, bostonský teriér</figcaption></figure>",
-      "css": ".ds-photo { position: relative; max-width: 300px; margin: 0 0 16px 0; } .ds-photo__plate { aspect-ratio: 720 / 879; border: 1px solid var(--ink, #101413); background-color: var(--bg-2, #eceeec); background-image: repeating-linear-gradient(135deg, rgba(16,20,19,.10) 0 1px, transparent 1px 9px); filter: grayscale(1) contrast(1.05); } .ds-photo::before { content: \"\"; position: absolute; inset: 0; transform: translate(12px, 12px); border: 1px solid var(--blue, #2547f0); z-index: -1; } .ds-photo__cap { position: absolute; left: 12px; bottom: 12px; background: var(--acid, #d7f94b); color: var(--ink, #101413); padding: 3px 8px; font-family: var(--font-mono, Spline Sans Mono, ui-monospace, Menlo, monospace); font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; }"
+      "refersTo": "work-hud",
+      "description": "Pinned-carousel progress: current index, moonlight-to-ember bar on a hairline track, current project name.",
+      "html": "<div class=\"ds-hud\"><span class=\"ds-count\">03 / 06</span><span class=\"ds-track\"><i></i></span><span>Assoluto</span></div>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-hud{display:flex;align-items:center;gap:20px;padding:24px;background:var(--bg);font-family: var(--f);font-size:15px;color:var(--text-3)} .ds-count{min-width:5ch;color:var(--text)} .ds-track{flex:1;height:1px;background:var(--line-2);position:relative;overflow:hidden} .ds-track i{position:absolute;inset:0;background:linear-gradient(90deg,var(--cool),var(--warm));transform-origin:left;transform:scaleX(.45);transition:transform 600ms var(--ease-quint)} .ds-hud:hover .ds-track i{transform:scaleX(.8)}"
+    },
+    {
+      "name": "Timeline",
+      "kind": "custom",
+      "refersTo": "role",
+      "description": "Hairline rail with ember-to-moonlight progress line; current roles get a filled glowing ember node.",
+      "html": "<div class=\"ds-hist\"><span class=\"ds-rail\"></span><span class=\"ds-line\"></span><ol><li class=\"is-current\"><span class=\"ds-per\">10/2024 → dnes</span><p class=\"ds-role\">IT Analyst / Solution Architect</p><p class=\"ds-via\"><span>přes</span>Aricoma</p></li><li><span class=\"ds-per\">11/2017 → 12/2020</span><p class=\"ds-role\">Consultant, Senior Analyst</p><p class=\"ds-via\"><span>přes</span>Deloitte CE</p></li></ol></div>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-hist{position:relative;padding:24px 24px 24px 58px;background:var(--bg);color:var(--text);font-family: var(--f);} .ds-hist ol{margin:0;padding:0;list-style:none} .ds-rail,.ds-line{position:absolute;left:28px;top:34px;bottom:34px;width:1px;background:var(--line)} .ds-line{width:2px;left:27.5px;bottom:50%;background:linear-gradient(var(--warm),var(--cool));box-shadow:0 0 14px rgba(255,184,119,.5)} .ds-hist li{position:relative;padding-bottom:32px} .ds-hist li:last-child{padding-bottom:0} .ds-hist li::before{content:\"\";position:absolute;left:-34px;top:8px;width:10px;height:10px;border-radius:50%;background:var(--bg);box-shadow:inset 0 0 0 1.5px var(--text-3)} .ds-hist li.is-current::before{background:var(--warm);box-shadow:0 0 14px var(--warm)} .ds-per{display:block;font-size:15px;color:var(--text-3);margin-bottom:6px} .ds-role{margin:0;font-weight:360;font-stretch:108%;font-size:clamp(22px,2vw,30px);line-height:1.15;letter-spacing:-0.02em} .ds-via{margin:6px 0 0;font-size:15px;color:var(--text-2)} .ds-via span{color:var(--text-3);margin-right:8px}"
     },
     {
       "name": "Contact E-mail",
       "kind": "custom",
-      "refersTo": null,
-      "description": "Display type set lighter and narrower than any other display use, because it is an address rather than a headline. The acid underline thickens from 2px to 6px on hover.",
-      "html": "<div class=\"ds-ink-block\"><a class=\"ds-contact-email\" href=\"mailto:hello@vaclavmudra.com\">hello@vaclavmudra.com</a></div>",
-      "css": ".ds-ink-block { background: var(--ink, #101413); padding: 40px 32px; } .ds-contact-email { display: inline-block; font-family: var(--font-display, Archivo, sans-serif); font-weight: 500; font-stretch: 100%; font-size: clamp(22px, 4vw, 50px); letter-spacing: -0.01em; color: var(--bg, #f5f7f6); text-decoration: none; padding-bottom: 6px; background-image: linear-gradient(var(--acid, #d7f94b), var(--acid, #d7f94b)); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 2px; transition: color 240ms ease, background-size 320ms cubic-bezier(0.2,0.7,0,1); } .ds-contact-email:hover { color: var(--acid, #d7f94b); background-size: 100% 6px; } .ds-contact-email:focus-visible { outline: 2px solid var(--acid, #d7f94b); outline-offset: 3px; }"
+      "refersTo": "contact-email",
+      "description": "Large light e-mail; 2px moonlight-to-ember underline extends on hover while a light runs along it.",
+      "html": "<div class=\"ds-c\"><a class=\"ds-email\" href=\"#\"><span>hello@vaclavmudra.com</span></a></div>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-c{padding:40px 24px;background:var(--bg);font-family: var(--f);} .ds-email{position:relative;display:inline-block;font-weight:320;font-stretch:108%;font-size:clamp(28px,5vw,64px);line-height:1.1;letter-spacing:-0.03em;color:var(--text);text-decoration:none;padding-bottom:12px;clip-path:inset(-20px 0 -12px 0);transition:color 400ms ease} .ds-email::after{content:\"\";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,var(--cool),var(--warm));transform-origin:left;transform:scaleX(.18);transition:transform 700ms var(--ease-quint)} .ds-email::before{content:\"\";position:absolute;left:0;bottom:-3px;z-index:1;width:26%;height:8px;border-radius:4px;background:radial-gradient(closest-side,#fff,rgba(255,220,180,.6) 45%,transparent);filter:blur(1px);opacity:0;transform:translateX(-110%)} .ds-email:hover,.ds-email:focus-visible{color:#fff;outline:none} .ds-email:hover::after,.ds-email:focus-visible::after{transform:none} .ds-email:hover::before,.ds-email:focus-visible::before{opacity:1;transform:translateX(380%);transition:transform 1100ms cubic-bezier(0.77,0,0.175,1) 120ms,opacity 200ms ease 120ms}"
     },
     {
-      "name": "Scroll-Progress Button",
-      "kind": "button",
-      "refersTo": "topstar",
-      "description": "A dial, not a button: the cobalt asterisk rotates in direct proportion to document scroll progress. One of only two circular objects in the system.",
-      "html": "<button class=\"ds-topstar\" type=\"button\" aria-label=\"Zpět nahoru\"><span aria-hidden=\"true\">✳</span></button>",
-      "css": ".ds-topstar { display: grid; place-items: center; width: 48px; height: 48px; background: var(--bg, #f5f7f6); border: 1px solid var(--ink, #101413); border-radius: 50%; color: var(--blue, #2547f0); font-size: 24px; line-height: 1; cursor: pointer; transition: background 200ms ease, color 200ms ease; } .ds-topstar span { display: block; transform: rotate(78deg); } .ds-topstar:hover { background: var(--acid, #d7f94b); color: var(--ink, #101413); } .ds-topstar:focus-visible { outline: 2px solid var(--blue, #2547f0); outline-offset: 3px; }"
+      "name": "Footer with Version Switcher",
+      "kind": "nav",
+      "refersTo": "footer",
+      "description": "Hairline-topped footer; version switcher links every archived generation, current one as plain text.",
+      "html": "<footer class=\"ds-foot\"><span>© 2026 Václav Mudra</span><span>Statické HTML. Žádné trackery. Sazba: Archivo. Verze webu: <a href=\"#\">v4</a>, <a href=\"#\">v5</a>, <span aria-current=\"page\">v6a</span>, <a href=\"#\">v6b</a> · <a href=\"#\">English</a></span></footer>",
+      "css": ":host{--bg:#070a12;--text:#edeae4;--text-2:#b4b8c4;--text-3:#858b9b;--line:rgba(237,234,228,.10);--line-2:rgba(237,234,228,.22);--warm:#ffb877;--cool:#8fb8ff;--live:#8be0b0;--ease-out:cubic-bezier(0.23,1,0.32,1);--ease-quint:cubic-bezier(0.22,1,0.36,1);--f:\"Archivo\",system-ui,-apple-system,\"Segoe UI\",sans-serif} .ds-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;padding:22px 24px;border-top:1px solid var(--line);background:var(--bg);font-family: var(--f);font-size:14px;color:var(--text-3)} .ds-foot a{color:var(--text-2);text-decoration:none;box-shadow:inset 0 -1px 0 var(--line-2);transition:color 200ms ease} .ds-foot a:hover{color:var(--text)} .ds-foot a:focus-visible{outline:2px solid var(--warm);outline-offset:4px} .ds-foot [aria-current]{color:var(--text)}"
     }
   ],
   "narrative": {
-    "northStar": "Modrotisk",
-    "overview": "Modrotisk is the Czech word for indigo-resist block printing — a folk textile craft where a resist paste is stamped onto cloth, the cloth is dipped in indigo, and the pattern emerges as bright figures on a deep blue ground. Read literally, the same word decomposes into modrý + tisk: blue print. Both readings are load-bearing here. From the craft comes the discipline of a stamped mark, a registration that either aligns or visibly does not, and ink that sits in the surface rather than floating above it. From the literal reading comes the drafting table: a 64px grid, orthogonal elbow joins as in an ArchiMate diagram, registration crosses at the corners of every node, cobalt as the line weight of a technical drawing.\n\nThe system is bright, cool and orthogonal. Cool white ground, cool-black ink, one structural blue and one highlighter green. Depth is achieved by offset and hairline rather than by blur: the About photograph carries a cobalt frame displaced 12px down and right, exactly as a misregistered second pass would print. There are no shadows anywhere in the stylesheet, no gradients other than the grid's own fade-out mask, no grain, no glass. Nothing is rounded except two things that are literally circles — the availability stamp and the scroll-progress button.\n\nThe counter-position is explicit and was the reason for the redesign. This replaced a dark, Raycast-inspired v4 whose genre — dark ground, glow blobs, a grid of hairline-bordered cards, five rainbow accents, mono eyebrow labels — is now the default output of any code-generating model. It also replaced an intermediate v5 (\"Papír a stroj\": warm paper, Fraunces, vermilion) rejected for sepia tones and typographic overacting. Brightness is the first differentiator; the second is that the graphics carry meaning. The hero's animated canvas schematic says solution architect without a word of copy, and it earns the space a decorative illustration would have wasted.\n\nOn the status of what follows: every rule in this system describes the shipped v5.1 implementation and holds until a deliberate decision replaces it. None of them is sacred. They are named and stated forcefully because a design system that hedges gets ignored, not because they are beyond revision — a future direction is free to overturn any of them, as long as it does so on purpose and system-wide rather than by drift on one section.",
+    "northStar": "Light in a Dark Room",
+    "overview": "A near-black page (night) lit from behind by a hand-written WebGL fragment shader: domain-warped fbm noise with thin filaments that shift between moonlight and ember, bending toward the pointer and glowing where it rests. Everything on top is type. One variable face, Archivo, set very light (260–320) and wide (108–115%) at display sizes, so the letters read as lit edges rather than ink. The only colors besides bone-white text are the two lights the field itself emits, ember and moonlight, plus a single mint status dot.\n\nThe field is atmosphere, not decoration under the words: text blocks marked as calm zones push the shader down to 7% in a soft-edged rectangle around them, the field dims as the hero scrolls away, and it brightens again toward the contact section. Motion is filmic and slow (quint ease-out, 1000–1500 ms reveals) and always settles: kinetic letters, tilted project windows and the cursor spotlights return to rest when the pointer and scroll stop. Every effect has a static path for `prefers-reduced-motion` and a content-complete no-JS path.\n\nArchived generations stay linked from the footer: v4 at `/old/`, v5.1 \"modrotisk\" blueprint at `/v5/`, and v6b at `/v6b/` (this same system with a contour-line shader background).",
     "keyCharacteristics": [
-      "Bright cool-white ground; dark surfaces are the rare exception, not the mode",
-      "Exactly two accents, each with one job: cobalt structures, acid pulses",
-      "Zero radius everywhere except literal circles; zero shadows anywhere",
-      "Depth by offset overprint and hairline, never by blur",
-      "Full-bleed hairlines set the vertical rhythm; sections are separated by rules, not cards",
-      "Three type roles on three faces: Archivo display, Instrument Sans text, Spline Sans Mono meta",
-      "Graphics are technical artifacts (grid, registration crosses, stamp, schematic), not ornament",
-      "Scroll produces motion in several directions and speeds at once; prefers-reduced-motion yields a complete static drawing"
+      "Dark base (night) with a live WebGL light field fixed behind the page; a 6% SVG noise grain sits over everything.",
+      "One typeface, Archivo variable (wght 100–900, wdth 62–125%); hierarchy through weight, width and size, never a second family.",
+      "Display type light (260–320) with tight negative tracking; kinetic headings modulate width and weight per letter.",
+      "Two light accents, ember (warm) and moonlight (cool); mint only for \"live\" status.",
+      "Rounded glass containers (14–20px) against 1px hairline rules; no hard boxes.",
+      "Shared single `styles.css`, `main.js`, `kinetic-lite.js` across CS and EN."
     ],
     "rules": [
       {
-        "name": "The Two Jobs Rule",
-        "body": "Cobalt structures, acid pulses. A third accent hue would require deciding what job it does, and there is no third job. When a new element needs color, it is asking to be either structure or pulse; decide which, then use that accent.",
+        "name": "The Lights Not Paint Rule",
+        "body": "Ember and moonlight appear only as small emissive things: dots, numerals, single words, 1–2px lines, glows and spotlights. No accent-filled buttons, panels or section backgrounds.",
         "section": "colors"
       },
       {
-        "name": "The Acid Never Speaks Rule",
-        "body": "Acid is a ground or an underline, never a text color. As text on cool white it measures 1.11:1 — invisible. As a ground under cool ink it measures 15.5:1. The rule is a legibility fact wearing a doctrine's clothes.",
+        "name": "The Two Lights Rule",
+        "body": "Every gradient line pairs moonlight and ember (HUD progress bar, timeline progress, contact e-mail underline). No third hue enters a gradient.",
         "section": "colors"
       },
       {
-        "name": "The Two Ink Blocks Rule",
-        "body": "The inverted ink surface appears twice on the page — the final project card and the contact section — and it lands because it is rare. A third would make the page look like it has a dark theme it does not have.",
+        "name": "The Translucent Night Rule",
+        "body": "Surfaces over the field are translucent night (0.75–0.85 alpha), never opaque, so the light behind stays readable as one continuous space.",
         "section": "colors"
       },
       {
-        "name": "The Inverse Opacity Ladder",
-        "body": "On ink surfaces, secondary text is cool white at 0.75, metadata at 0.6, muted at 0.5, and borders at 0.25. These are written as literal rgba(245, 247, 246, …) in the stylesheet rather than as tokens; treat the ladder as the token until it is promoted into one.",
-        "section": "colors"
-      },
-      {
-        "name": "The Width-Axis Rule",
-        "body": "Display type is set on Archivo's wdth axis between 105% and 115%, wider as it gets larger. Reaching for more presence means going wider and heavier, not just bigger — the axis is what distinguishes this setting from any default sans at a big size.",
+        "name": "The One Family Rule",
+        "body": "Archivo only. Hierarchy comes from weight (260–500), width (108–115% on display roles) and size. No mono, no serif, no second sans.",
         "section": "typography"
       },
       {
-        "name": "The Third Voice Rule",
-        "body": "Every piece of metadata is mono, uppercase, and tracked open. Anything that is a label, an index, a URL, a status, or a date belongs to Spline Sans Mono; anything a person reads as a sentence belongs to Instrument Sans. There is no overlap, which is what keeps the two from competing. The footer is the one place mono is not uppercased.",
+        "name": "The Light Display Rule",
+        "body": "Anything above 26px sits at weight 260–380 with negative tracking (-0.015em to -0.05em). Heavier display weight exists only transiently, as kinetic response (+80 at most).",
         "section": "typography"
       },
       {
-        "name": "The Czech Typography Rule",
-        "body": "Correct Czech typesetting is a requirement, not a finish: „low-high quotes\", em dashes, non-breaking spaces after single-letter prepositions and inside broken numerals and coordinates, and no orphans in headings. The English mutation follows English conventions with the same rigor. Both files carry these as literal entities in the markup.",
+        "name": "The Sentence Case Rule",
+        "body": "No uppercase and no letter-spaced labels anywhere; meta reads as quiet sentence-case text in bone-muted.",
         "section": "typography"
       },
       {
-        "name": "The Rule-Not-Card Rule",
-        "body": "Structure is expressed with lines across the page. When a new block needs separating, give it a hairline and vertical space; do not give it a border box, a background panel, or a radius.",
-        "section": "layout"
-      },
-      {
-        "name": "The Own-Proportion Rule",
-        "body": "Each section declares the grid its content wants. Consistency lives in the gutter, the container, the rules, and the type — not in a shared column count.",
-        "section": "layout"
-      },
-      {
-        "name": "The Offset-Not-Blur Rule",
-        "body": "Depth is produced by displacing a line, changing a tone, or stacking a real surface. A shadow would introduce a light source the page has otherwise decided not to have.",
+        "name": "The Calm Under Text Rule",
+        "body": "Every non-heading text block over the open field carries `data-calm`; the shader reduces itself to 7% within a soft margin (18px pad, 2–14% of viewport height falloff) around it. Up to 8 zones. Headings are allowed to sit in the light; paragraphs are not.",
         "section": "elevation"
       },
       {
-        "name": "The Two-Radii Rule",
-        "body": "0 for anything rectangular, 50% for anything that is a physical round object. No 4px, no 8px, no pills.",
-        "section": "shapes"
-      },
-      {
-        "name": "The Orthogonal Rule",
-        "body": "Connections turn at right angles. No diagonals, no bezier curves, no organic paths.",
-        "section": "shapes"
+        "name": "The Field Breathes With Story Rule",
+        "body": "Field intensity is tied to position: full in the hero, down to 14% after it, rising back toward 76% as the contact section enters.",
+        "section": "elevation"
       }
     ],
     "dos": [
-      "Do give each accent its one job: cobalt for structure (links, indices, rails, connections, focus), acid for pulse (chips, live status, underlines, selection).",
-      "Do put acid behind ink text rather than in it — as a ground or an underline. The one exception in the system, acid text on an ink ground in the active language chip, works because the contrast is 15.5:1.",
-      "Do separate blocks with a full-bleed hairline and vertical space. --line-strong for structure, --line for internal dividers.",
-      "Do set display type on Archivo's width axis (105–115%) as well as its weight when it needs more presence.",
-      "Do keep every label, index, URL, status and date in Spline Sans Mono, uppercase, tracked at 0.08em or wider.",
-      "Do cap measure per block — 52–58ch for descriptions, ~56ch for ledes, ~22ch for display-set headings.",
-      "Do create depth by offsetting a line, changing a tone, or stacking a real surface.",
-      "Do give every new section the staggered reveal (data-reveal plus a --i index, 70ms apart over 700ms). A dedicated scroll behavior — a sticky stack, a self-drawing line — is earned by content that genuinely justifies one, not granted by default.",
-      "Do hide decorative motion from assistive technology (aria-hidden) and provide an sr-only equivalent whenever it carries real content.",
-      "Do encode status redundantly — glyph and border treatment and color, as in ● LIVE / ◐ BETA / ○ WIP.",
-      "Do run new motion through the single requestAnimationFrame loop in main.js, animate only transform and opacity, cache measurements outside the loop, and keep the try/catch so one bad frame cannot kill the sequence.",
-      "Do verify that prefers-reduced-motion leaves a complete, usable static page — the schematic fully drawn, the timeline line at full height, bands and glyphs untransformed.",
-      "Do keep the non-JS path intact: .js gates the reveal and rise animations, so content is visible when the class never lands."
+      "Do mark every paragraph-level text block placed over the open field with `data-calm` (max 8 per page).",
+      "Do keep display type at weight 260–320 with width 108–115% and tracking between -0.03em and -0.05em.",
+      "Do use ember and moonlight only as light: dots, numerals, single words, 1–2px lines, glows and spotlights.",
+      "Do run every gradient line between moonlight and ember.",
+      "Do frame project screenshots in the browser window, captured at the same 1440x900 viewport, and tint each window's `--glow` from the project's own color.",
+      "Do use the quint ease-out (cubic-bezier(0.22, 1, 0.36, 1)) for reveals and 600–1500ms durations for entrances; 200–300ms for state color changes.",
+      "Do give every motion a settled rest state and a reduced-motion path where all content is visible and static.",
+      "Do keep the version switcher in both language footers whenever a generation is archived."
     ],
     "donts": [
-      "Don't add a third accent hue. If a new element needs color, decide whether it is structure or pulse and use that accent.",
-      "Don't introduce box-shadow, blur, backdrop filters, or grain. The page has decided not to have a light source.",
-      "Don't use a radius between 0 and 50%. No 4px, no 8px, no pills.",
-      "Don't enclose content in bordered boxes or background panels to group it — that was the v4 card-grid pattern this design replaced.",
-      "Don't add a third inverted ink surface. Two is what keeps them rare enough to register.",
-      "Don't tile the 64px drafting grid beyond the hero, where it fades out by design.",
-      "Don't draw a diagonal or curved connection. Elbows turn at right angles.",
-      "Don't put the photograph in the hero or crop it to a circle — it belongs in About, rectangular, grayscale, in its offset frame.",
-      "Don't let a decorative element overlap a meaning-carrying one. The stamp and the schematic are both cobalt; where they overlapped, a visitor read it as a rendering bug, not as intentional misregistration.",
-      "Don't place load-bearing text in --ink-3 at display sizes below 11px, and don't reintroduce a muted token that fails 4.5:1. Recession is the lightest legible step, not an illegible one.",
-      "Don't load a font, script, or image from a third-party origin. Zero external requests is a claim the footer makes literally.",
-      "Don't let a change land in one language mutation only. index.html and en/index.html share styles.css and main.js; a structural edit to one is unfinished until the other matches.",
-      "Don't reintroduce the v4 dark-glow vocabulary or the rejected v5 warm-paper vocabulary. Both are anti-references on record."
+      "Don't add a second typeface, uppercase labels or letter-spaced captions.",
+      "Don't fill buttons, panels or sections with ember, moonlight or mint.",
+      "Don't make surfaces over the field opaque; use translucent night at 0.75–0.85 alpha.",
+      "Don't add dark drop shadows to anything other than project windows; depth elsewhere comes from glass, light glows and the field.",
+      "Don't let kinetic or tilt effects keep moving once pointer and scroll are idle.",
+      "Don't use mint for anything other than live/available status."
     ]
   }
 }
