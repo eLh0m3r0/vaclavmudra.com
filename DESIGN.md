@@ -27,6 +27,7 @@ colors:
   window-url-text: "#9aa0ae"
   window-bar-rule: "rgba(237, 234, 228, 0.07)"
   window-shadow: "rgba(0, 0, 0, 0.8)"
+  email-sweep-light: "rgba(255, 220, 180, 0.6)"
   glass-sheen: "rgba(255, 255, 255, 0.07)"
   traffic-red: "#ff6159"
   traffic-amber: "#ffbd2e"
