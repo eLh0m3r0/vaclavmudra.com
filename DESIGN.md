@@ -80,6 +80,13 @@ typography:
     lineHeight: 1.08
     letterSpacing: "-0.03em"
     fontVariation: "'wdth' 110"
+  title-sector:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "clamp(28px, 3vw, 48px)"
+    fontWeight: 320
+    lineHeight: 1.08
+    letterSpacing: "-0.03em"
+    fontVariation: "'wdth' 110"
   role:
     fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
     fontSize: "clamp(22px, 2vw, 30px)"
@@ -132,6 +139,18 @@ typography:
     fontSize: "13px"
     fontWeight: 400
     lineHeight: "24px"
+    letterSpacing: "normal"
+  facts:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.6
+    letterSpacing: "normal"
+  window-url:
+    fontFamily: "Archivo, system-ui, -apple-system, Segoe UI, sans-serif"
+    fontSize: "12px"
+    fontWeight: 400
+    lineHeight: "20px"
     letterSpacing: "normal"
 rounded:
   url-pill: "6px"
