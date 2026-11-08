@@ -3,8 +3,8 @@
 Static personal site. Plain HTML + CSS + vanilla JS. No build step, no external
 requests, no trackers.
 
-Design: **v6a** — dark, cinematic. A hand-written WebGL shader field behind the
-page (calmed under text), one variable typeface (Archivo, light weights, `wdth`
+Design: **v6b** — dark, cinematic. A hand-written WebGL shader field of
+topographic contour lines behind the page (calmed under text), one variable typeface (Archivo, light weights, `wdth`
 axis), restrained kinetic typography on headings, cursor-lit sections, marquee
 bands and a pinned horizontal carousel of real product screenshots framed as
 browser windows. Full `prefers-reduced-motion` and no-JS fallbacks. Details in
@@ -16,8 +16,8 @@ Every generation stays online, linked from the version switcher in each footer:
 
 | Version | Path    | Notes                                              |
 |---------|---------|----------------------------------------------------|
-| v6a     | `/`     | Current, the only indexed one                      |
-| v6b     | `/v6b/` | Same system, contour-line shader background        |
+| v6b     | `/`     | Current, the only indexed one                      |
+| v6a     | `/v6a/` | Same system, filament shader background            |
 | v5.1    | `/v5/`  | „Modrotisk" — bright technical blueprint            |
 | v4      | `/old/` | Raycast-inspired dark                              |
 
@@ -28,12 +28,13 @@ project set.
 
 ```
 /
-├── index.html            # CS (root, primary) — v6a
+├── index.html            # CS (root, primary) — v6b
 ├── en/index.html         # EN
 ├── styles.css            # Shared CSS
 ├── main.js               # Shader field, reveals, bands, carousel, spotlights (no libs)
 ├── kinetic-lite.js       # Kinetic headings ([data-kin])
-├── v6b/                  # v6b (CS, en/, own styles.css, main.js, kinetic-lite.js)
+├── v6a/                  # v6a (CS, en/, own styles.css, main.js, kinetic-lite.js)
+├── v6b/                  # Redirect stubs to / (v6b was here before it became primary)
 ├── v5/                   # v5.1 archive
 ├── old/                  # v4 archive
 ├── preview/              # Working previews of redesign variants (not published)

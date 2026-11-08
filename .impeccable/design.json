@@ -296,7 +296,7 @@
         "role": "tertiary",
         "displayName": "Live Mint",
         "canonical": "oklch(84.0% 0.107 158.3)",
-        "purpose": "Status only: hero availability ping, Live dot on project cards.",
+        "purpose": "Status only: Live dot on project cards.",
         "tonalRamp": [
           "oklch(15% 0.107 158.3)",
           "oklch(26% 0.107 158.3)",
@@ -581,7 +581,7 @@
       {
         "name": "ease-out",
         "value": "cubic-bezier(0.23, 1, 0.32, 1)",
-        "purpose": "Short state transitions: header, skip link, arrows, screenshot parallax, sheen, ping."
+        "purpose": "Short state transitions: header, skip link, arrows, screenshot parallax, sheen."
       },
       {
         "name": "ease-quint",
@@ -601,7 +601,7 @@
       {
         "name": "rise",
         "value": "1200ms ease-quint, delay 700ms",
-        "purpose": "Hero meta and foot: opacity 0, translateY(18px)."
+        "purpose": "Hero foot: opacity 0, translateY(18px)."
       },
       {
         "name": "reveal",
@@ -667,11 +667,6 @@
         "name": "kinetic",
         "value": "spring k 0.08, damping 0.62; radius 11vw; pointer +10% wdth / +80 wght; scroll wave +/-4% wdth / +20 wght; starts at 1900ms",
         "purpose": "[data-kin] headings; settles within ~500ms of idle; fine pointer only for proximity; off under reduced motion."
-      },
-      {
-        "name": "ping",
-        "value": "2.6s ease-out infinite, 0 to 10px ring",
-        "purpose": "Availability dot."
       },
       {
         "name": "reduced-motion",
@@ -803,7 +798,7 @@
   ],
   "narrative": {
     "northStar": "Light in a Dark Room",
-    "overview": "A near-black page (night) lit from behind by a hand-written WebGL fragment shader: domain-warped fbm noise with thin filaments that shift between moonlight and ember, bending toward the pointer and glowing where it rests. Everything on top is type. One variable face, Archivo, set very light (260–320) and wide (108–115%) at display sizes, so the letters read as lit edges rather than ink. The only colors besides bone-white text are the two lights the field itself emits, ember and moonlight, plus a single mint status dot.\n\nThe field is atmosphere, not decoration under the words: text blocks marked as calm zones push the shader down to 7% in a soft-edged rectangle around them, the field dims as the hero scrolls away, and it brightens again toward the contact section. Motion is filmic and slow (quint ease-out, 1000–1500 ms reveals) and always settles: kinetic letters, tilted project windows and the cursor spotlights return to rest when the pointer and scroll stop. Every effect has a static path for `prefers-reduced-motion` and a content-complete no-JS path.\n\nArchived generations stay linked from the footer: v4 at `/old/`, v5.1 \"modrotisk\" blueprint at `/v5/`, and v6b at `/v6b/` (this same system with a contour-line shader background).",
+    "overview": "A near-black page (night) lit from behind by a hand-written WebGL fragment shader: a slowly drifting fbm height map drawn as thin topographic contour lines (every fifth line brighter), moonlight in the valleys and ember on the peaks, rising into a hill under the pointer and glowing where it rests. Everything on top is type. One variable face, Archivo, set very light (260–320) and wide (108–115%) at display sizes, so the letters read as lit edges rather than ink. The only colors besides bone-white text are the two lights the field itself emits, ember and moonlight, plus a single mint status dot on live projects.\n\nThe field is atmosphere, not decoration under the words: text blocks marked as calm zones push the shader down to 7% in a soft-edged rectangle around them, the field dims as the hero scrolls away, and it brightens again toward the contact section. Motion is filmic and slow (quint ease-out, 1000–1500 ms reveals) and always settles: kinetic letters, tilted project windows and the cursor spotlights return to rest when the pointer and scroll stop. Every effect has a static path for `prefers-reduced-motion` and a content-complete no-JS path.\n\nInternally this is v6b. Other generations stay linked from the footer: v4 at `/old/`, v5.1 \"modrotisk\" blueprint at `/v5/`, and v6a at `/v6a/` (this same system with a domain-warped filament shader instead of contour lines). The hero carries no meta row (no location, coordinates or availability badge); the name stands alone under the header.",
     "keyCharacteristics": [
       "Dark base (night) with a live WebGL light field fixed behind the page; a 6% SVG noise grain sits over everything.",
       "One typeface, Archivo variable (wght 100–900, wdth 62–125%); hierarchy through weight, width and size, never a second family.",
@@ -870,7 +865,7 @@
       "Don't make surfaces over the field opaque; use translucent night at 0.75–0.85 alpha.",
       "Don't add dark drop shadows to anything other than project windows; depth elsewhere comes from glass, light glows and the field.",
       "Don't let kinetic or tilt effects keep moving once pointer and scroll are idle.",
-      "Don't use mint for anything other than live/available status."
+      "Don't use mint for anything other than live project status."
     ]
   }
 }

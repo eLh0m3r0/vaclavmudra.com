@@ -63,8 +63,9 @@ keep visible without turning either into the headline:
 - Static hosting on GitHub Pages from the root of `main`; `git push` deploys.
   `CNAME` handles the apex domain `vaclavmudra.com`.
 - Every design generation stays reachable, linked from a version switcher in
-  each footer: v6a at `/` (current, the only indexed one), v6b at `/v6b/`
-  (same system, contour-line shader), v5.1 at `/v5/`, v4 at `/old/`. Archives
+  each footer: v6b at `/` (current, the only indexed one; contour-line
+  shader), v6a at `/v6a/` (same system, filament shader; `/v6b/` redirects
+  to `/`), v5.1 at `/v5/`, v4 at `/old/`. Archives
   are `noindex`, outside `sitemap.xml`, and carry the same project set as the
   current version.
 
@@ -78,7 +79,7 @@ keep visible without turning either into the headline:
   "no trackers" line in the footer is meant literally. Fonts are self-hosted
   `woff2` (latin + latin-ext).
 - Shared `styles.css`, `main.js` and `kinetic-lite.js` across both language
-  mutations. JS budget ≤ 10 kB gzipped, no libraries (v6a: ~8.4 kB gz).
+  mutations. JS budget ≤ 10 kB gzipped, no libraries (v6b: ~8.4 kB gz).
 - Performance budget: Lighthouse ≥ 95 on mobile in both mutations,
   LCP < 1.5 s, CLS ≈ 0, TBT < 200 ms.
 - SEO surface that must survive any redesign: per-language `<title>` and
@@ -138,7 +139,7 @@ keep visible without turning either into the headline:
 - **Photograph** — `assets/photo-dog-720.jpeg` (original `assets/photo-dog.jpeg`):
   Václav outdoors in a forest with Kvido, his Boston terrier. Personal and
   informal by intent; explicitly not a corporate headshot, never a circle crop.
-- **Social preview** — `assets/og-image.jpg` / `og-image-en.jpg` (1200×630, v6a hero), `assets/favicon.svg`.
+- **Social preview** — `assets/og-image.jpg` / `og-image-en.jpg` (1200×630, v6b hero), `assets/favicon.svg`.
 - **Project previews** — `assets/previews/*-1440.webp` / `-800.webp`: homepages captured at an identical 1440×900 viewport (Docházka at 1920×1200 scaled 0.75).
 - **Verifiable credentials** — Ing. in Project Management within the Systems
   Engineering & Informatics program (2017–2019, thesis: agile project

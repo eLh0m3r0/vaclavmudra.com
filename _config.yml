@@ -13,7 +13,7 @@ exclude:
   - DESIGN.md
   - uploads/
   # Pracovní náhledy variant redesignu (A, A2, A3, B…) — publikují se jen
-  # vybrané verze: v6a v kořeni a v6b na /v6b/.
+  # vybrané verze: v6b v kořeni a v6a na /v6a/.
   - preview/
   - .impeccable/
   - .gitignore

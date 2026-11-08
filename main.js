@@ -1,4 +1,4 @@
-/* vaclavmudra.com — varianta A „Tmavá, filmová"
+/* vaclavmudra.com — varianta A3 (Vrstevnice) — varianta A „Tmavá, filmová"
    Bez knihoven: WebGL světelné pole (fragment shader), připnutá horizontální
    galerie s 3D náklonem, marquee reagující na rychlost scrollu, světelné kužely.
    Všechno má cestu pro prefers-reduced-motion a funguje i bez JS (obsah). */
@@ -23,6 +23,7 @@
 
   var VERT = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   var FRAG = [
+    '#extension GL_OES_standard_derivatives : enable',
     'precision highp float;',
     'uniform vec2 r;uniform float t;uniform vec2 m;uniform float k;uniform vec4 z[8];',
     'float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}',
@@ -31,25 +32,24 @@
     'float fbm(vec2 p){float v=0.,a=.5;mat2 R=mat2(.8,.6,-.6,.8);for(int i=0;i<5;i++){v+=a*n(p);p=R*p*2.02;a*=.5;}return v;}',
     'void main(){',
     ' vec2 uv=gl_FragCoord.xy/r;float as=r.x/r.y;',
-    ' vec2 p=vec2(uv.x*as,uv.y)*1.3;vec2 mp=vec2(m.x*as,m.y)*1.3;',
-    ' float d=length(p-mp);',
-    ' p+=(mp-p)*.22*exp(-d*1.6);',                       // pole se stáčí ke kurzoru
-    ' float tt=t*.045;',
-    ' vec2 q=vec2(fbm(p+vec2(0.,tt)),fbm(p+vec2(5.2,1.3)-tt));',
-    ' vec2 w=vec2(fbm(p+3.4*q+vec2(1.7,9.2)+tt*1.3),fbm(p+3.4*q+vec2(8.3,2.8)-tt));',
-    ' float f=fbm(p+3.*w);',
     ' vec3 bg=vec3(.027,.039,.071);',
     ' vec3 deep=vec3(.06,.11,.27);',
     ' vec3 cool=vec3(.52,.7,1.);',
     ' vec3 warm=vec3(1.,.64,.38);',
-    ' vec3 c=bg+deep*pow(f,2.2)*.75;',
-    ' float ridge=1.-abs(2.*f-1.);',                       // tenká světelná vlákna kolem f=0.5
-    ' float fil=pow(ridge,9.)*(.55+.45*w.x);',
-    ' c+=mix(cool,warm,smoothstep(.42,.72,w.y))*fil*.9;',
-    ' float g=exp(-d*d*2.4);',                            // světlo pod kurzorem
-    ' c+=mix(warm,cool,.45)*g*.14;',
-    ' c+=warm*pow(ridge,24.)*g*.9;',                      // u kurzoru vlákna žhnou
-    ' c*=(.38+.62*smoothstep(.02,.62,uv.y))*(.5+.5*smoothstep(1.,.84,uv.y));', // tma pod textem a pod lištou
+    ' vec2 p=vec2(uv.x*as,uv.y)*2.;vec2 mp=vec2(m.x*as,m.y)*2.;',
+    ' float tt=t*.025;',
+    ' float hg=fbm(p*.55+vec2(tt,-tt*.6))*1.15+.12*fbm(p*1.3-vec2(tt*1.4,tt*.3));',
+    ' float d=length(p-mp);hg+=.42*exp(-d*d*.9);',
+    ' float lv=hg*13.;float dl=min(fract(lv),1.-fract(lv));',
+    ' float w=max(fwidth(lv),.0001);',
+    ' float line=1.-smoothstep(.0,w*1.3,dl);',
+    ' float major=step(.5,1.-step(.5,abs(mod(floor(lv+.5),5.))));',
+    ' vec3 col=mix(cool,warm,smoothstep(.55,1.25,hg));',
+    ' vec3 c=bg+deep*pow(clamp(hg-.2,0.,1.),2.)*.55;',
+    ' c+=col*line*mix(.22,.62,major);',
+    ' c+=warm*line*exp(-d*d*1.4)*.55;',
+    ' c+=mix(warm,cool,.5)*exp(-d*d*1.8)*.08;',
+    ' c*=(.38+.62*smoothstep(.02,.62,uv.y))*(.5+.5*smoothstep(1.,.84,uv.y));',
     ' float v=smoothstep(1.4,.2,length((uv-vec2(.55,.62))*vec2(1.,1.2)));',
     ' c=mix(bg,c,v*k*k);',
     ' float calm=0.;',                                    // klidné zóny pod textem
@@ -66,6 +66,7 @@
     if (!canvas) return false;
     try { gl = canvas.getContext('webgl', { antialias: false, alpha: false, powerPreference: 'low-power' }); } catch (_) { gl = null; }
     if (!gl) return false;
+    if (!gl.getExtension('OES_standard_derivatives')) { gl = null; return false; }
     function sh(type, src) {
       var s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
       if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));

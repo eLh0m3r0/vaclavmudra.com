@@ -252,11 +252,11 @@ components:
 
 **Creative North Star: "Light in a Dark Room"**
 
-A near-black page (night) lit from behind by a hand-written WebGL fragment shader: domain-warped fbm noise with thin filaments that shift between moonlight and ember, bending toward the pointer and glowing where it rests. Everything on top is type. One variable face, Archivo, set very light (260–320) and wide (108–115%) at display sizes, so the letters read as lit edges rather than ink. The only colors besides bone-white text are the two lights the field itself emits, ember and moonlight, plus a single mint status dot.
+A near-black page (night) lit from behind by a hand-written WebGL fragment shader: a slowly drifting fbm height map drawn as thin topographic contour lines (every fifth line brighter), moonlight in the valleys and ember on the peaks, rising into a hill under the pointer and glowing where it rests. Everything on top is type. One variable face, Archivo, set very light (260–320) and wide (108–115%) at display sizes, so the letters read as lit edges rather than ink. The only colors besides bone-white text are the two lights the field itself emits, ember and moonlight, plus a single mint status dot on live projects.
 
 The field is atmosphere, not decoration under the words: text blocks marked as calm zones push the shader down to 7% in a soft-edged rectangle around them, the field dims as the hero scrolls away, and it brightens again toward the contact section. Motion is filmic and slow (quint ease-out, 1000–1500 ms reveals) and always settles: kinetic letters, tilted project windows and the cursor spotlights return to rest when the pointer and scroll stop. Every effect has a static path for `prefers-reduced-motion` and a content-complete no-JS path.
 
-Archived generations stay linked from the footer: v4 at `/old/`, v5.1 "modrotisk" blueprint at `/v5/`, and v6b at `/v6b/` (this same system with a contour-line shader background).
+Internally this is v6b. Other generations stay linked from the footer: v4 at `/old/`, v5.1 "modrotisk" blueprint at `/v5/`, and v6a at `/v6a/` (this same system with a domain-warped filament shader instead of contour lines). The hero carries no meta row (no location, coordinates or availability badge); the name stands alone under the header.
 
 **Key Characteristics:**
 - Dark base (night) with a live WebGL light field fixed behind the page; a 6% SVG noise grain sits over everything.
@@ -277,7 +277,7 @@ A cold-dark neutral ground lit by two emitted lights; color appears as light sou
 - **Moonlight** (moonlight): the cool light. Second sector card's edge light and tag dot, outline-band separator dots, the cool end of every gradient line. moonlight-glow is the default under-glow of project windows.
 
 ### Tertiary
-- **Live Mint** (live-mint): status only. The pulsing "available" dot in the hero meta and the Live dot on project cards. Never used for text or decoration.
+- **Live Mint** (live-mint): status only. The Live dot on project cards. Never used for text or decoration.
 
 ### Neutral
 - **Night** (night): page ground, `theme-color`, text on inverted surfaces (active language pill, skip link, selection).
@@ -368,8 +368,8 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 - Bone text with a hairline-strong 1px underline at rest; on hover a currentColor 1px line wipes in left to right (500ms quint). Trailing arrows (↘ ↗) nudge 3px up-right.
 
 ### Hero
-- Name lines rise from behind a mask (1500ms, translateY 108% with 6deg skew and wdth 62% to rest), staggered 130ms after a 200ms delay. Meta and foot rise 18px at 700ms. On scroll the name narrows (115% to 70%), lifts 60px and fades to 10%.
-- Availability: mint dot with a 2.6s ping ring. Scroll cue: 1px x 54px line with a travelling highlight.
+- Name lines rise from behind a mask (1500ms, translateY 108% with 6deg skew and wdth 62% to rest), staggered 130ms after a 200ms delay. The foot rises 18px at 700ms. On scroll the name narrows (115% to 70%), lifts 60px and fades to 10%.
+- Scroll cue: 1px x 54px line with a travelling highlight.
 
 ### Marquee bands
 - Two aria-hidden rows moving in opposite directions (0.6px per frame plus 0.9x smoothed scroll velocity), edge-masked to transparent over 10%. Row A is solid bone with ember dots; row B is outline-stroke with moonlight dots. An sr-only paragraph carries the same content.
@@ -396,7 +396,7 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 - Social links as text links; location right-aligned in label size.
 
 ### Footer
-- Hairline top rule, label-small, bone-muted. Copyright, the literal "static HTML, no trackers, set in Archivo" line, and the version switcher: v4, v5, v6a (current, `aria-current`, plain text), v6b, plus the other language. Marked `data-calm`.
+- Hairline top rule, label-small, bone-muted. Copyright, the literal "static HTML, no trackers, set in Archivo" line, and the version switcher: v4, v5, v6a, v6b (current, `aria-current`, plain text), plus the other language. Marked `data-calm`.
 
 ### Kinetic headings
 - Headings with `data-kin` (hero name, section h2s, contact title) are split into per-letter spans after 1900ms. Letters within 11vw of the pointer widen by up to +10% and gain up to +80 weight; scrolling sends a gentle sine wave (±4% width, +20 weight) scaled by smoothed velocity. Spring stiffness 0.08, damping 0.62, no overshoot; everything returns to zero within ~0.5s of the pointer stopping. Pointer response on fine pointers only; disabled entirely under reduced motion.
@@ -422,4 +422,4 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 - **Don't** make surfaces over the field opaque; use translucent night at 0.75–0.85 alpha.
 - **Don't** add dark drop shadows to anything other than project windows; depth elsewhere comes from glass, light glows and the field.
 - **Don't** let kinetic or tilt effects keep moving once pointer and scroll are idle.
-- **Don't** use mint for anything other than live/available status.
+- **Don't** use mint for anything other than live project status.
