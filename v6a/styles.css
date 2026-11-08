@@ -257,10 +257,14 @@ button { font: inherit; color: inherit; }
   .hero__name { font-size: 24vw; }
   .contact__title { font-size: 21vw; }
 }
-/* telefon na výšku: jméno nesmí lepit pod lištu; hero může přesáhnout
-   výšku obrazovky, popis pak dojede až scrollem */
+/* telefon na výšku: hero se kotví shora, odstup od lišty roste s výškou
+   obrazovky (jinak by na vysokých telefonech jméno sjelo k polovině);
+   na malých může hero přesáhnout výšku, popis pak dojede až scrollem */
 @media (max-width: 900px) and (orientation: portrait) {
-  .hero { padding-top: calc(var(--header-h) + clamp(100px, 13svh + 44px, 184px)); }
+  .hero {
+    justify-content: flex-start;
+    padding-top: calc(var(--header-h) + clamp(96px, 40svh - 145px, 260px));
+  }
 }
 /* telefon na šířku: celé jméno se vejde pod lištu a nad systémový
    proužek iOS; zbytek hero pokračuje pod ohybem */
