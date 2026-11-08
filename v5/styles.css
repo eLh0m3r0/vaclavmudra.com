@@ -273,7 +273,7 @@ a:focus-visible, button:focus-visible {
 
 .hero {
   position: relative;
-  padding: clamp(68px, 11vh, 128px) 0 clamp(48px, 7vh, 88px);
+  padding: clamp(40px, 6vh, 72px) 0 clamp(48px, 7vh, 88px);
   /* rýsovací grid */
   background-image:
     linear-gradient(var(--line) 1px, transparent 1px),

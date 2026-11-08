@@ -264,6 +264,11 @@ button { font: inherit; color: inherit; }
 }
 /* telefon na šířku: celé jméno se vejde pod lištu a nad systémový
    proužek iOS; zbytek hero pokračuje pod ohybem */
+/* desktop a tablet na šířku: bez meta řádku nahoře se celé hero zvedne
+   výš, dole zůstane vzduch pro scroll cue */
+@media (orientation: landscape) and (min-height: 521px) {
+  .hero { padding-bottom: clamp(56px, 14vh, 160px); }
+}
 @media (orientation: landscape) and (max-height: 520px) {
   .hero {
     justify-content: flex-start; min-height: 0;
