@@ -681,6 +681,11 @@ section:first-of-type { border-top: 0; }
   padding-top: 6px;
 }
 .project__url { color: var(--text-tertiary); }
+/* vedlejší odkaz (GitHub, Marketplace) leží nad odkazem přes celou kartu */
+/* patička karty je nad odkazem .cover, ale kliky propouští; chytá je jen vedlejší odkaz */
+.project .project__foot { z-index: 2; pointer-events: none; }
+.project__more { pointer-events: auto; color: var(--text-tertiary); border-bottom: 1px solid var(--border-strong); }
+.project__more:hover { color: var(--text-primary); opacity: 1; }
 .project__tag {
   display: inline-block;
   align-self: flex-start;

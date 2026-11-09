@@ -631,6 +631,9 @@ a:focus-visible, button:focus-visible {
 .deck__card:hover .deck__url span { transform: translate(3px, -3px); }
 .deck__card:focus-within { outline: 2px solid var(--blue); outline-offset: -2px; }
 .cover { position: absolute; inset: 0; z-index: 2; }
+/* vedlejší odkazy (GitHub, Marketplace) leží nad odkazem přes celou kartu */
+.deck__links { display: inline-flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px 20px; }
+.deck__more { position: relative; z-index: 3; }
 .cover:focus-visible { outline: none; }
 
 @media (max-width: 720px) {
