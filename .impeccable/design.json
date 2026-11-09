@@ -600,7 +600,7 @@
       },
       {
         "name": "rise",
-        "value": "1200ms ease-quint, delay 700ms",
+        "value": "fade 450ms ease-out + rise 900ms ease-quint, delay 300ms",
         "purpose": "Hero foot: opacity 0, translateY(18px)."
       },
       {
@@ -620,7 +620,7 @@
       },
       {
         "name": "field-intensity",
-        "value": "lerp 0.08 toward max(1 - 0.86 * heroProgress, 0.14 + 0.62 * contactProgress)",
+        "value": "lerp 0.08 toward max(1 - 0.86 * heroProgress, 0.28 + 0.48 * contactProgress)",
         "purpose": "Field dims leaving the hero, brightens toward contact. Pointer follow lerp 0.05."
       },
       {
@@ -665,7 +665,7 @@
       },
       {
         "name": "kinetic",
-        "value": "spring k 0.08, damping 0.62; radius 11vw; pointer +10% wdth / +80 wght; scroll wave +/-4% wdth / +20 wght; starts at 1900ms",
+        "value": "spring k 0.08, damping 0.62; radius 11vw; pointer +10% wdth / +80 wght; scroll wave +/-4% wdth / +20 wght; written in steps of 0.5% wdth / 4 wght; starts at 1900ms",
         "purpose": "[data-kin] headings; settles within ~500ms of idle; fine pointer only for proximity; off under reduced motion."
       },
       {
@@ -845,7 +845,7 @@
       },
       {
         "name": "The Field Breathes With Story Rule",
-        "body": "Field intensity is tied to position: full in the hero, down to 14% after it, rising back toward 76% as the contact section enters.",
+        "body": "Field intensity is tied to position: full in the hero, down to 28% after it, rising back toward 76% as the contact section enters.",
         "section": "elevation"
       }
     ],

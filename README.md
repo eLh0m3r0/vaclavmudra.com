@@ -41,9 +41,10 @@ project set.
 ├── fonts/                # Self-hosted woff2 (Archivo; v4/v5 also Instrument Sans, Spline Sans Mono)
 ├── assets/
 │   ├── previews/         # Product homepages, 1440×900 captures (1440w + 800w webp)
-│   ├── photo-dog-720.jpeg
+│   ├── photo-dog-720.webp    # + photo-dog-1048.webp for 2x screens (archives use the .jpeg)
 │   ├── og-image.jpg      # 1200×630 social preview (CS), og-image-en.jpg (EN)
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── apple-touch-icon.png  # 180×180, same mark without rounded corners
 ├── robots.txt
 ├── sitemap.xml
 └── uploads/              # Design briefs & archived design systems (not published)
@@ -57,7 +58,8 @@ the "no trackers" line in the footer is meant literally.
 ## Deployment
 
 GitHub Pages from the root of `main`. Push to deploy. `CNAME` handles the apex
-domain. `_config.yml` keeps docs, `uploads/` and `preview/` off the domain.
+domain. `_config.yml` keeps docs, `uploads/`, `preview/` and preview-only
+screenshots off the domain.
 
 ## Adding a CV / phone
 

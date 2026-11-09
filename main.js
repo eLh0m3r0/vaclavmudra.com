@@ -1,4 +1,4 @@
-/* vaclavmudra.com — varianta A3 (Vrstevnice) — varianta A „Tmavá, filmová"
+/* vaclavmudra.com — v6b „Tmavá, filmová" (vrstevnice)
    Bez knihoven: WebGL světelné pole (fragment shader), připnutá horizontální
    galerie s 3D náklonem, marquee reagující na rychlost scrollu, světelné kužely.
    Všechno má cestu pro prefers-reduced-motion a funguje i bez JS (obsah). */
@@ -19,7 +19,7 @@
   /* ---------- Světelné pole (WebGL) ---------- */
 
   var canvas = $('[data-field]');
-  var gl = null, prog = null, U = {}, fieldScale = 0.5, fieldIntensity = 1, fieldTarget = 1;
+  var gl = null, prog = null, U = {}, fieldScale = 0.5, fieldIntensity = 1, fieldTarget = 1, lastDraw = 0;
 
   var VERT = 'attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
   var FRAG = [
@@ -96,7 +96,7 @@
     // pole je měkké — stačí poloviční rozlišení, prohlížeč ho roztáhne
     var s = Math.min(window.devicePixelRatio || 1, 1.5) * fieldScale;
     var w = Math.max(2, Math.round(vw * s)), h = Math.max(2, Math.round(vh * s));
-    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; gl.viewport(0, 0, w, h); }
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; gl.viewport(0, 0, w, h); lastDraw = 0; }
   }
   // obdélníky textových bloků v pixelech plátna (počátek vlevo dole), s okrajem
   var calmEls = null, calmBuf = new Float32Array(32);
@@ -188,7 +188,9 @@
     var track = row.firstElementChild, seq = track.firstElementChild;
     return { row: row, track: track, seq: seq, dir: +row.getAttribute('data-band') || -1, off: 0, w: 0 };
   });
+  var bandEl = $('.band'), bandTop = 0, bandBottom = 0;
   function setupBands() {
+    if (bandEl) { bandTop = bandEl.getBoundingClientRect().top + scrollY; bandBottom = bandTop + bandEl.offsetHeight; }
     bands.forEach(function (b) {
       b.w = b.seq.offsetWidth;
       if (!b.w) return;
@@ -312,14 +314,16 @@
     }
     var cr = contact ? contact.getBoundingClientRect() : null;
     var cp = cr ? clamp((vh - cr.top) / vh, 0, 1) : 0;
-    fieldTarget = Math.max(1 - hp * 0.86, 0.14 + cp * 0.62);
+    fieldTarget = Math.max(1 - hp * 0.86, 0.28 + cp * 0.48);
     fieldIntensity = lerp(fieldIntensity, fieldTarget, 0.08);
 
+    // pásy mimo obraz se dál počítají, ale nepřepisují
+    var bandSeen = y + vh > bandTop - 80 && y < bandBottom + 80;
     bands.forEach(function (b) {
       if (!b.w) return;
       b.off += b.dir * (0.6 + Math.abs(smoothV) * 0.9) * dt;
       var o = b.off % b.w; if (o > 0) o -= b.w; b.off = o;
-      b.track.style.transform = 'translate3d(' + o.toFixed(1) + 'px,0,0)';
+      if (bandSeen) b.track.style.transform = 'translate3d(' + o.toFixed(1) + 'px,0,0)';
     });
 
     updateWork(y);
@@ -336,7 +340,11 @@
       }
     }
 
-    drawField(t);
+    // pole se samo jen pomalu převaluje: v klidu ho stačí kreslit ~30× za
+    // vteřinu, naplno jen když se hýbe scroll, kurzor nebo jeho intenzita
+    var moving = v !== 0 || Math.abs(mouse.tx - mouse.x) > 0.0006 || Math.abs(mouse.ty - mouse.y) > 0.0006 ||
+      Math.abs(fieldTarget - fieldIntensity) > 0.003;
+    if (moving || t - lastDraw >= 32) { drawField(t); lastDraw = t; }
     if (!document.hidden) schedule();
   }
   function schedule() { if (!running) { running = true; requestAnimationFrame(frame); } }

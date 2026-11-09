@@ -1,4 +1,4 @@
-/* Střídmá kinetická typografie pro varianty A: nadpisy s [data-kin].
+/* Střídmá kinetická typografie: nadpisy s [data-kin].
    Písmena blízko kurzoru se pružně rozšíří a přitíží (osy wdth + wght)
    a při scrollu jimi projde jemná vlna úměrná rychlosti. V klidu
    (kurzor stojí, stránka nescrolluje) vše dosedne do výchozího stavu. */
@@ -88,11 +88,13 @@
       if (Math.abs(l.dg - tg) < 0.4 && Math.abs(l.vg) < 0.1) { l.dg = tg; l.vg = 0; }
       if (Math.abs(l.dw) < 0.02) l.dw = 0;
       if (Math.abs(l.dg) < 0.2) l.dg = 0;
-      // dosednutí na nulu se zapíše vždy, i když je rozdíl pod prahem
-      if (Math.abs(l.dw - l.lw) > 0.1 || Math.abs(l.dg - l.lg) > 0.5 || (l.dw === 0 && l.lw !== 0) || (l.dg === 0 && l.lg !== 0)) {
-        l.el.style.setProperty('--dw', l.dw.toFixed(2) + '%');
-        l.el.style.setProperty('--dg', l.dg.toFixed(0));
-        l.lw = l.dw; l.lg = l.dg;
+      // zapisuje se po krocích (šířka 0,5 %, tučnost 4): každá nová kombinace
+      // os znamená nový řez písma, po krocích se řezy opakují a berou z cache
+      var qw = Math.round(l.dw * 2) / 2, qg = Math.round(l.dg / 4) * 4;
+      if (qw !== l.lw || qg !== l.lg) {
+        l.el.style.setProperty('--dw', qw + '%');
+        l.el.style.setProperty('--dg', qg);
+        l.lw = qw; l.lg = qg;
       }
       if (l.dw || l.dg || l.vw || l.vg) active = true;
     });

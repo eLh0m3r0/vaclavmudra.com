@@ -330,13 +330,13 @@ A cold-dark neutral ground lit by two emitted lights; color appears as light sou
 
 ## Layout
 
-Single page, anchored sections, max container 1440px with fluid gutter (gutter). Sections breathe vertically (section-y) and open with a two-column section head: a numbered index (minmax(140px, 0.32fr)) beside the h2, collapsing to one column under 760px. The hero fills 100svh with content bottom-aligned; meta line (location with coordinates, availability) pinned under the header.
+Single page, anchored sections, max container 1440px with fluid gutter (gutter). Sections breathe vertically (section-y) and open with a two-column section head: a numbered index (minmax(140px, 0.32fr)) beside the h2, collapsing to one column under 760px. The hero fills 100svh with content bottom-aligned (anchored from the top on portrait phones); it carries no meta row.
 
 Order: hero, two marquee bands, 01 skills list, 02 two sector cards (1fr 1fr, stacked under 860px), 03 horizontally pinned project carousel, 04 about (photo + facts | timeline, 0.9fr/1.1fr, stacked under 900px), 05 contact with footer.
 
-The project section pins (sticky, 100vh) and translates its track horizontally with vertical scroll only on fine pointers with viewport at least 900x560 and no reduced motion; otherwise it is a native horizontal scroll-snap carousel (cards min(84vw, 640px)) with a "scroll sideways" hint. The pinned track starts aligned to the container edge and ends with 18vw trailing space.
+The project section pins (sticky, 100vh) and translates its track horizontally with vertical scroll only on fine pointers with viewport at least 900x560 and no reduced motion; otherwise it is a native horizontal scroll-snap carousel (cards min(84vw, 640px)) with a "scroll sideways" hint. The pinned track starts aligned to the container edge and ends with 18vw trailing space, built as a real flex item (`::after`) so it counts into the scroll travel and the last card can reach the centre.
 
-Breakpoints: 900px (hero foot, about, card info to one column; scroll cue hidden; pin gate), 860px (nav keeps only Projects and Contact; skills to 36px numeral column; sectors stack; 44px language targets), 760px (section head stacks), 520px (coordinates hidden; display sizes switch to vw), 440px (wordmark dot hidden).
+Breakpoints: 900px (hero foot, about, card info to one column; scroll cue hidden; pin gate), 860px (nav keeps only Projects and Contact; skills to 36px numeral column; sectors stack; 44px language targets), 760px (section head stacks), 520px (display sizes switch to vw), 440px (wordmark dot hidden, tighter header gaps), 389px (nav keeps only Contact, the page's goal).
 
 ## Elevation & Depth
 
@@ -350,7 +350,7 @@ Depth is light, not shadow. Three planes: the WebGL field (fixed, z -1, half res
 ### Named Rules
 **The Calm Under Text Rule.** Every non-heading text block over the open field carries `data-calm`; the shader reduces itself to 7% within a soft margin (18px pad, 2–14% of viewport height falloff) around it. Up to 8 zones. Headings are allowed to sit in the light; paragraphs are not.
 
-**The Field Breathes With Story Rule.** Field intensity is tied to position: full in the hero, down to 14% after it, rising back toward 76% as the contact section enters.
+**The Field Breathes With Story Rule.** Field intensity is tied to position: full in the hero, down to 28% after it (the shader squares it, so roughly 8% of the hero's light: present, never distracting), rising back toward 76% as the contact section enters. At rest the field is redrawn about 30 times a second; every frame only while scroll, pointer or intensity is moving.
 
 ## Shapes
 
@@ -359,7 +359,7 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 ## Components
 
 ### Navigation
-- **Header:** fixed, 68px, transparent at top; after 10px of scroll takes header-scrim. Hides (translateY(-100%), 300ms) when scrolling down past 70% of the viewport, returns on any upward scroll.
+- **Header:** fixed, 68px, transparent at top; after 10px of scroll takes header-scrim. Hides (translateY(-100%), 300ms) when scrolling down past 70% of the viewport, returns on any upward scroll and whenever keyboard focus is inside it.
 - **Wordmark:** 17px / 500 / 112% with an 8px ember light dot.
 - **Links:** label size, bone-secondary, to bone on hover and when their section is current (IntersectionObserver, middle 5% band of the viewport).
 - **Language toggle:** pill links 40x32px (44x44px under 860px); active is inverted (bone fill, night text).
@@ -368,7 +368,7 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 - Bone text with a hairline-strong 1px underline at rest; on hover a currentColor 1px line wipes in left to right (500ms quint). Trailing arrows (↘ ↗) nudge 3px up-right.
 
 ### Hero
-- Name lines rise from behind a mask (1500ms, translateY 108% with 6deg skew and wdth 62% to rest), staggered 130ms after a 200ms delay. The foot rises 18px at 700ms. On scroll the name narrows (115% to 70%), lifts 60px and fades to 10%.
+- Name lines rise from behind a mask (1500ms, translateY 108% with 6deg skew and wdth 62% to rest), staggered 130ms after a 200ms delay. The foot starts at 300ms: it fades in over 450ms and rises 18px over 900ms (it is the largest text above the fold, so it must not wait for the whole choreography). On scroll the name narrows (115% to 70%), lifts 60px and fades to 10%.
 - Scroll cue: 1px x 54px line with a travelling highlight.
 
 ### Marquee bands
@@ -384,7 +384,7 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 ### Project window cards + HUD (signature)
 - Browser-window frame (window-body, 38px bar with traffic dots and centered URL pill, 16:10 view) around a 1440x900 homepage screenshot, object-fit cover from the top, scaled 1.05.
 - Depth: off-center cards rotate up to 16deg on Y; pointer tilt adds up to 5deg / 4deg; the screenshot parallaxes against the motion and a 7% white sheen slides with the tilt. All values lerp at 0.12 per frame.
-- Info row: muted "NN / NN" numeral, project name (title-project) whose link covers the whole card, description, meta with mint Live dot (hollow ring for WIP), tags and the URL in bone.
+- Info row: muted "NN / NN" numeral, project name (title-project) whose link covers the whole card, description, meta with mint Live dot (hollow ring for WIP), tags and the URL in bone (part of the card-wide link, underlined while the card is hovered), then optional secondary text links above that link: GitHub for open-source projects, Marketplace for Trailmap.
 - HUD under the pinned track: current index, a 1px track filled by a moonlight-to-ember bar scaled to progress, and the current project name. Hidden when not pinned. Focusing a card scrolls it to center.
 
 ### About
@@ -399,10 +399,10 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 - Hairline top rule, label-small, bone-muted. Copyright, the literal "static HTML, no trackers, set in Archivo" line, and the version switcher: v4, v5, v6a, v6b (current, `aria-current`, plain text), plus the other language. Marked `data-calm`.
 
 ### Kinetic headings
-- Headings with `data-kin` (hero name, section h2s, contact title) are split into per-letter spans after 1900ms. Letters within 11vw of the pointer widen by up to +10% and gain up to +80 weight; scrolling sends a gentle sine wave (±4% width, +20 weight) scaled by smoothed velocity. Spring stiffness 0.08, damping 0.62, no overshoot; everything returns to zero within ~0.5s of the pointer stopping. Pointer response on fine pointers only; disabled entirely under reduced motion.
+- Headings with `data-kin` (hero name, section h2s, contact title) are split into per-word and per-letter spans after 1900ms; both stay `display: inline`, which keeps kerning, find-in-page and the LCP record intact. Axis values are written in steps (0.5% width, 4 weight) so font instances repeat and come from cache. Letters within 11vw of the pointer widen by up to +10% and gain up to +80 weight; scrolling sends a gentle sine wave (±4% width, +20 weight) scaled by smoothed velocity. Spring stiffness 0.08, damping 0.62, no overshoot; everything returns to zero within ~0.5s of the pointer stopping. Pointer response on fine pointers only; disabled entirely under reduced motion.
 
 ### Focus treatment
-- Global `:focus-visible` is a 2px ember outline at 4px offset. Project cards move focus to an ember ring on the window. Skip link drops in from the top as an inverted bone tab.
+- Global `:focus-visible` is a 2px ember outline at 4px offset. Project cards move focus to an ember ring on the window (secondary links in the meta row keep the outline as well). Skip link drops in from the top as an inverted bone tab.
 
 ## Do's and Don'ts
 
@@ -415,6 +415,7 @@ Soft containers, hard lines. Windows, photo and sector cards use generous radii 
 - **Do** use the quint ease-out (cubic-bezier(0.22, 1, 0.36, 1)) for reveals and 600–1500ms durations for entrances; 200–300ms for state color changes.
 - **Do** give every motion a settled rest state and a reduced-motion path where all content is visible and static.
 - **Do** keep the version switcher in both language footers whenever a generation is archived.
+- **Do** keep the print path working: `@media print` turns the page into a light, static document (no field, bands or header; everything revealed; project gallery as a two-column grid; link URLs spelled out).
 
 ### Don't:
 - **Don't** add a second typeface, uppercase labels or letter-spaced captions.

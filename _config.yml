@@ -15,6 +15,12 @@ exclude:
   # Pracovní náhledy variant redesignu (A, A2, A3, B…) — publikují se jen
   # vybrané verze: v6b v kořeni a v6a na /v6a/.
   - preview/
+  # Snímky, které používá už jen preview/b (Genesis Factory z webu vypadla,
+  # Docházka má širší záběr dochazka-wide-*).
+  - assets/previews/genesis-1440.webp
+  - assets/previews/genesis-800.webp
+  - assets/previews/dochazka-1440.webp
+  - assets/previews/dochazka-800.webp
   - .impeccable/
   - .gitignore
 

@@ -136,10 +136,10 @@ keep visible without turning either into the headline:
   `dochazka.net`, `elh0m3r0.github.io/geodaily` (newsletter also on
   `buttondown.com/geodaily`), `dissconnect.lol`. Genesis Factory was dropped
   from the site in v6 (WIP repo, weaker than the shipped products).
-- **Photograph** — `assets/photo-dog-720.jpeg` (original `assets/photo-dog.jpeg`):
+- **Photograph** — `assets/photo-dog-720.webp` / `photo-dog-1048.webp` (original `assets/photo-dog.jpeg`):
   Václav outdoors in a forest with Kvido, his Boston terrier. Personal and
   informal by intent; explicitly not a corporate headshot, never a circle crop.
-- **Social preview** — `assets/og-image.jpg` / `og-image-en.jpg` (1200×630, v6b hero), `assets/favicon.svg`.
+- **Social preview** — `assets/og-image.jpg` / `og-image-en.jpg` (1200×630, v6b hero), `assets/favicon.svg` (VM monogram with the ember dot), `assets/apple-touch-icon.png`.
 - **Project previews** — `assets/previews/*-1440.webp` / `-800.webp`: homepages captured at an identical 1440×900 viewport (Docházka at 1920×1200 scaled 0.75).
 - **Verifiable credentials** — Ing. in Project Management within the Systems
   Engineering & Informatics program (2017–2019, thesis: agile project

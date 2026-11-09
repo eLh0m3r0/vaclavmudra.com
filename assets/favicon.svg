@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#07080a"></rect>
-  <rect x="0.5" y="0.5" width="31" height="31" rx="6.5" fill="none" stroke="#1b1c1e"></rect>
-  <text x="16" y="21" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#f9f9f9" letter-spacing="0.5">VM</text>
+  <defs>
+    <radialGradient id="e" cx="35%" cy="35%" r="65%">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.6" stop-color="#ffb877"/>
+    </radialGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#070a12"/>
+  <path d="M5 12.8 9.4 23 13.8 12.8M17.2 23V12.8l4.8 7.2 4.8-7.2V23" fill="none" stroke="#edeae4" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="6.4" cy="6.8" r="1.8" fill="url(#e)"/>
 </svg>
